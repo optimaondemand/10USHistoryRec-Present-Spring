@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Reagan Years and the Soviet Squeeze | U.S. HISTORY: RECONSTRUCTION TO PRESENT</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Segoe, Arial, sans-serif; background: #F4F6FA; color: #1a2340; }
+  .wrap { max-width: 900px; margin: 0 auto; background: #fff; min-height: 100vh; }
+  a { color: #0E1C42; }
+  blockquote.source { background: #F7F8FC; border-left: 4px solid #55C8E8; padding: 16px 20px; font-style: italic; margin: 0; white-space: pre-line; line-height: 1.7; font-size: 17px; }
+  .source-cite { font-size: 13px; font-style: normal; color: #55607f; margin-top: 10px; text-align: right; }
+  .iframe-wrap { margin: 20px 0; border: 2px solid #2196D0; border-radius: 12px; overflow: hidden; background: #f8f9fa; }
+  .iframe-header { background: #0E1C42; color: #fff; padding: 10px 18px; font-weight: bold; font-size: 15px; }
+  .iframe-fallback { padding: 6px 18px; font-size: 12px; color: #666; background: #EEF1F8; }
+  .seq-nav { display: flex; justify-content: space-between; gap: 16px; margin: 0 34px 24px; flex-wrap: wrap; }
+  .seq-nav a { flex: 1; min-width: 140px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 12px 16px; text-decoration: none; }
+  .seq-nav a.next { text-align: right; }
+  .seq-nav .seq-kicker { font-size: 10px; color: #6b7a99; }
+  .seq-nav .seq-label { font-size: 15px; color: #0e1c42; }
+  .back-to-map { margin: 0 34px 16px; }
+  .back-to-map a { font-size: 14px; color: #55607f; text-decoration: none; }
+  .back-to-map a:hover { text-decoration: underline; }
+  /* Glossary of Subject Vocabulary: one combined box for all glossed terms. */
+  .glossary-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 24px 34px 20px; }
+  .glossary-box .glossary-title { font-size: 13px; color: #0e1c42; margin-bottom: 6px; }
+  .glossary-box .glossary-note { font-size: 14px; color: #55607f; font-style: italic; margin-bottom: 10px; }
+  .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+  .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+  .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+  .gloss .gloss-tip { display: none; }
+  .gloss.open .gloss-tip, .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
+  .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+  .gloss-audio:hover { color: #0E1C42; }
+  .gloss-tip { position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+  .gloss-pron { display: block; color: #55C8E8; font-size: 11px; margin-bottom: 4px; font-style: italic; }
+  /* Finding 7 (remediation-S2): gold time-estimate pill, optima-lesson-format's spec. */
+  .time-pill { display: inline-block; background: #C7922C; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 11px; border-radius: 999px; margin-left: 10px; vertical-align: middle; }
+  /* optima-world-history Part IV, borrowed in (2026-08-17): main map, figure bio box, visual boxes. */
+  .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #2196D0; border-radius: 8px; margin: 0 34px 24px; overflow: hidden; }
+  .map-card .map-kicker { padding: 14px 20px 0; font-size: 11px; color: #2196D0; }
+  .map-card img { width: 100%; display: block; margin-top: 10px; }
+  .map-card .map-caption { padding: 14px 20px 4px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .map-card .map-credit { padding: 0 20px 14px; font-size: 11px; color: #8290ab; }
+  .figure-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; margin: 0 34px 24px; padding: 20px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .figure-box img { width: 140px; height: auto; border-radius: 6px; flex-shrink: 0; }
+  .figure-box .figure-kicker { font-size: 11px; color: #c7922c; margin-bottom: 6px; }
+  .figure-box .figure-name { font-size: 17px; color: #0e1c42; margin-bottom: 8px; }
+  .figure-box .figure-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .figure-box .figure-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+  .visual-box { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #55C8E8; border-radius: 8px; margin: 0 34px 24px; padding: 20px; }
+  .visual-box .visual-kicker { font-size: 11px; color: #0e1c42; margin-bottom: 10px; }
+  .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
+  .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+  <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+    <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+    <div>
+      <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+      <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+    </div>
+  </div>
+  <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">U.S. HISTORY: RECONSTRUCTION TO PRESENT</div>
+</div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Week</div>
+    <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Week 34</div>
+  </div>
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Page</div>
+    <div style="font-size: 17px; color: #0e1c42;">Lesson 16.1</div>
+  </div>
+  <div style="flex: 1; min-width: 220px; padding: 12px 16px;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">This Week's Topic</div>
+    <div style="font-size: 15px; color: #0e1c42;">The End of the Cold War</div>
+  </div>
+</div>
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin: 24px 34px 20px;">
+  <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">&#128214; LESSON 16.1<span class="time-pill">10 min</span></div>
+  <div style="font-size: 22px; color: #0e1c42;">The Reagan Years and the Soviet Squeeze</div>
+</div>
+<div class="glossary-box">
+  <div class="glossary-title">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+  <div class="glossary-note">A few words below are worth a quick look before you read. Tap or click any underlined term, here or in the lesson text, to see what it means.</div>
+  <ul>
+    <li><span class="gloss" tabindex="0">Iran-Contra affair<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'ih-RAHN KON-trah uh-FAIR')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ih-RAHN KON-trah uh-FAIR</span>A scandal in which Reagan's staff secretly sold weapons to Iran and used some of the money to help the Contra rebels in Nicaragua, against a law passed by Congress.</span></span></li>
+    <li><span class="gloss" tabindex="0">Paul Volcker<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'PAWL VOLE-ker')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">PAWL VOLE-ker</span>The head of the Federal Reserve from 1979 to 1987. He raised interest rates sharply to bring down inflation.</span></span></li>
+    <li><span class="gloss" tabindex="0">Reagan Doctrine<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'RAY-gun DOK-trin')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">RAY-gun DOK-trin</span>The policy of helping anti-communist fighters in places such as Afghanistan and Nicaragua instead of only holding communism back.</span></span></li>
+    <li><span class="gloss" tabindex="0">Ronald Reagan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'RON-uld RAY-gun')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">RON-uld RAY-gun</span>The 40th president, from 1981 to 1989. He was a former actor and governor of California.</span></span></li>
+    <li><span class="gloss" tabindex="0">Strategic Defense Initiative<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'struh-TEE-jik dih-FENS ih-NISH-uh-tiv')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">struh-TEE-jik dih-FENS ih-NISH-uh-tiv</span>Reagan's 1983 plan for a system that would shoot down enemy missiles before they hit the United States. Critics nicknamed it "Star Wars."</span></span></li>
+    <li><span class="gloss" tabindex="0">supply-side economics<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'suh-PLY-side ek-uh-NOM-iks')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">suh-PLY-side ek-uh-NOM-iks</span>The idea that cutting taxes gives people more reason to work, save, and invest, which will make the economy grow.</span></span></li>
+  </ul>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S LESSON</div>
+  <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>By 1980, many Americans were tired. The 1970s had brought a lost war, a scandal, high inflation, long gas lines, and a hostage crisis in Iran. Fifty-two Americans were held for 444 days after Iranian students seized the embassy in Tehran. Jimmy Carter's attempt at a rescue failed in the desert. Voters wanted a change, and they found it in <span class="gloss" tabindex="0">Ronald Reagan<span class="gloss-tip"><span class="gloss-pron">RON-uld RAY-gun</span>The 40th president, from 1981 to 1989. He was a former actor and governor of California.</span></span>. Reagan was a former actor and a two-term governor of California. He spoke in plain words, and he told Americans that their country was a "shining city on a hill," and that its best days were ahead. In November 1980, he won the presidency in a landslide.</p>
+<p>Reagan's ideas were simple, and he repeated them often. Government, he said, had grown too large and taxes too high. A strong military was needed to face the Soviets. And America should believe in itself. In his first inaugural address, he said, "Government is not the solution to our problem; government is the problem." His economic program rested on <span class="gloss" tabindex="0">supply-side economics<span class="gloss-tip"><span class="gloss-pron">suh-PLY-side ek-uh-NOM-iks</span>The idea that cutting taxes gives people more reason to work, save, and invest, which will make the economy grow.</span></span>. This is the idea that cutting taxes, especially on businesses and high earners, would give people more reason to work, save, and invest, and that growth would follow. Supporters said that the economy would grow so much that the government would collect nearly as much money as before. Critics called it a trick that would only help the rich.</p>
+<p>Reagan's good luck, and his skill, helped him in his first months. On March 30, 1981, a gunman shot him outside a Washington hotel. Reagan was badly hurt, but he joked with the doctors, and the country admired his calm. With that goodwill, he won a large tax cut and cuts in domestic spending from a Congress controlled in part by Democrats. His success showed another part of his skill: he could make a deal. He often struck bargains with the House Speaker, Tip O'Neill, a Democrat, even while the two men fought bitterly in public.</p>
+<p>The early results were rough. The Federal Reserve, led by <span class="gloss" tabindex="0">Paul Volcker<span class="gloss-tip"><span class="gloss-pron">PAWL VOLE-ker</span>The head of the Federal Reserve from 1979 to 1987. He raised interest rates sharply to bring down inflation.</span></span>, raised interest rates sharply to break inflation, and the economy fell into a deep recession in 1981 and 1982. Unemployment reached nearly ten percent. Yet inflation, which had been above thirteen percent, dropped to about four percent by 1983. Then a long recovery began. The economy grew for most of the decade, and millions of new jobs were created. There were costs too. The deficit, the gap between what the government spends and what it collects, grew very large, because tax cuts were not matched by cuts in spending and the military was growing. The national debt tripled in the decade. Economists still argue about how much credit or blame belongs to Reagan, to Volcker, and to forces no president controls.</p>
+<p>In foreign policy, Reagan rejected the quiet approach of détente. He believed the Soviet Union was a weak and cruel system that could be pressured into change, and he said so. He called for a huge buildup of the military, including new missiles, bombers, and warships. In March 1983, he gave a speech to a group of evangelical ministers in which he called the Soviet Union an "evil empire." You will read part of the speech this week. Critics at home called it reckless. Others replied that it put plain moral language to the conflict, as Reagan wished to do. He also kept a hope for a better path, and he said that he wanted to bargain from strength.</p>
+<p>Later that month, Reagan announced a program that he hoped might end the nuclear threat. The <span class="gloss" tabindex="0">Strategic Defense Initiative<span class="gloss-tip"><span class="gloss-pron">struh-TEE-jik dih-FENS ih-NISH-uh-tiv</span>Reagan's 1983 plan for a system that would shoot down enemy missiles before they hit the United States. Critics nicknamed it "Star Wars."</span></span>, which critics nicknamed "Star Wars," would use new technology to shoot down enemy missiles before they reached American soil. Scientists doubted that it could work, and it never did in Reagan's time. But the Soviets took it seriously. They feared that they could not afford to match it, and that it would upset the balance that had kept the peace. Historians still disagree about whether the program was a bluff, a mistake, or a clever pressure on Moscow.</p>
+<p>Reagan's approach to the wider Cold War became known as the <span class="gloss" tabindex="0">Reagan Doctrine<span class="gloss-tip"><span class="gloss-pron">RAY-gun DOK-trin</span>The policy of helping anti-communist fighters in places such as Afghanistan and Nicaragua instead of only holding communism back.</span></span>. Instead of just holding communism back, the United States would help anti-communist fighters in places like Afghanistan, Angola, and Nicaragua. In Afghanistan, which the Soviets had invaded in 1979, American money and missiles went to rebels who fought the Red Army for a decade. It bled the Soviets and gave them their own Vietnam. In Nicaragua, a leftist government had come to power, and the United States backed rebels called the Contras. Congress, wary of another Vietnam, banned military aid to them. This led to the biggest scandal of Reagan's presidency.</p>
+<p>In the <span class="gloss" tabindex="0">Iran-Contra affair<span class="gloss-tip"><span class="gloss-pron">ih-RAHN KON-trah uh-FAIR</span>A scandal in which Reagan's staff secretly sold weapons to Iran and used some of the money to help the Contra rebels in Nicaragua, against a law passed by Congress.</span></span>, members of the president's staff secretly sold weapons to Iran, a country the United States had labeled a supporter of terrorism, in hopes of freeing American hostages held in Lebanon. They then used part of the profits to pay for the Contras, in violation of the law that Congress had passed. When it came out in late 1986, Reagan's popularity fell. He first denied it and then admitted that "what began as a strategic opening to Iran deteriorated" into trading arms for hostages. Fourteen people were charged with crimes, and several were convicted, though some convictions were overturned or pardoned. Reagan was never shown to have known about the diversion of money. Still, the affair raised an old question: who is responsible when a president's staff acts outside the law? You will notice an echo of the last lesson.</p>
+<p>By the mid-1980s, though, a more hopeful story was beginning. At home, the economy was strong, and Reagan won reelection in 1984 with a win in forty-nine states, with the slogan "Morning in America." Abroad, the Soviet economy was failing. It had been weak for years, held back by central planning and by the cost of keeping up with the Americans. It was also bogged down in Afghanistan, and its people were losing faith in the system. A new leader was about to take power in Moscow, and he would change everything.</p>
+<p>For a classical republican, the Reagan years offer lessons on both sides. Reagan's optimism, his clear purpose, and his skill at persuasion helped to restore the nation's confidence. Yet the large deficits, and the habit of taking quick fixes, suggested that the country was spending more than it earned. Contingency matters here too. The Cold War might have ended very differently if the Soviets had picked another leader or if the oil price had not collapsed. The next lesson takes up the story of how it ended.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> explain the ideas behind Reagan's economic program and its results</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> describe how Reagan's military buildup and foreign policy increased pressure on the Soviet Union</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> evaluate Reagan's leadership using the idea of contingency and Classical Republican standards</div>
+  </div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+  <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; border-left: 3px solid #D0D9E8; padding-left: 12px;"><span style="color: #c7922c; font-size: 16px; flex-shrink: 0;">&#9654;</span>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Today's lesson text (below)</div>
+  </div>
+</div>
+<div class="seq-nav"><div></div><a class="next" href="primary-source-1.html"><div class="seq-kicker">Next &rarr;</div><div class="seq-label">Primary Source 16.2</div></a></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+  <div style="font-size: 16px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; U.S. HISTORY: RECONSTRUCTION TO PRESENT &middot; Quarter 4</div>
+  <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 34 &middot; Lesson 16.1 &middot; The Reagan Years and the Soviet Squeeze</div>
+  <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+document.addEventListener('click', function (e) {
+  var gloss = e.target.closest('.gloss');
+  if (gloss && !e.target.closest('.gloss-audio')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { if (g !== gloss) g.classList.remove('open'); });
+    gloss.classList.toggle('open');
+  } else if (!e.target.closest('.gloss-tip')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
+  }
+});
+</script>
+</body>
+</html>
