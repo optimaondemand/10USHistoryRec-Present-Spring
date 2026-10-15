@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Arsenal at Home | U.S. HISTORY: RECONSTRUCTION TO PRESENT</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Segoe, Arial, sans-serif; background: #F4F6FA; color: #1a2340; }
+  .wrap { max-width: 900px; margin: 0 auto; background: #fff; min-height: 100vh; }
+  a { color: #0E1C42; }
+  blockquote.source { background: #F7F8FC; border-left: 4px solid #55C8E8; padding: 16px 20px; font-style: italic; margin: 0; white-space: pre-line; line-height: 1.7; font-size: 17px; }
+  .source-cite { font-size: 13px; font-style: normal; color: #55607f; margin-top: 10px; text-align: right; }
+  .iframe-wrap { margin: 20px 0; border: 2px solid #2196D0; border-radius: 12px; overflow: hidden; background: #f8f9fa; }
+  .iframe-header { background: #0E1C42; color: #fff; padding: 10px 18px; font-weight: bold; font-size: 15px; }
+  .iframe-fallback { padding: 6px 18px; font-size: 12px; color: #666; background: #EEF1F8; }
+  .seq-nav { display: flex; justify-content: space-between; gap: 16px; margin: 0 34px 24px; flex-wrap: wrap; }
+  .seq-nav a { flex: 1; min-width: 140px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 12px 16px; text-decoration: none; }
+  .seq-nav a.next { text-align: right; }
+  .seq-nav .seq-kicker { font-size: 10px; color: #6b7a99; }
+  .seq-nav .seq-label { font-size: 15px; color: #0e1c42; }
+  .back-to-map { margin: 0 34px 16px; }
+  .back-to-map a { font-size: 14px; color: #55607f; text-decoration: none; }
+  .back-to-map a:hover { text-decoration: underline; }
+  /* Glossary of Subject Vocabulary: one combined box for all glossed terms. */
+  .glossary-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 24px 34px 20px; }
+  .glossary-box .glossary-title { font-size: 13px; color: #0e1c42; margin-bottom: 6px; }
+  .glossary-box .glossary-note { font-size: 14px; color: #55607f; font-style: italic; margin-bottom: 10px; }
+  .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+  .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+  .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+  .gloss .gloss-tip { display: none; }
+  .gloss.open .gloss-tip, .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
+  .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+  .gloss-audio:hover { color: #0E1C42; }
+  .gloss-tip { position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+  .gloss-pron { display: block; color: #55C8E8; font-size: 11px; margin-bottom: 4px; font-style: italic; }
+  /* Finding 7 (remediation-S2): gold time-estimate pill, optima-lesson-format's spec. */
+  .time-pill { display: inline-block; background: #C7922C; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 11px; border-radius: 999px; margin-left: 10px; vertical-align: middle; }
+  /* optima-world-history Part IV, borrowed in (2026-08-17): main map, figure bio box, visual boxes. */
+  .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #2196D0; border-radius: 8px; margin: 0 34px 24px; overflow: hidden; }
+  .map-card .map-kicker { padding: 14px 20px 0; font-size: 11px; color: #2196D0; }
+  .map-card img { width: 100%; display: block; margin-top: 10px; }
+  .map-card .map-caption { padding: 14px 20px 4px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .map-card .map-credit { padding: 0 20px 14px; font-size: 11px; color: #8290ab; }
+  .figure-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; margin: 0 34px 24px; padding: 20px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .figure-box img { width: 140px; height: auto; border-radius: 6px; flex-shrink: 0; }
+  .figure-box .figure-kicker { font-size: 11px; color: #c7922c; margin-bottom: 6px; }
+  .figure-box .figure-name { font-size: 17px; color: #0e1c42; margin-bottom: 8px; }
+  .figure-box .figure-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .figure-box .figure-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+  .visual-box { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #55C8E8; border-radius: 8px; margin: 0 34px 24px; padding: 20px; }
+  .visual-box .visual-kicker { font-size: 11px; color: #0e1c42; margin-bottom: 10px; }
+  .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
+  .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+  <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+    <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+    <div>
+      <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+      <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+    </div>
+  </div>
+  <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">U.S. HISTORY: RECONSTRUCTION TO PRESENT</div>
+</div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Week</div>
+    <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Week 27</div>
+  </div>
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Page</div>
+    <div style="font-size: 17px; color: #0e1c42;">Lesson 9.1</div>
+  </div>
+  <div style="flex: 1; min-width: 220px; padding: 12px 16px;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">This Week's Topic</div>
+    <div style="font-size: 15px; color: #0e1c42;">The Home Front and the End of the War</div>
+  </div>
+</div>
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin: 24px 34px 20px;">
+  <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">&#128214; LESSON 9.1<span class="time-pill">9 min</span></div>
+  <div style="font-size: 22px; color: #0e1c42;">The Arsenal at Home</div>
+</div>
+<div class="glossary-box">
+  <div class="glossary-title">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+  <div class="glossary-note">A few words below are worth a quick look before you read. Tap or click any underlined term, here or in the lesson text, to see what it means.</div>
+  <ul>
+    <li><span class="gloss" tabindex="0">A. Philip Randolph<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'ay FIL-ip RAN-dolf')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ay FIL-ip RAN-dolf</span>A Black labor leader whose threat of a march on Washington in 1941 helped win a ban on discrimination in defense jobs.</span></span></li>
+    <li><span class="gloss" tabindex="0">Executive Order 9066<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'ig-ZEK-yuh-tiv OR-der nyn-oh-siks-siks')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ig-ZEK-yuh-tiv OR-der nyn-oh-siks-siks</span>The February 1942 order that let the army remove people of Japanese descent from the West Coast.</span></span></li>
+    <li><span class="gloss" tabindex="0">Fair Employment Practices Committee<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'fair em-PLOY-ment PRAK-tis-iz kuh-MIT-ee')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">fair em-PLOY-ment PRAK-tis-iz kuh-MIT-ee</span>A federal committee set up in 1941 to enforce the ban on job discrimination in defense industries.</span></span></li>
+    <li><span class="gloss" tabindex="0">Fred Korematsu<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'fred kor-eh-MAHT-soo')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">fred kor-eh-MAHT-soo</span>A Japanese American who refused to go to the camps and took his case to the Supreme Court.</span></span></li>
+    <li><span class="gloss" tabindex="0">GI Bill<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'JEE eye bil')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">JEE eye bil</span>The 1944 law that gave veterans help with college, home loans, and finding work.</span></span></li>
+    <li><span class="gloss" tabindex="0">Liberty ship<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'LIB-ur-tee ship')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">LIB-ur-tee ship</span>A cheap cargo ship, built from standard parts with welded seams, that American yards produced by the thousands in the war.</span></span></li>
+    <li><span class="gloss" tabindex="0">Manhattan Project<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'man-HAT-un PROJ-ekt')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">man-HAT-un PROJ-ekt</span>The secret American program, begun in 1942, to build an atomic bomb.</span></span></li>
+    <li><span class="gloss" tabindex="0">rationing<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'RASH-un-ing')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">RASH-un-ing</span>A system that limits how much of a scarce good each person may buy.</span></span></li>
+    <li><span class="gloss" tabindex="0">war bonds<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'wor bondz')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">wor bondz</span>Bonds sold to citizens to lend money to the government in wartime, to be paid back later with interest.</span></span></li>
+  </ul>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S LESSON</div>
+  <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In a speech in December 1940, Roosevelt called the United States "the great arsenal of democracy." By 1942, the phrase was no longer just a hope. The country was now the largest factory in the world. Wars of the twentieth century were won by those who could make more tanks, ships, and planes than the enemy, and the United States did this better than anyone. The home front, as Americans called it, was where much of the war was decided.</p>
+<p>The change started in early 1942. The government told car companies to stop making cars. Within months, the same factories were making tanks, jeeps, and aircraft engines. Roosevelt set a goal of sixty thousand planes in a single year, which seemed impossible, and the country met it. Henry Ford's new plant at Willow Run, Michigan, was one of the largest factory buildings in the world and was built to make B-24 bombers. At its peak, it turned out one bomber an hour. In the shipyards of Henry Kaiser, workers built the <span class="gloss" tabindex="0">Liberty ship<span class="gloss-tip"><span class="gloss-pron">LIB-ur-tee ship</span>A cheap cargo ship, built from standard parts with welded seams, that American yards produced by the thousands in the war.</span></span>, a cheap cargo vessel made from standard parts, with welded seams in place of rivets. One Liberty ship, the Robert E. Peary, was finished in a little under five days. Over the course of the war, American yards built more than two thousand of them. These ships could carry food and weapons faster than German submarines could sink them.</p>
+<p>The Great Depression ended because of the war. Unemployment, which had been above twenty percent in 1933, fell below two percent by 1944. Wages rose. But money could not buy everything, because factories were making weapons instead of goods for families. To make sure there was enough to go around, the government began <span class="gloss" tabindex="0">rationing<span class="gloss-tip"><span class="gloss-pron">RASH-un-ing</span>A system that limits how much of a scarce good each person may buy.</span></span>, which limits how much of something each person may buy. Families received books of stamps for sugar, meat, butter, gasoline, and rubber tires. Citizens also bought <span class="gloss" tabindex="0">war bonds<span class="gloss-tip"><span class="gloss-pron">wor bondz</span>Bonds sold to citizens to lend money to the government in wartime, to be paid back later with interest.</span></span>, which let them lend money to the government and be paid back later with interest. Americans planted victory gardens and collected scrap metal. This kind of cooperation is what the classical republican tradition calls civic virtue, which means that ordinary people accepted limits on themselves for the common good. The American people did not do it perfectly, and a black market in rationed goods grew. But they did it on a scale that surprised even their leaders.</p>
+<p>Women were central to the change. About six million women entered the workforce during the war, many taking jobs in factories that had been closed to them. Posters and songs celebrated "Rosie the Riveter." Women welded ships, built planes, and ran machines. Others served in the military in nonfighting roles, as nurses, pilots who delivered planes, and radio operators. When the war ended, most women left their jobs, either because they chose to or because they were told to. Yet the experience had changed what many women expected from life.</p>
+<p>The war also changed things for Black Americans, though not by itself. The Great Migration of Black families from the South to the cities of the North and West continued, since the best war jobs were there. But those jobs were not given freely. In 1941, the labor leader <span class="gloss" tabindex="0">A. Philip Randolph<span class="gloss-tip"><span class="gloss-pron">ay FIL-ip RAN-dolf</span>A Black labor leader whose threat of a march on Washington in 1941 helped win a ban on discrimination in defense jobs.</span></span> threatened to bring a hundred thousand Black marchers to Washington to demand equal hiring. Roosevelt did not want the embarrassment, so he issued an order that banned discrimination in defense industries and set up the <span class="gloss" tabindex="0">Fair Employment Practices Committee<span class="gloss-tip"><span class="gloss-pron">fair em-PLOY-ment PRAK-tis-iz kuh-MIT-ee</span>A federal committee set up in 1941 to enforce the ban on job discrimination in defense industries.</span></span> to enforce it. The committee had little power, but it was an important first step. The armed forces stayed segregated. Even so, Black soldiers, sailors, and airmen served with courage. The Tuskegee Airmen, Black pilots trained in Alabama, escorted bombers over Europe and earned an excellent record. Tension at home also ran high. In June 1943, a riot in Detroit killed thirty-four people. Many Black Americans spoke of a "double victory," over fascism abroad and over racism at home.</p>
+<p>The darkest chapter on the home front involved Japanese Americans. After Pearl Harbor, fear spread on the West Coast that Japan might invade, and that people of Japanese descent could help it. There was no proof that any Japanese American was a spy. Still, on February 19, 1942, Roosevelt signed <span class="gloss" tabindex="0">Executive Order 9066<span class="gloss-tip"><span class="gloss-pron">ig-ZEK-yuh-tiv OR-der nyn-oh-siks-siks</span>The February 1942 order that let the army remove people of Japanese descent from the West Coast.</span></span>. It gave the army power to remove people from areas it judged important for defense. In practice, this meant that about 120,000 people of Japanese descent, most of whom lived in California, Oregon, and Washington, were forced from their homes. About two-thirds of them were American citizens. They were sent to camps in remote places, such as Manzanar in California and Heart Mountain in Wyoming, and held behind barbed wire. Many lost their homes, farms, and businesses. No Japanese American was ever convicted of spying.</p>
+<p>A young man named <span class="gloss" tabindex="0">Fred Korematsu<span class="gloss-tip"><span class="gloss-pron">fred kor-eh-MAHT-soo</span>A Japanese American who refused to go to the camps and took his case to the Supreme Court.</span></span> refused to go. He was arrested and convicted. His case reached the Supreme Court. In December 1944, in Korematsu v. United States, the Court ruled six to three that the order was allowed because of military necessity. Justice Frank Murphy, in a dissent, said that the order went over "the very brink of constitutional power" and fell into "the ugly abyss of racism." The decision has not been supported by later generations. Congress passed a law in 1988 that apologized and paid twenty thousand dollars to each survivor of the camps. In 2018, the Court itself said that Korematsu was "gravely wrong the day it was decided." You will read parts of the opinion in this week's source. Meanwhile, young Japanese American men in the army, the 442nd Regimental Combat Team, fought in Italy and France. For its size and length of service, it became the most decorated unit in American history.</p>
+<p>Back at home, Congress also planned for the future. In 1944, it passed the <span class="gloss" tabindex="0">GI Bill<span class="gloss-tip"><span class="gloss-pron">JEE eye bil</span>The 1944 law that gave veterans help with college, home loans, and finding work.</span></span>, a law that offered veterans money for college, loans to buy homes and start businesses, and help in finding work. Millions of veterans used it, and the law shaped the next generation of American life.</p>
+<p>One part of the home front was kept secret from almost everybody. In 1939, scientists had warned Roosevelt that Germany might be able to build a bomb of tremendous power. By 1942, the United States had launched the <span class="gloss" tabindex="0">Manhattan Project<span class="gloss-tip"><span class="gloss-pron">man-HAT-un PROJ-ekt</span>The secret American program, begun in 1942, to build an atomic bomb.</span></span>, a huge secret program to build such a weapon first. It was led by General Leslie Groves and the physicist J. Robert Oppenheimer. Workers at Oak Ridge in Tennessee, at Hanford in Washington, and at Los Alamos in New Mexico built different parts of it. More than a hundred thousand people worked on the project. Most of them did not know what they were making. It cost about two billion dollars.</p>
+<p>The home front shows a republic at its best and at its worst. It gave an example of freely chosen sacrifice and fast cooperation. It also showed that a nation can give up the rights of a group of its own citizens out of fear. The next lesson turns back to the fighting and to the use of the weapon that came out of the secret project.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> explain how American industry and ordinary citizens made victory possible</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> describe how the war changed the lives of women and of Black Americans</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> evaluate the government's treatment of Japanese Americans as a conflict between national security and constitutional rights</div>
+  </div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+  <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; border-left: 3px solid #D0D9E8; padding-left: 12px;"><span style="color: #c7922c; font-size: 16px; flex-shrink: 0;">&#9654;</span>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Today's lesson text (below)</div>
+  </div>
+</div>
+<div class="seq-nav"><div></div><a class="next" href="primary-source-1.html"><div class="seq-kicker">Next &rarr;</div><div class="seq-label">Primary Source 9.2</div></a></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+  <div style="font-size: 16px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; U.S. HISTORY: RECONSTRUCTION TO PRESENT &middot; Quarter 3</div>
+  <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 27 &middot; Lesson 9.1 &middot; The Arsenal at Home</div>
+  <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+document.addEventListener('click', function (e) {
+  var gloss = e.target.closest('.gloss');
+  if (gloss && !e.target.closest('.gloss-audio')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { if (g !== gloss) g.classList.remove('open'); });
+    gloss.classList.toggle('open');
+  } else if (!e.target.closest('.gloss-tip')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
+  }
+});
+</script>
+</body>
+</html>
