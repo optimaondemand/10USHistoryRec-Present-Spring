@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Containment | U.S. HISTORY: RECONSTRUCTION TO PRESENT</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", Segoe, Arial, sans-serif; background: #F4F6FA; color: #1a2340; }
+  .wrap { max-width: 900px; margin: 0 auto; background: #fff; min-height: 100vh; }
+  a { color: #0E1C42; }
+  blockquote.source { background: #F7F8FC; border-left: 4px solid #55C8E8; padding: 16px 20px; font-style: italic; margin: 0; white-space: pre-line; line-height: 1.7; font-size: 17px; }
+  .source-cite { font-size: 13px; font-style: normal; color: #55607f; margin-top: 10px; text-align: right; }
+  .iframe-wrap { margin: 20px 0; border: 2px solid #2196D0; border-radius: 12px; overflow: hidden; background: #f8f9fa; }
+  .iframe-header { background: #0E1C42; color: #fff; padding: 10px 18px; font-weight: bold; font-size: 15px; }
+  .iframe-fallback { padding: 6px 18px; font-size: 12px; color: #666; background: #EEF1F8; }
+  .seq-nav { display: flex; justify-content: space-between; gap: 16px; margin: 0 34px 24px; flex-wrap: wrap; }
+  .seq-nav a { flex: 1; min-width: 140px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 12px 16px; text-decoration: none; }
+  .seq-nav a.next { text-align: right; }
+  .seq-nav .seq-kicker { font-size: 10px; color: #6b7a99; }
+  .seq-nav .seq-label { font-size: 15px; color: #0e1c42; }
+  .back-to-map { margin: 0 34px 16px; }
+  .back-to-map a { font-size: 14px; color: #55607f; text-decoration: none; }
+  .back-to-map a:hover { text-decoration: underline; }
+  /* Glossary of Subject Vocabulary: one combined box for all glossed terms. */
+  .glossary-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 24px 34px 20px; }
+  .glossary-box .glossary-title { font-size: 13px; color: #0e1c42; margin-bottom: 6px; }
+  .glossary-box .glossary-note { font-size: 14px; color: #55607f; font-style: italic; margin-bottom: 10px; }
+  .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+  .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+  .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+  .gloss .gloss-tip { display: none; }
+  .gloss.open .gloss-tip, .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
+  .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+  .gloss-audio:hover { color: #0E1C42; }
+  .gloss-tip { position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+  .gloss-pron { display: block; color: #55C8E8; font-size: 11px; margin-bottom: 4px; font-style: italic; }
+  /* Finding 7 (remediation-S2): gold time-estimate pill, optima-lesson-format's spec. */
+  .time-pill { display: inline-block; background: #C7922C; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 11px; border-radius: 999px; margin-left: 10px; vertical-align: middle; }
+  /* optima-world-history Part IV, borrowed in (2026-08-17): main map, figure bio box, visual boxes. */
+  .map-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 4px solid #2196D0; border-radius: 8px; margin: 0 34px 24px; overflow: hidden; }
+  .map-card .map-kicker { padding: 14px 20px 0; font-size: 11px; color: #2196D0; }
+  .map-card img { width: 100%; display: block; margin-top: 10px; }
+  .map-card .map-caption { padding: 14px 20px 4px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .map-card .map-credit { padding: 0 20px 14px; font-size: 11px; color: #8290ab; }
+  .figure-box { background: #F7F8FC; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; margin: 0 34px 24px; padding: 20px; display: flex; gap: 18px; flex-wrap: wrap; }
+  .figure-box img { width: 140px; height: auto; border-radius: 6px; flex-shrink: 0; }
+  .figure-box .figure-kicker { font-size: 11px; color: #c7922c; margin-bottom: 6px; }
+  .figure-box .figure-name { font-size: 17px; color: #0e1c42; margin-bottom: 8px; }
+  .figure-box .figure-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .figure-box .figure-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+  .visual-box { background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #55C8E8; border-radius: 8px; margin: 0 34px 24px; padding: 20px; }
+  .visual-box .visual-kicker { font-size: 11px; color: #0e1c42; margin-bottom: 10px; }
+  .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
+  .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
+  .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+  <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+    <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+    <div>
+      <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+      <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+    </div>
+  </div>
+  <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">U.S. HISTORY: RECONSTRUCTION TO PRESENT</div>
+</div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Week</div>
+    <div style="font-size: 17px; color: #0e1c42;">Q4 &middot; Week 28</div>
+  </div>
+  <div style="flex: 1; min-width: 150px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Page</div>
+    <div style="font-size: 17px; color: #0e1c42;">Lesson 10.3</div>
+  </div>
+  <div style="flex: 1; min-width: 220px; padding: 12px 16px;">
+    <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">This Week's Topic</div>
+    <div style="font-size: 15px; color: #0e1c42;">The Postwar Order and Containment</div>
+  </div>
+</div>
+<div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin: 24px 34px 20px;">
+  <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">&#128214; LESSON 10.3<span class="time-pill">9 min</span></div>
+  <div style="font-size: 22px; color: #0e1c42;">Containment</div>
+</div>
+<div class="glossary-box">
+  <div class="glossary-title">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+  <div class="glossary-note">A few words below are worth a quick look before you read. Tap or click any underlined term, here or in the lesson text, to see what it means.</div>
+  <ul>
+    <li><span class="gloss" tabindex="0">Berlin Airlift<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'ber-LIN AIR-lift')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ber-LIN AIR-lift</span>The American and British effort in 1948 and 1949 to supply West Berlin by air after the Soviet Union cut off all roads, rails, and canals into the city.</span></span></li>
+    <li><span class="gloss" tabindex="0">Central Intelligence Agency<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'SEN-trul in-TEL-uh-jents AY-jen-see')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SEN-trul in-TEL-uh-jents AY-jen-see</span>The U.S. agency created in 1947 to gather and study information from other countries. It is often called the CIA.</span></span></li>
+    <li><span class="gloss" tabindex="0">containment<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'kun-TAYN-ment')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">kun-TAYN-ment</span>The American strategy of holding back the spread of Soviet power without starting a war.</span></span></li>
+    <li><span class="gloss" tabindex="0">George F. Kennan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'jorj eff KEN-un')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">jorj eff KEN-un</span>An American diplomat in Moscow whose 1946 cable and 1947 article shaped the strategy of containment.</span></span></li>
+    <li><span class="gloss" tabindex="0">Mao Zedong<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'mow dzuh-DONG')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">mow dzuh-DONG</span>The communist leader who won China's civil war in 1949 and ruled the country until 1976.</span></span></li>
+    <li><span class="gloss" tabindex="0">Marshall Plan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'MAR-shul plan')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MAR-shul plan</span>The American program, begun in 1948, that gave about thirteen billion dollars to help rebuild the economies of Western Europe.</span></span></li>
+    <li><span class="gloss" tabindex="0">National Security Act<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'NASH-uh-nul sih-KYOOR-ih-tee akt')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">NASH-uh-nul sih-KYOOR-ih-tee akt</span>The 1947 law that created the Department of Defense, the National Security Council, and the CIA.</span></span></li>
+    <li><span class="gloss" tabindex="0">NATO<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'NAY-toh')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">NAY-toh</span>The North Atlantic Treaty Organization, a military alliance formed in 1949 in which an attack on one member is treated as an attack on all.</span></span></li>
+    <li><span class="gloss" tabindex="0">NSC-68<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'en-es-see SIX-tee-ayt')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">en-es-see SIX-tee-ayt</span>A secret 1950 government paper that called for a large increase in American military spending to face the Soviet Union.</span></span></li>
+    <li><span class="gloss" tabindex="0">Truman Doctrine<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'TROO-mun DOK-trin')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">TROO-mun DOK-trin</span>President Truman's 1947 promise to support free peoples resisting takeover by armed minorities or outside pressure.</span></span></li>
+  </ul>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-top: 3px solid #C7922C; border-radius: 8px; padding: 20px 24px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S LESSON</div>
+  <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>By early 1947, American leaders needed a plan. They did not want another world war, and they did not want to hand Europe to Stalin. They also could not keep fighting with troops they had already sent home. The plan they chose came from a quiet diplomat named <span class="gloss" tabindex="0">George F. Kennan<span class="gloss-tip"><span class="gloss-pron">jorj eff KEN-un</span>An American diplomat in Moscow whose 1946 cable and 1947 article shaped the strategy of containment.</span></span>. Kennan had spent years in Moscow, and in February 1946 he sent the State Department a very long cable, which you will read this week. He argued that Soviet leaders believed they were in a permanent struggle with the capitalist world, and that they would push forward wherever nobody stopped them. But he also believed that they were cautious, and that they would back away when they met firm resistance.</p>
+<p>In July 1947, Kennan published his argument in a magazine under the signature "X." He said that the United States should follow a policy of "long-term, patient but firm and vigilant <span class="gloss" tabindex="0">containment<span class="gloss-tip"><span class="gloss-pron">kun-TAYN-ment</span>The American strategy of holding back the spread of Soviet power without starting a war.</span></span>" of Soviet expansion. Containment did not mean rolling back communism where it already ruled, and it did not mean war. It meant holding the line, and waiting. Kennan thought that a system built on fear and force would eventually weaken from the inside. He was right, though it took more than forty years.</p>
+<p>The first test came in Greece and Turkey. Britain had been helping the Greek government fight a communist rebellion, and Turkey was under Soviet pressure. In February 1947, the British told Washington that they were too poor to continue. Truman acted. On March 12, 1947, he asked Congress for four hundred million dollars in aid and made a larger promise: that the United States would "support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures." This promise became the <span class="gloss" tabindex="0">Truman Doctrine<span class="gloss-tip"><span class="gloss-pron">TROO-mun DOK-trin</span>President Truman's 1947 promise to support free peoples resisting takeover by armed minorities or outside pressure.</span></span>. Senator Arthur Vandenberg, a leading Republican and former isolationist, told Truman that to win Congress he would have to "scare hell out of the American people." Truman did, and Congress passed the aid.</p>
+<p>Aid to two countries was only the beginning. Europe was hungry, cold, and broke, and many Europeans were voting for communists in elections. Secretary of State George Marshall announced a much bigger idea in a Harvard speech in June 1947. The United States would help pay for the rebuilding of Europe, if Europeans would plan it together. The <span class="gloss" tabindex="0">Marshall Plan<span class="gloss-tip"><span class="gloss-pron">MAR-shul plan</span>The American program, begun in 1948, that gave about thirteen billion dollars to help rebuild the economies of Western Europe.</span></span> provided about thirteen billion dollars between 1948 and 1952, mostly as grants. Stalin refused to take part and forced the countries he controlled to refuse too. The Marshall Plan worked. Western European factories started up again, trade grew, and communist parties lost ground. It was an unusual moment in history: the strongest country in the world used its wealth to rebuild its former enemies as well as its friends.</p>
+<p>At home, Congress reorganized the government for a long struggle. The <span class="gloss" tabindex="0">National Security Act<span class="gloss-tip"><span class="gloss-pron">NASH-uh-nul sih-KYOOR-ih-tee akt</span>The 1947 law that created the Department of Defense, the National Security Council, and the CIA.</span></span> of 1947 created the Department of Defense to unify the armed forces, a National Security Council to advise the president, and the <span class="gloss" tabindex="0">Central Intelligence Agency<span class="gloss-tip"><span class="gloss-pron">SEN-trul in-TEL-uh-jents AY-jen-see</span>The U.S. agency created in 1947 to gather and study information from other countries. It is often called the CIA.</span></span> to gather information abroad. A republic had never kept this kind of permanent machinery in peacetime, and some Americans worried about what it meant for liberty.</p>
+<p>The next test was Berlin. The city lay deep in the Soviet zone of Germany, but it was divided into four sectors, and the Western powers held three of them. In June 1948, after the Western zones began to share a new currency, Stalin cut off every road, rail line, and canal into West Berlin. About two million people in the city had food for only a few weeks. Truman rejected a withdrawal, and he rejected an attempt to force a road through with troops, which might have started a war. Instead, American and British pilots flew supplies in. The <span class="gloss" tabindex="0">Berlin Airlift<span class="gloss-tip"><span class="gloss-pron">ber-LIN AIR-lift</span>The American and British effort in 1948 and 1949 to supply West Berlin by air after the Soviet Union cut off all roads, rails, and canals into the city.</span></span> lasted for more than ten months, and at its height a plane landed in Berlin about every minute. In May 1949, Stalin gave up the blockade. It was a victory for the policy: the West had held its ground without firing a shot.</p>
+<p>The Berlin crisis also pushed Americans to take a step that George Washington had warned against. In April 1949, the United States joined eleven other countries, including Canada, Britain, France, and Italy, in the North Atlantic Treaty. The treaty created <span class="gloss" tabindex="0">NATO<span class="gloss-tip"><span class="gloss-pron">NAY-toh</span>The North Atlantic Treaty Organization, a military alliance formed in 1949 in which an attack on one member is treated as an attack on all.</span></span>, the North Atlantic Treaty Organization. Its key promise was that an attack on one member would be treated as an attack on all. The Senate approved it in July 1949, by 82 to 13. It was the first time since the French alliance of 1778 that the United States had made a binding military alliance in peacetime. Supporters argued that war was more likely without the alliance. Opponents, including Senator Robert Taft, argued that it risked dragging the country into wars that Congress had not chosen.</p>
+<p>Late in 1949, two shocks hit within weeks of each other. In August, the Soviet Union tested its own atomic bomb, years before most experts had expected. And in October, the communists led by <span class="gloss" tabindex="0">Mao Zedong<span class="gloss-tip"><span class="gloss-pron">mow dzuh-DONG</span>The communist leader who won China's civil war in 1949 and ruled the country until 1976.</span></span> won the civil war in China, which meant that the world's most populous country was now communist. Many Americans asked who had "lost" China. The truth was that the United States had never had the power to decide the outcome, but the question became a political weapon at home.</p>
+<p>Truman asked his advisers to rethink strategy. Their answer, in April 1950, was a secret paper called <span class="gloss" tabindex="0">NSC-68<span class="gloss-tip"><span class="gloss-pron">en-es-see SIX-tee-ayt</span>A secret 1950 government paper that called for a large increase in American military spending to face the Soviet Union.</span></span>. It said that the Soviet Union was determined to dominate the world, and that the United States should greatly increase its military spending. The paper was not made public for many years. Within three months of its being delivered, the Korean War began, and the argument for it seemed proven.</p>
+<p>Was containment wise? Its defenders say that it solved the two first-order problems that every state faces. It protected the country against attack, and it did so without a third world war. It rebuilt the free economies of Europe, and those economies became rich trading partners. Its critics offer several arguments. Some say that the Soviet threat was overstated, and that the United States turned a rivalry into a permanent confrontation. Kennan himself later said that his ideas had been read as mostly military when he had meant them to be mostly political. Others say that containment gave the president too much power to act without Congress. You will weigh these views in this week's discussion. Notice, as you do, how many different outcomes were possible. If Truman had given up on Berlin, or if Congress had refused Greece, the map of Europe might look very different today.</p></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> explain the strategy of containment and the reasoning behind it</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> describe the Truman Doctrine, the Marshall Plan, the Berlin Airlift, and NATO as parts of one policy</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;">
+    <div style="min-width: 24px; height: 24px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>I will be able to</strong> evaluate whether containment was prudent or provocative</div>
+  </div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+  <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 6px; border-left: 3px solid #D0D9E8; padding-left: 12px;"><span style="color: #c7922c; font-size: 16px; flex-shrink: 0;">&#9654;</span>
+    <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Today's lesson text (below)</div>
+  </div>
+</div>
+<div class="seq-nav"><a class="prev" href="primary-source-1.html"><div class="seq-kicker">&larr; Previous</div><div class="seq-label">Primary Source 10.2</div></a><a class="next" href="primary-source-2.html"><div class="seq-kicker">Next &rarr;</div><div class="seq-label">Primary Source 10.4</div></a></div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+  <div style="font-size: 16px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; U.S. HISTORY: RECONSTRUCTION TO PRESENT &middot; Quarter 4</div>
+  <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Week 28 &middot; Lesson 10.3 &middot; Containment</div>
+  <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+document.addEventListener('click', function (e) {
+  var gloss = e.target.closest('.gloss');
+  if (gloss && !e.target.closest('.gloss-audio')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { if (g !== gloss) g.classList.remove('open'); });
+    gloss.classList.toggle('open');
+  } else if (!e.target.closest('.gloss-tip')) {
+    document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
+  }
+});
+</script>
+</body>
+</html>
