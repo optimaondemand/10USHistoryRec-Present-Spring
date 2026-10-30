@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,11 +368,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p><span class="gloss" tabindex="0">Richard Nixon<span class="gloss-tip"><span class="gloss-pron">RICH-erd NIK-sun</span>The 37th president, from 1969 to 1974. He is the only president to have resigned from office.</span></span> won the presidency in 1968 by a narrow margin. He had spent twenty years in politics, first as a congressman, then as Eisenhower's vice president, and then as a man who had lost two elections in a row. He took office with a hard problem and a plan. The problem was Vietnam. The plan was to end the war without making America look weak, a goal he called "peace with honor." He chose as his main adviser a Harvard professor of foreign policy named <span class="gloss" tabindex="0">Henry Kissinger<span class="gloss-tip"><span class="gloss-pron">HEN-ree KISS-in-jer</span>Nixon's national security adviser and later secretary of state. He planned the opening to China and the arms talks with the Soviets.</span></span>, and the two of them ran American foreign policy from the White House with little help from anyone else.</p>
 <p>Nixon's first step was a policy known as <span class="gloss" tabindex="0">Vietnamization<span class="gloss-tip"><span class="gloss-pron">vee-et-nah-mih-ZAY-shun</span>Nixon's plan to hand the ground fighting to the South Vietnamese army while American troops went home a little at a time.</span></span>. The idea was to hand the ground fighting back to the South Vietnamese army, while American troops went home a little at a time. American forces in Vietnam fell from about 540,000 in 1969 to under 30,000 by the end of 1972. At the same time, the United States gave South Vietnam weapons and money, and kept up heavy bombing. Nixon explained the thinking in a wider form, which became known as the <span class="gloss" tabindex="0">Nixon Doctrine<span class="gloss-tip"><span class="gloss-pron">NIK-sun DOK-trin</span>Nixon's policy that America would keep its treaty promises and help its allies, but those allies would supply most of the soldiers for their own defense.</span></span>. America would keep its treaty promises and would help its allies, but those allies would have to provide most of the soldiers needed for their own defense.</p>
 <p>The war did not end quickly. In the spring of 1970, Nixon sent troops into Cambodia to destroy enemy bases there. The move set off protests across the country, and it led to the shootings at Kent State that you read about in the last lesson. Nixon also kept the secret bombing of Cambodia hidden from the public, and he kept the details from most of Congress. Meanwhile, peace talks in Paris dragged on. Finally, in January 1973, the two sides signed the <span class="gloss" tabindex="0">Paris Peace Accords<span class="gloss-tip"><span class="gloss-pron">PAIR-iss PEES uh-KORDZ</span>The January 1973 agreement that ended direct American fighting in Vietnam. American troops left and prisoners of war came home.</span></span>. The United States agreed to withdraw its remaining troops, and North Vietnam agreed to return American prisoners of war. But North Vietnamese soldiers stayed in the south, and nothing in the agreement stopped the fighting between the two Vietnamese governments. Many observers saw the agreement as a "decent interval," a pause meant to let America leave before South Vietnam collapsed.</p>
+<div class="optima-widget ow-reflect" data-wid="m15-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Nixon kept the bombing of Cambodia secret from the public and from most of Congress. When, if ever, is a leader right to keep a military action secret? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That is the usual case for secrecy. The hard part is who checks that the reason is real.">When telling would put soldiers or plans in danger</button><button data-response="That is a middle path. It keeps the secret, but not from everyone who is supposed to share the power over war.">Only if some members of Congress are told</button><button data-response="That view puts the public first. Others reply that some plans cannot work if the enemy can read about them.">Never, because people who pay for a war should know</button><button data-response="Be careful here. A rule that bends with the news is not much of a rule.">It depends on whether the war is going well</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Congress reacted to the way the war had been fought. In November 1973, it passed the <span class="gloss" tabindex="0">War Powers Resolution<span class="gloss-tip"><span class="gloss-pron">WOR POW-erz rez-uh-LOO-shun</span>A 1973 law that requires a president to tell Congress soon after sending troops into combat, and to bring them home within sixty days unless Congress approves.</span></span> over Nixon's veto. The law said the president must tell Congress within forty-eight hours of sending troops into combat, and must withdraw them within sixty days unless Congress approves. Presidents since then have argued that the law limits their powers more than the Constitution allows, and they have often worked around it. The question of who decides when America goes to war, which you met in the last lesson, remains unsettled. The draft also ended in 1973, and America turned to an all-volunteer army.</p>
 <p>While the war wound down, Nixon and Kissinger made a pair of surprising moves in the wider world. For twenty years, the United States had refused to recognize the communist government of China. Americans had even been forbidden to travel there. But the two Cold War rivals, China and the Soviet Union, had grown to distrust each other, and they had fought a border clash in 1969. Kissinger saw an opening. In July 1971, he made a secret trip to Beijing. In February 1972, Nixon himself landed in China and shook hands with Mao Zedong. The leader who had built his career on fighting communism was now the first president to visit a communist capital. Few other leaders could have done it, because few others had Nixon's record of anticommunism to protect them from the charge of being "soft." The visit did not bring full diplomatic ties right away, but it changed the balance of the Cold War. The Soviets now had to worry about a friendship between their two largest rivals.</p>
+<div class="optima-widget ow-select" data-wid="m15-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHO DID WHAT?</div><div class="widget-question">Choose the best answer for each question.</div><div class="widget-row" data-correct="2" data-fb="Yes. America would keep its treaty promises and help its allies, but the allies would supply most of the soldiers." data-hint="The doctrine speaks of help, not of replacing the ally&#x27;s own army."><div class="widget-row-prompt">1. Under the <span class="gloss" tabindex="0">Nixon Doctrine<span class="gloss-tip"><span class="gloss-pron">NIK-sun DOK-trin</span>Nixon's policy that America would keep its treaty promises and help its allies, but those allies would supply most of the soldiers for their own defense.</span></span>, who was to provide most of the soldiers for an ally's defense?</div><div class="widget-options"><button data-choice="0">A new army drawn from many nations</button><button data-choice="1">American troops stationed in that country</button><button data-choice="2">The ally itself</button></div></div><div class="widget-row" data-correct="3" data-fb="Yes. Few other leaders had a record of anticommunism that protected them from the charge of being soft." data-hint="Think about what Nixon&#x27;s career had been built on."><div class="widget-row-prompt">2. Why could Nixon visit China when few other leaders could have?</div><div class="widget-options"><button data-choice="0">China had asked the Soviet Union for its permission to receive him</button><button data-choice="1">Congress had just voted to end the ban on travel and trade with China</button><button data-choice="2">He had helped end the border clash between China and the Soviets in 1969</button><button data-choice="3">His record as an anticommunist shielded him from the charge of being soft</button></div></div><div class="widget-row" data-correct="0" data-fb="Yes. The president must tell Congress within forty-eight hours and withdraw the troops within sixty days unless Congress approves." data-hint="The law sets two deadlines, one short and one longer."><div class="widget-row-prompt">3. What does the <span class="gloss" tabindex="0">War Powers Resolution<span class="gloss-tip"><span class="gloss-pron">WOR POW-erz rez-uh-LOO-shun</span>A 1973 law that requires a president to tell Congress soon after sending troops into combat, and to bring them home within sixty days unless Congress approves.</span></span> require of a president who sends troops into combat?</div><div class="widget-options"><button data-choice="0">Tell Congress within forty-eight hours, and withdraw after sixty days unless it approves</button><button data-choice="1">Ask Congress for a vote before sending any troops at all</button><button data-choice="2">Tell Congress after a year, once the war is paid for</button><button data-choice="3">Tell the Supreme Court and wait for its permission</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Three months later, Nixon traveled to Moscow. The Soviet Union had reached rough equality with the United States in nuclear weapons, and both sides were spending huge sums to stay even. In 1972, they signed the first agreement of the <span class="gloss" tabindex="0">Strategic Arms Limitation Talks<span class="gloss-tip"><span class="gloss-pron">struh-TEE-jik ARMZ lim-ih-TAY-shun TAWKS</span>Negotiations, called SALT, in which the United States and the Soviet Union agreed in 1972 to limit the number of certain nuclear missiles each could build.</span></span>, called SALT I, which set limits on the number of missiles each side could build. They also signed a treaty that sharply limited anti-ballistic missile systems, which were designed to shoot down incoming warheads. The thinking was that if neither side could defend itself, neither would dare to strike first. This easing of tensions became known as <span class="gloss" tabindex="0">détente<span class="gloss-tip"><span class="gloss-pron">day-TAHNT</span>A French word meaning a loosening or relaxing. It names the easing of Cold War tensions between the United States and the Soviet Union in the 1970s.</span></span>, a French word meaning a loosening or relaxing. Soviet and American leaders met, trade grew, and the danger of war seemed to shrink.</p>
 <p>Nixon's critics attacked détente from both sides. Some on the left said that he was too willing to prop up harsh governments in the name of stability, as in Chile and Pakistan. Some on the right said that détente let the Soviets catch up while America pretended all was well. Defenders answer that it kept the peace between two armed superpowers, and that Kissinger's patient bargaining was exactly what a republic needs from its diplomats. As always, it is worth asking what might have happened otherwise. Without the opening to China, the Soviets might have faced no pressure at all. But it is also true that Moscow kept building missiles, and it kept making trouble around the world, during the years of détente.</p>
 <p>At home, the early 1970s brought an economic shock. In October 1973, Egypt and Syria attacked Israel, and the United States helped to resupply the Israelis. In response, the Arab members of the Organization of the Petroleum Exporting Countries, or <span class="gloss" tabindex="0">OPEC<span class="gloss-tip"><span class="gloss-pron">OH-pek</span>The Organization of the Petroleum Exporting Countries, a group of oil-producing nations that tries to control the supply and price of oil.</span></span>, stopped selling oil to the United States. Gas prices soared, and drivers waited in long lines at stations. Even after the embargo ended, the price of oil stayed high. Now the economy faced an odd combination. Prices were rising fast, and the economy was also stuck and unemployment was high. Economists called it <span class="gloss" tabindex="0">stagflation<span class="gloss-tip"><span class="gloss-pron">stag-FLAY-shun</span>A time when prices rise quickly (inflation) while the economy is stuck and many people are out of work. The word blends "stagnation" and "inflation."</span></span>, a blend of "stagnation" and "inflation." Earlier tools, which worked against one problem at a time, seemed useless against both at once. Neither Nixon nor the presidents after him found an easy answer.</p>
+<div class="ow-group" data-wid="m15-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did critics on each side say about easing tensions with the Soviets?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Critics on the left said Nixon was too willing to prop up harsh governments for the sake of stability. Critics on the right said the Soviets caught up while America pretended all was well.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did the two sides limit anti-ballistic missile systems?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The thinking was that if neither side could defend itself, neither would dare to strike first.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the 1973 peace agreement leave unsettled?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">North Vietnamese soldiers stayed in the south, and nothing stopped the fighting between the two Vietnamese governments. Some saw it as a &#x27;decent interval&#x27; before South Vietnam collapsed.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>When Nixon won reelection in November 1972, in one of the biggest landslides in history, his plan seemed to be working. America was leaving Vietnam, tensions were lower, and China and the Soviets were talking. Yet the war had cost the lives of more than 58,000 Americans, and it had cost the country its trust in its leaders. In April 1975, North Vietnamese tanks rolled into Saigon, and the South Vietnamese government surrendered. Nixon was by then out of office. The cause of his fall was not the war in Asia but a scandal at home, which is the subject of the next lesson.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -390,6 +426,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

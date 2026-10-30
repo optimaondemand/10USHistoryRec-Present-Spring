@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -331,11 +364,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In March 1985, the Soviet Politburo chose a new leader. <span class="gloss" tabindex="0">Mikhail Gorbachev<span class="gloss-tip"><span class="gloss-pron">mih-KYLE GOR-buh-chof</span>The last leader of the Soviet Union, from 1985 to 1991. He tried to reform the system, and the reforms helped bring it down.</span></span> was fifty-four, young for a Soviet ruler, and he was the first to have grown up after Stalin's terror. He knew that the system was in trouble. Stores were empty, factories made goods that no one wanted, and the army was costing a huge share of the national income. Oil prices had fallen, and the Soviet Union depended on oil for much of the money it earned from other countries. Gorbachev wanted to save the system, not to end it. He believed that communism could be reformed, and he began with two ideas.</p>
 <p>The first was <span class="gloss" tabindex="0">glasnost<span class="gloss-tip"><span class="gloss-pron">GLAHZ-nohst</span>A Russian word meaning "openness." It was Gorbachev's policy of letting Soviet citizens discuss and criticize their government.</span></span>, a Russian word meaning "openness." For the first time, Soviet newspapers and writers could criticize the government, and ordinary people could discuss the country's past. The second was <span class="gloss" tabindex="0">perestroika<span class="gloss-tip"><span class="gloss-pron">pair-uh-STROY-kuh</span>A Russian word meaning "restructuring." It was Gorbachev's plan to change the Soviet economy and allow some private business.</span></span>, meaning "restructuring." It allowed some private business and gave factory managers more freedom. Both ideas had a surprising effect. Once people were allowed to talk, they began to say aloud what they had long believed, and the party lost much of its power to frighten them. A reform meant to repair the machine instead began to shake it apart.</p>
 <p>Gorbachev also wanted to ease the cost of the arms race. He and Reagan met for the first time in Geneva in 1985. A year later, in Reykjavik, Iceland, they came close to agreeing to remove all nuclear weapons, but the talks broke down over Reagan's refusal to give up the Strategic Defense Initiative. Even so, the two men had built trust. In December 1987, they signed the <span class="gloss" tabindex="0">Intermediate-Range Nuclear Forces Treaty<span class="gloss-tip"><span class="gloss-pron">in-ter-MEE-dee-it RAYNJ NOO-klee-er FOR-siz TREE-tee</span>A 1987 treaty in which the United States and the Soviet Union agreed to destroy a whole class of nuclear missiles. It also allowed inspections.</span></span> in Washington. It was the first agreement to destroy a whole class of nuclear weapons, rather than just limit their growth. The treaty also allowed each side to inspect the other's sites. Reagan used an old Russian proverb at the signing: "Trust, but verify."</p>
+<div class="optima-widget" data-wid="m16-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">At the Reykjavik meeting, Reagan and <span class="gloss" tabindex="0">Gorbachev<span class="gloss-tip"><span class="gloss-pron">mih-KYLE GOR-buh-chof</span>The last leader of the Soviet Union, from 1985 to 1991. He tried to reform the system, and the reforms helped bring it down.</span></span> came close to agreeing to remove all nuclear weapons. The talks broke down because Reagan would not give up his missile-defense program.</div><details class="ow-reveal"><summary>Suppose he had given it up. What might have followed? Decide first and jot down your guess before you open this.</summary><div class="ow-reveal-body">The lesson does not say, so any answer is reasoning rather than fact. One possibility is a sweeping agreement that would have changed the arms race much sooner. Another is that the deal would have fallen apart under pressure at home. What the lesson does show is that the trust built at Reykjavik helped lead to the treaty of December 1987, even though the meeting itself failed. Small turns in a meeting can change a story, but they do not always change where it ends.</div></details><button class="widget-reset">Reset</button></div>
 <p>Reagan's own position on the Soviets had changed too. The man who had called them an evil empire now said that he did not think of Gorbachev that way. Some historians argue that Reagan's firm stance, followed by his willingness to deal, got the best result. Others stress that Gorbachev was the one who made the choices, and that a different Soviet leader might have used force to keep the empire together. Both views are probably partly right, and this is where contingency matters. In June 1987, Reagan stood before the Brandenburg Gate in West Berlin, within sight of the wall that divided the city, and called on Gorbachev to "tear down this wall." You will read the address this week. At the time, it seemed to many like a hopeless demand.</p>
 <p>The wall fell sooner than anyone expected. The Soviet Union's allies in Eastern Europe had been held in place for forty years by Soviet tanks. Gorbachev announced that he would no longer use them. In Poland, a free labor union called <span class="gloss" tabindex="0">Solidarity<span class="gloss-tip"><span class="gloss-pron">sol-ih-DAIR-ih-tee</span>A free labor union in Poland, led by Lech Walesa, that grew into a movement that helped end communist rule there.</span></span>, led by an electrician named Lech Walesa and backed by the Catholic Church and Pope John Paul II, forced the government to hold elections. In June 1989, Solidarity won nearly every seat it was allowed to contest. In the summer, Hungary opened its border with Austria, and thousands of East Germans fled to the West. Huge crowds gathered in East German cities to demand freedom. The government that had built the Berlin Wall could not stop them.</p>
+<div class="optima-widget ow-scale" data-wid="m16-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID ONE DECISION MATTER?</div><div class="widget-question">Soviet tanks had held the governments of Eastern Europe in place for forty years. Gorbachev told them the tanks would stay home. How much did that decision matter?</div><div class="widget-row" data-correct="1,2" data-fb="Both of those fit the lesson: many causes worked together, and this was a choice that might have gone the other way." data-hint="The lesson says a different Soviet leader might have used force, and also that many causes worked together."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson says the allies had been held in place by Soviet tanks for forty years.">It made no difference</button><button data-choice="1" data-fb="That is a fair answer. Many causes worked together, and this was one of them.">It mattered some, among many causes</button><button data-choice="2" data-fb="That is a fair answer too. Force had held the old order in place, and a different Soviet leader might have used it.">It mattered a great deal, though not alone</button><button data-choice="3" data-fb="Not quite. The lesson names many causes, including the Soviet economy and people who risked their lives.">It was the only cause</button></div></div><button class="widget-reset">Reset</button></div>
 <p>On the night of November 9, 1989, an East German official, speaking at a news conference, said by mistake that new travel rules took effect "immediately." Thousands of people rushed to the wall. The guards, unsure what to do, did not shoot, and the crossings were opened. People climbed on the wall and swung hammers at it. The sight was shown on televisions around the world. Within weeks, Czechoslovakia's communists gave up power in what became known as the <span class="gloss" tabindex="0">Velvet Revolution<span class="gloss-tip"><span class="gloss-pron">VEL-vit rev-uh-LOO-shun</span>The peaceful end of communist rule in Czechoslovakia in late 1989. It was called "velvet" because there was almost no violence.</span></span>, so called because it came almost without bloodshed. Romania's revolution that December was violent, and its dictator was executed. By the end of the year, communist rule in Eastern Europe was gone. Germany was officially reunited in October 1990, with the support of the United States.</p>
 <p>The collapse spread to the Soviet Union itself. Its fifteen republics, including Ukraine, Lithuania, and Georgia, began to demand independence. In August 1991, communist hard-liners tried to take power in a coup. They placed Gorbachev under house arrest, but ordinary people in Moscow, led by Boris Yeltsin, the leader of the Russian republic, stood in front of the tanks, and the coup failed within three days. It destroyed what was left of the party's authority. On December 25, 1991, Gorbachev resigned. The next day, the Soviet Union ceased to exist, and the red flag was lowered from the Kremlin. Fifteen new nations took its place. The Cold War was over, without a nuclear exchange, and the United States stood as the world's only superpower.</p>
 <p>Why did it end? Historians give several answers. Some point to America's strength: its military buildup, its economic growth, and its alliances. Others point to the Soviet system itself, which could not meet the needs of its people. Some credit leaders such as Reagan, Gorbachev, and Pope John Paul II. Others give the credit to ordinary people in Poland, East Germany, and elsewhere who risked their lives. In truth, many causes worked together. The cause that was missing is the one that people feared most. Nuclear war did not come. A classical republican might note that the Western alliance had kept up its guard for four decades, and that its patience and the habits of free societies proved stronger than the discipline of a closed one.</p>
+<div class="optima-widget ow-seq" data-wid="m16-2-3" data-ra-skip data-n="5" data-fb="That is the order. It took six years from the first reforms to the end of the Soviet state." data-hint="The changes in Eastern Europe came before the end of the Soviet Union itself."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Gorbachev becomes the Soviet leader</button><button data-pos="2">Reagan and Gorbachev sign a treaty to destroy a whole class of nuclear weapons</button><button data-pos="3">Poland&#x27;s free labor union wins nearly every seat it may contest</button><button data-pos="4">East German guards open the crossings in Berlin</button><button data-pos="5">The Soviet Union ceases to exist</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>There is a lesson about humility too. Almost no one predicted the end of the Soviet Union, even in 1985, and certainly not in the form it took. Gorbachev, who hoped to save it, helped to end it. Reagan, who is often praised for a plan, could not have known how events would turn out. Contingency means that history can surprise even the experts. In this week's discussion, you will decide how much of the credit each person and factor deserves, and who, in the end, "won."</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -386,6 +422,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -334,12 +367,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>On the afternoon of November 22, 1963, Vice President <span class="gloss" tabindex="0">Lyndon B. Johnson<span class="gloss-tip"><span class="gloss-pron">LIN-dun bee JON-sun</span>The thirty-sixth president, who took office after Kennedy's death and served until 1969.</span></span> took the oath of office on an airplane in Dallas, with Kennedy's widow standing at his side. Johnson was a very different man from Kennedy. He was a tall Texan from a poor part of the Hill Country, who had begun as a schoolteacher and risen to become the most effective Senate majority leader of his time. He understood how Congress worked better than any president of the century. He knew whom to flatter, whom to pressure, and what each member needed. Within five days, he told Congress that the best memorial for Kennedy would be to pass the laws that Kennedy had proposed.</p>
 <p>He started with two. The first was a tax cut, which Kennedy had asked for and which passed in 1964. It helped to power a long economic boom. The second was the Civil Rights Act, which you studied in the last module. But Johnson wanted more than to finish Kennedy's work. In May 1964, speaking at the University of Michigan, he described what he wanted to build. It would be a <span class="gloss" tabindex="0">Great Society<span class="gloss-tip"><span class="gloss-pron">grayt suh-SY-uh-tee</span>Johnson's name for his plan to end poverty and racial injustice and to improve education, health care, and cities.</span></span>, one "that rests on abundance and liberty for all" and that "demands an end to poverty and racial injustice." You will read this speech in this week's source.</p>
 <p>The first target was poverty. In 1964, nearly one in five Americans lived below the <span class="gloss" tabindex="0">poverty line<span class="gloss-tip"><span class="gloss-pron">POV-er-tee lyne</span>The income level the government sets as the least a family needs to meet its basic needs.</span></span>, the income level that the government sets as the least a family needs to meet its basic needs. Johnson declared a <span class="gloss" tabindex="0">War on Poverty<span class="gloss-tip"><span class="gloss-pron">wor on POV-er-tee</span>Johnson's 1964 campaign of programs meant to lift Americans out of poverty.</span></span>. The Economic Opportunity Act, passed that August, created a number of programs. Job Corps trained young people from poor families. VISTA sent volunteers to work in poor communities, as a kind of domestic Peace Corps. <span class="gloss" tabindex="0">Head Start<span class="gloss-tip"><span class="gloss-pron">hed start</span>A program begun in 1965 that gives preschool classes to children from low-income families.</span></span> gave preschool classes to children from low-income homes, to help them be ready for school. Community Action Programs let poor neighborhoods run local efforts. Some of these programs produced results. Head Start is still around today, and some studies find that children who attended did better in later life. Others had problems, and some were poorly managed.</p>
+<div class="optima-widget" data-wid="m13-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Five days after he took the oath, Johnson told Congress that the best memorial to Kennedy would be to pass Kennedy's own laws.</div><details class="ow-reveal"><summary>Why might that argument work, and what else would Johnson need? Decide first and jot down two ideas before you open this.</summary><div class="ow-reveal-body">The argument may have worked because the nation was grieving. But a mood fades. Johnson also needed what the lesson says he had: a close knowledge of Congress, of whom to flatter, whom to pressure, and what each member needed. Had Kennedy lived, the same bills might have moved more slowly, or not at all. That is reasoning, not settled fact, since the lesson cannot tell us what would have happened. It does show that a good idea and a skilled legislator are two different things.</div></details><button class="widget-reset">Reset</button></div>
 <p>Johnson faced the voters in 1964 against Senator <span class="gloss" tabindex="0">Barry Goldwater<span class="gloss-tip"><span class="gloss-pron">BAIR-ee GOHL-waw-ter</span>The Arizona senator and conservative who ran against Johnson in 1964.</span></span> of Arizona. Goldwater was an open conservative who believed that the federal government had grown too large and too powerful. He had voted against the Civil Rights Act, because he thought that parts of it went beyond what the Constitution allowed. His supporters liked that he spoke his mind. His opponents tried to paint him as dangerous, and a famous Johnson television ad suggested that Goldwater might start a nuclear war. In November, Johnson won with about 61 percent of the vote, the largest share of any president in the twentieth century. Democrats also won huge majorities in Congress, and in 1965, Johnson had the votes to pass nearly anything he wanted.</p>
 <p>What he wanted next was health care. Before 1965, many elderly Americans had no health insurance, and illness could wipe out a family's savings. In July 1965, Johnson signed <span class="gloss" tabindex="0">Medicare<span class="gloss-tip"><span class="gloss-pron">MED-ih-kair</span>A program, begun in 1965, that pays for hospital and medical care for Americans over sixty-five.</span></span>, which pays for hospital and medical care for Americans over sixty-five, and <span class="gloss" tabindex="0">Medicaid<span class="gloss-tip"><span class="gloss-pron">MED-ih-kayd</span>A program, begun in 1965, that helps the states pay for the health care of poor people.</span></span>, which helps the states pay for the health care of poor people. He signed the bill in Independence, Missouri, in front of Harry Truman, who had proposed national health insurance twenty years before. In just a few months, millions of older Americans were enrolled.</p>
 <p>The 1965 Congress passed a great deal more. The Elementary and Secondary Education Act sent federal money to schools in poor districts, the first big federal role in local education. The Higher Education Act created scholarships and loans for college. Congress also created the National Endowments for the Arts and for the Humanities, a Department of Housing and Urban Development, and the Voting Rights Act, which you have already read about. New laws set standards for the safety of cars and for clean air and water.</p>
+<div class="optima-widget ow-seq" data-wid="m13-2-2" data-ra-skip data-n="5" data-fb="That is the order. The landslide of November 1964 gave Johnson the votes to pass health care in 1965." data-hint="Think of the goal first, then the law, then the vote that made more laws possible."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Johnson takes the oath on an airplane in Dallas</button><button data-pos="2">Johnson describes his hopes for a better nation in a speech in Michigan</button><button data-pos="3">Congress passes the Economic Opportunity Act</button><button data-pos="4">Johnson beats Goldwater in a landslide</button><button data-pos="5">Johnson signs health insurance for the elderly and the poor in Independence, Missouri</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>One of the most important laws was also one of the least noticed at the time. The <span class="gloss" tabindex="0">Immigration and Nationality Act of 1965<span class="gloss-tip"><span class="gloss-pron">im-ih-GRAY-shun and nash-uh-NAL-ih-tee akt uv nyne-TEEN SIX-tee-fyve</span>The law that ended the quota system based on national origin and gave priority to family ties and skills.</span></span> ended the quota system of the 1920s, which had set limits by national origin and favored Northern Europeans. The new law gave priority to family ties and to skills. Supporters said that it was just a matter of fairness. They expected that few new immigrants would come from outside Europe. In fact, over the following decades, immigration shifted greatly toward Asia and Latin America. Here, as in other cases, the results were very different from the expectations. It is one of the best examples in this course of an unintended consequence.</p>
 <p>How did the Great Society do? Supporters have a strong case. The poverty rate fell from about nineteen percent in 1964 to about twelve percent by 1969, and the elderly, who had been the poorest group in America, did far better once Medicare and Social Security grew. Medicare and Medicaid spread basic medical care. Millions of students went to college with federal help.</p>
 <p>Critics have a case too. Some argue that welfare programs, as they grew, rewarded people for not working or not marrying, and led to long-term dependence. Conservatives made an argument that fit the Tocqueville tradition: that the real strength of America came from churches, families, and local groups, and that big federal programs pushed these aside. Others said that the programs were too big and too hastily designed, that they promised more than they could deliver, and that federal spending on them added to the cost of government. A republic judges policies by whether they help solve the first-order economic problem, and this one is still contested. Another argument is about federalism: should the national government decide how to run local schools and health care, or should the states and cities?</p>
+<div class="optima-widget ow-scale" data-wid="m13-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW SETTLED IS THE VERDICT?</div><div class="widget-question">Supporters of the <span class="gloss" tabindex="0">Great Society<span class="gloss-tip"><span class="gloss-pron">grayt suh-SY-uh-tee</span>Johnson's name for his plan to end poverty and racial injustice and to improve education, health care, and cities.</span></span> point to the fall in the <span class="gloss" tabindex="0">poverty rate<span class="gloss-tip"><span class="gloss-pron">POV-er-tee lyne</span>The income level the government sets as the least a family needs to meet its basic needs.</span></span>. Critics point to dependence, cost, and who should run local schools. How settled is the question of whether it worked?</div><div class="widget-row" data-correct="3" data-fb="Yes. Supporters point to falling poverty and spreading health care. Critics point to dependence, cost, and the question of who should run schools and health care." data-hint="The lesson gives a case for supporters and a case for critics, and calls the question contested."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The poverty rate fell and many people gained health care, which supporters count as real success.">Settled: it clearly failed</button><button data-choice="1" data-fb="Not quite. The lesson cites studies, and the debate is still open.">Nobody has studied it</button><button data-choice="2" data-fb="Not quite. Critics have a case too, about dependence, cost, and who should decide.">Settled: it clearly worked</button><button data-choice="3" data-fb="Yes. Supporters point to falling poverty and spreading health care. Critics point to dependence, cost, and the question of who should run schools and health care.">Still contested, with real evidence on both sides</button></div></div><button class="widget-reset">Reset</button></div>
 <p>There was one more difficulty, and it was growing. Johnson wanted to spend on both guns and butter, which means that he wanted to fight a war abroad and build a Great Society at home. By 1965, the war in Vietnam was swallowing up money, attention, and the trust of the American people. Johnson himself feared that the war would crowd out his domestic dreams, and he later told a biographer that it had done just that. The next module turns to that war, the largest and most troubling event of his presidency.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -390,6 +426,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

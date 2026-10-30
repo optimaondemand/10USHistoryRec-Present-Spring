@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,13 +368,16 @@
 <p>On April 1, 1945, American soldiers and Marines landed on Okinawa, an island only about 350 miles from the Japanese mainland. The invasion force was the largest the Americans ever used in the Pacific. The Japanese commander did not try to stop the landing at the beaches. Instead he pulled his men back into the hills and caves and let the Americans come to him. The <span class="gloss" tabindex="0">Battle of Okinawa<span class="gloss-tip"><span class="gloss-pron">BAT-ul uv oh-kih-NAH-wuh</span>The 82-day battle in 1945 for an island about 350 miles from Japan, the last and bloodiest battle of the Pacific War.</span></span> lasted eighty-two days. More than twelve thousand Americans died on land and sea. More than a hundred thousand Japanese soldiers were killed. Tens of thousands of Okinawan civilians died as well, caught between the armies.</p>
 <p>At sea, the Americans met a new weapon. Japanese pilots began to fly their planes loaded with explosives straight into ships. They were called <span class="gloss" tabindex="0">kamikaze<span class="gloss-tip"><span class="gloss-pron">kah-mih-KAH-zee</span>A Japanese word meaning "divine wind." It names the pilots who flew explosive-filled planes into ships.</span></span>, a Japanese word meaning "divine wind." Over the course of the battle, these attacks sank dozens of ships and killed nearly five thousand sailors. It was the deadliest battle in the history of the United States Navy. To Americans in the fleet, the message was clear. If this was what it cost to take a small island, what would it cost to take Japan itself?</p>
 <p>On April 12, 1945, in the middle of the Okinawa fighting, Roosevelt died of a stroke at his vacation home in Georgia. His successor was <span class="gloss" tabindex="0">Harry S. Truman<span class="gloss-tip"><span class="gloss-pron">HAIR-ee es TROO-mun</span>The thirty-third president, who took office when Roosevelt died in April 1945.</span></span>, a former senator from Missouri who had been vice president for only eighty-two days. Roosevelt had told him almost nothing about the war plans. Only after he took the oath did Truman learn about the <span class="gloss" tabindex="0">Manhattan Project<span class="gloss-tip"><span class="gloss-pron">man-HAT-un PROJ-ekt</span>The secret American program, begun in 1942, to build an atomic bomb.</span></span>. The new president, who had no experience with foreign affairs, now had to make the most serious decision any American leader had faced.</p>
+<div class="optima-widget" data-wid="m9-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">In April 1945, Truman became president knowing almost nothing about the biggest secrets of the war.</div><details class="ow-reveal"><summary>What might have been different if <span class="gloss" tabindex="0">Truman<span class="gloss-tip"><span class="gloss-pron">HAIR-ee es TROO-mun</span>The thirty-third president, who took office when Roosevelt died in April 1945.</span></span> had been fully briefed during his eighty-two days as vice president? Decide first and jot down two possible differences before you open this.</summary><div class="ow-reveal-body">He would still have faced the same war, the same invasion plan, and the same secret weapon. But he might have had time to ask questions, hear from more advisers, and weigh his choices before facing them alone. The lesson does not tell us what he would have decided. This is reasoning from what we know, not a certain result.</div></details><button class="widget-reset">Reset</button></div>
 <p>The planning for an invasion of Japan was already under way. It was known as <span class="gloss" tabindex="0">Operation Downfall<span class="gloss-tip"><span class="gloss-pron">op-er-AY-shun DOWN-fawl</span>The American plan to invade Japan, set to begin in November 1945.</span></span>. The first stage, an attack on the southern island of Kyushu, was set for November 1945. Japan had many soldiers at home, and it was gathering thousands of planes for suicide attacks. Experts guessed at how many Americans might die in the invasion, and their guesses varied widely. Historians still argue about the numbers. What is clear is that the leaders in Washington expected a battle that would be far worse than Okinawa. Many Japanese civilians would die too.</p>
 <p>At the same time, the Americans tried to end the war by other means. A tight naval blockade, together with bombing, was choking off Japan's food and fuel. In July 1945, Truman met with Churchill and Stalin at Potsdam, a city near Berlin. On July 26, the United States, Britain, and China issued the <span class="gloss" tabindex="0">Potsdam Declaration<span class="gloss-tip"><span class="gloss-pron">POTS-dam dek-luh-RAY-shun</span>The July 26, 1945, demand by the United States, Britain, and China that Japan surrender or face "prompt and utter destruction."</span></span>. It called on Japan to surrender at once, or face "prompt and utter destruction." The declaration did not say what would happen to the emperor, and that was a key question for Japan's leaders. Japan's government answered that it would "ignore" the declaration. The word could be read in different ways, but the Americans took it as a refusal.</p>
 <p>Meanwhile, the work in the desert had succeeded. On July 16, before dawn, scientists exploded the first <span class="gloss" tabindex="0">atomic bomb<span class="gloss-tip"><span class="gloss-pron">uh-TOM-ik bom</span>A weapon whose great force comes from splitting atoms.</span></span> at a site in New Mexico called Trinity. An atomic bomb is a weapon that gets its force from splitting atoms, and its power far exceeded that of any earlier weapon. Truman received the news at Potsdam. He told Stalin only in a vague way that the United States had a new weapon.</p>
 <p>On August 6, a B-29 named the Enola Gay dropped a bomb on the city of Hiroshima. About 70,000 people died almost at once, and the total by the end of the year was perhaps twice that. Truman announced the news to the American people and warned that more would follow if Japan did not give up. On August 8, the Soviet Union, which had promised to join the war, declared war on Japan and attacked Japanese forces in Manchuria. On August 9, a second bomb fell on Nagasaki. The plane had been sent to another city, Kokura, but clouds covered it, so the crew went on to its second target. Perhaps 40,000 died at once at Nagasaki, and by the end of the year, about 70,000.</p>
+<div class="optima-widget ow-seq" data-wid="m9-2-2" data-ra-skip data-n="5" data-fb="That is the order. The test came first, and the Soviet declaration fell between the two bombs." data-hint="Use the dates in the lesson. July comes before August."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events of 1945 in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Scientists test a new weapon in the New Mexico desert</button><button data-pos="2">The United States, Britain, and China call on Japan to surrender</button><button data-pos="3">A bomber drops a bomb on Hiroshima</button><button data-pos="4">The Soviet Union declares war on Japan</button><button data-pos="5">A second bomb falls on Nagasaki</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Even then, Japan's leaders were split. Some members of the war council wanted to surrender if the emperor kept his position. Others wanted to fight on. In the middle of the night of August 9 to 10, the emperor, <span class="gloss" tabindex="0">Hirohito<span class="gloss-tip"><span class="gloss-pron">heer-oh-HEE-toh</span>The emperor of Japan from 1926 to 1989, whose radio speech announced Japan's surrender.</span></span>, broke the tie and called for surrender. Japan asked if it could keep him, and the Allies replied in a way that allowed it. On August 15, for the first time, the Japanese people heard the voice of their emperor, in a radio speech announcing the end of the war. Americans celebrated what they called <span class="gloss" tabindex="0">V-J Day<span class="gloss-tip"><span class="gloss-pron">VEE-jay day</span>"Victory over Japan Day," the celebration of the end of the war with Japan, in August 1945.</span></span>, for Victory over Japan. The formal surrender took place on September 2, aboard the battleship USS Missouri in Tokyo Bay, with General MacArthur presiding.</p>
 <p>Was the use of the bomb right? Historians have argued about it for decades, and you should look at both sides. Those who defended it said that it ended the war quickly and saved many lives, American and Japanese, that would have been lost in an invasion or in a longer blockade. They pointed out that Japan had not surrendered after the firebombing, after the loss of its navy, or after the Potsdam Declaration. Critics said that Japan was already close to defeat and that a demonstration of the weapon, a clearer promise about the emperor, or a short wait for the Soviet attack might have worked. Some also argued that deliberately killing so many civilians broke the old rule that soldiers must protect those who are not fighting. Even some officers who served in the war doubted that the bombs had been needed.</p>
 <p>Notice that every choice in 1945 was made with limited knowledge, in the middle of a war that had already killed tens of millions. The leaders could not see how things would turn out, and the next day might have gone in different directions. A clouded sky saved Kokura. A tie vote in a Japanese council was broken by one man. As you read Truman's own statement, ask what he said, what he did not say, and what questions it leaves open.</p>
+<div class="optima-widget ow-scale" data-wid="m9-2-3" data-ra-skip><div class="widget-kicker">&#9889; WHERE WOULD YOU PLACE IT?</div><div class="widget-question">How settled is the debate over whether the bomb was needed to end the war?</div><div class="widget-row" data-correct="3,4" data-fb="Yes. Historians have argued about it for decades, and each side has serious points." data-hint="Think about what the lesson says about the two sides and how long they have argued."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson says historians have argued about this for decades.">Fully settled</button><button data-choice="1" data-fb="Not quite. Both sides in the lesson have serious points.">Mostly settled</button><button data-choice="2" data-fb="Not quite. After decades of argument, the question is not close to settled.">Partly settled</button><button data-choice="3" data-fb="Yes. Each side has serious points, so the question is still mostly open.">Mostly open</button><button data-choice="4" data-fb="Also fair. Historians have argued for decades, and no side has won the whole question.">Fully open</button></div></div><button class="widget-reset">Reset</button></div>
 <p>When the war ended, the United States stood as the strongest country on earth. It held a weapon that no other nation had. It faced a new rival, the Soviet Union, that had also grown mighty. The story of that struggle begins next quarter.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -392,6 +428,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -334,12 +367,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In a speech in December 1940, Roosevelt called the United States "the great arsenal of democracy." By 1942, the phrase was no longer just a hope. The country was now the largest factory in the world. Wars of the twentieth century were won by those who could make more tanks, ships, and planes than the enemy, and the United States did this better than anyone. The home front, as Americans called it, was where much of the war was decided.</p>
 <p>The change started in early 1942. The government told car companies to stop making cars. Within months, the same factories were making tanks, jeeps, and aircraft engines. Roosevelt set a goal of sixty thousand planes in a single year, which seemed impossible, and the country met it. Henry Ford's new plant at Willow Run, Michigan, was one of the largest factory buildings in the world and was built to make B-24 bombers. At its peak, it turned out one bomber an hour. In the shipyards of Henry Kaiser, workers built the <span class="gloss" tabindex="0">Liberty ship<span class="gloss-tip"><span class="gloss-pron">LIB-ur-tee ship</span>A cheap cargo ship, built from standard parts with welded seams, that American yards produced by the thousands in the war.</span></span>, a cheap cargo vessel made from standard parts, with welded seams in place of rivets. One Liberty ship, the Robert E. Peary, was finished in a little under five days. Over the course of the war, American yards built more than two thousand of them. These ships could carry food and weapons faster than German submarines could sink them.</p>
 <p>The Great Depression ended because of the war. Unemployment, which had been above twenty percent in 1933, fell below two percent by 1944. Wages rose. But money could not buy everything, because factories were making weapons instead of goods for families. To make sure there was enough to go around, the government began <span class="gloss" tabindex="0">rationing<span class="gloss-tip"><span class="gloss-pron">RASH-un-ing</span>A system that limits how much of a scarce good each person may buy.</span></span>, which limits how much of something each person may buy. Families received books of stamps for sugar, meat, butter, gasoline, and rubber tires. Citizens also bought <span class="gloss" tabindex="0">war bonds<span class="gloss-tip"><span class="gloss-pron">wor bondz</span>Bonds sold to citizens to lend money to the government in wartime, to be paid back later with interest.</span></span>, which let them lend money to the government and be paid back later with interest. Americans planted victory gardens and collected scrap metal. This kind of cooperation is what the classical republican tradition calls civic virtue, which means that ordinary people accepted limits on themselves for the common good. The American people did not do it perfectly, and a black market in rationed goods grew. But they did it on a scale that surprised even their leaders.</p>
+<div class="optima-widget ow-reflect" data-wid="m9-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Imagine the government asked your family to limit how much sugar, gas, and meat you could buy, for a goal you believed in. How would you respond? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Many families did. Going along because you share the goal is one way a whole country can pull together.">Go along gladly</button><button data-response="That was common too. People can complain and still do their part.">Go along, but grumble</button><button data-response="Some people did. The lesson says a black market grew in goods that were limited.">Look for ways around it</button><button data-response="A fair question. People tend to accept limits more readily when they understand why.">Ask for the reason first</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Women were central to the change. About six million women entered the workforce during the war, many taking jobs in factories that had been closed to them. Posters and songs celebrated "Rosie the Riveter." Women welded ships, built planes, and ran machines. Others served in the military in nonfighting roles, as nurses, pilots who delivered planes, and radio operators. When the war ended, most women left their jobs, either because they chose to or because they were told to. Yet the experience had changed what many women expected from life.</p>
 <p>The war also changed things for Black Americans, though not by itself. The Great Migration of Black families from the South to the cities of the North and West continued, since the best war jobs were there. But those jobs were not given freely. In 1941, the labor leader <span class="gloss" tabindex="0">A. Philip Randolph<span class="gloss-tip"><span class="gloss-pron">ay FIL-ip RAN-dolf</span>A Black labor leader whose threat of a march on Washington in 1941 helped win a ban on discrimination in defense jobs.</span></span> threatened to bring a hundred thousand Black marchers to Washington to demand equal hiring. Roosevelt did not want the embarrassment, so he issued an order that banned discrimination in defense industries and set up the <span class="gloss" tabindex="0">Fair Employment Practices Committee<span class="gloss-tip"><span class="gloss-pron">fair em-PLOY-ment PRAK-tis-iz kuh-MIT-ee</span>A federal committee set up in 1941 to enforce the ban on job discrimination in defense industries.</span></span> to enforce it. The committee had little power, but it was an important first step. The armed forces stayed segregated. Even so, Black soldiers, sailors, and airmen served with courage. The Tuskegee Airmen, Black pilots trained in Alabama, escorted bombers over Europe and earned an excellent record. Tension at home also ran high. In June 1943, a riot in Detroit killed thirty-four people. Many Black Americans spoke of a "double victory," over fascism abroad and over racism at home.</p>
 <p>The darkest chapter on the home front involved Japanese Americans. After Pearl Harbor, fear spread on the West Coast that Japan might invade, and that people of Japanese descent could help it. There was no proof that any Japanese American was a spy. Still, on February 19, 1942, Roosevelt signed <span class="gloss" tabindex="0">Executive Order 9066<span class="gloss-tip"><span class="gloss-pron">ig-ZEK-yuh-tiv OR-der nyn-oh-siks-siks</span>The February 1942 order that let the army remove people of Japanese descent from the West Coast.</span></span>. It gave the army power to remove people from areas it judged important for defense. In practice, this meant that about 120,000 people of Japanese descent, most of whom lived in California, Oregon, and Washington, were forced from their homes. About two-thirds of them were American citizens. They were sent to camps in remote places, such as Manzanar in California and Heart Mountain in Wyoming, and held behind barbed wire. Many lost their homes, farms, and businesses. No Japanese American was ever convicted of spying.</p>
+<div class="optima-widget ow-select" data-wid="m9-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; SORT THE ACTIONS</div><div class="widget-question">Each action below shows a different side of the home front. Choose the best description of each.</div><div class="widget-row" data-correct="3" data-fb="Right. Citizens chose to accept limits and lend money for the common good." data-hint="Think about who chose to do this, and why."><div class="widget-row-prompt">1. Families bought <span class="gloss" tabindex="0">war bonds<span class="gloss-tip"><span class="gloss-pron">wor bondz</span>Bonds sold to citizens to lend money to the government in wartime, to be paid back later with interest.</span></span> and collected scrap metal.</div><div class="widget-options"><button data-choice="0">A group lost its rights out of fear</button><button data-choice="1">A group gained chances it had not had before</button><button data-choice="2">Leaders planned ahead for peace</button><button data-choice="3">Ordinary people accepted limits for a shared goal</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. There was no proof against them, and about two-thirds were citizens." data-hint="Ask who made the decision, and whether the people affected had any say."><div class="widget-row-prompt">2. About 120,000 people of Japanese descent were removed from their homes.</div><div class="widget-options"><button data-choice="0">A group gained chances it had not had before</button><button data-choice="1">A group lost its rights out of fear</button><button data-choice="2">Ordinary people accepted limits for a shared goal</button><button data-choice="3">Leaders planned ahead for peace</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. The war opened doors that had been shut, though most women left those jobs when it ended." data-hint="Think about what these women could now do that they could not do before."><div class="widget-row-prompt">3. About six million women took jobs, many in factories that had been closed to them.</div><div class="widget-options"><button data-choice="0">A group gained chances it had not had before</button><button data-choice="1">Ordinary people accepted limits for a shared goal</button><button data-choice="2">Leaders planned ahead for peace</button><button data-choice="3">A group lost its rights out of fear</button></div></div><button class="widget-reset">Reset</button></div>
 <p>A young man named <span class="gloss" tabindex="0">Fred Korematsu<span class="gloss-tip"><span class="gloss-pron">fred kor-eh-MAHT-soo</span>A Japanese American who refused to go to the camps and took his case to the Supreme Court.</span></span> refused to go. He was arrested and convicted. His case reached the Supreme Court. In December 1944, in Korematsu v. United States, the Court ruled six to three that the order was allowed because of military necessity. Justice Frank Murphy, in a dissent, said that the order went over "the very brink of constitutional power" and fell into "the ugly abyss of racism." The decision has not been supported by later generations. Congress passed a law in 1988 that apologized and paid twenty thousand dollars to each survivor of the camps. In 2018, the Court itself said that Korematsu was "gravely wrong the day it was decided." You will read parts of the opinion in this week's source. Meanwhile, young Japanese American men in the army, the 442nd Regimental Combat Team, fought in Italy and France. For its size and length of service, it became the most decorated unit in American history.</p>
 <p>Back at home, Congress also planned for the future. In 1944, it passed the <span class="gloss" tabindex="0">GI Bill<span class="gloss-tip"><span class="gloss-pron">JEE eye bil</span>The 1944 law that gave veterans help with college, home loans, and finding work.</span></span>, a law that offered veterans money for college, loans to buy homes and start businesses, and help in finding work. Millions of veterans used it, and the law shaped the next generation of American life.</p>
 <p>One part of the home front was kept secret from almost everybody. In 1939, scientists had warned Roosevelt that Germany might be able to build a bomb of tremendous power. By 1942, the United States had launched the <span class="gloss" tabindex="0">Manhattan Project<span class="gloss-tip"><span class="gloss-pron">man-HAT-un PROJ-ekt</span>The secret American program, begun in 1942, to build an atomic bomb.</span></span>, a huge secret program to build such a weapon first. It was led by General Leslie Groves and the physicist J. Robert Oppenheimer. Workers at Oak Ridge in Tennessee, at Hanford in Washington, and at Los Alamos in New Mexico built different parts of it. More than a hundred thousand people worked on the project. Most of them did not know what they were making. It cost about two billion dollars.</p>
+<div class="ow-group" data-wid="m9-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">A 1944 law offered veterans three kinds of help. Can you name them?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Money for college, loans to buy homes and start businesses, and help finding work.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Who led the huge secret weapons program, and in which states did the work take place?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">General Leslie Groves and the physicist J. Robert Oppenheimer led it. Work took place in Tennessee, Washington, and New Mexico, and most of the workers did not know what they were making.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Which unit of Japanese American soldiers became the most decorated for its size and length of service?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The 442nd Regimental Combat Team, which fought in Italy and France.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>The home front shows a republic at its best and at its worst. It gave an example of freely chosen sacrifice and fast cooperation. It also showed that a nation can give up the rights of a group of its own citizens out of fear. The next lesson turns back to the fighting and to the use of the weapon that came out of the secret project.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -390,6 +426,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

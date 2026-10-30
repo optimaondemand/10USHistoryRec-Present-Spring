@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,11 +368,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>By the late 1960s, the largest generation in American history was coming of age. The baby boomers had grown up with prosperity, television, and the Cold War, and many of them questioned the world their parents had built. At the same time, the nation was fighting an unpopular war and struggling with racial justice. It is not surprising that the decade became one of the most turbulent in the century. It is important to remember, though, that the protests were varied. Some were serious and aimed at fixing real problems. Some had little to do with politics. And many Americans, probably most, took no part in any of them.</p>
 <p>The student movement began at the universities. In 1962, a small group of young people met in Port Huron, Michigan, and wrote a statement of their ideas. They founded <span class="gloss" tabindex="0">Students for a Democratic Society<span class="gloss-tip"><span class="gloss-pron">STOO-dents for uh dem-uh-KRAT-ik suh-SY-uh-tee</span>A student group founded in 1962 that called for "participatory democracy" and later led antiwar protest. It is often called SDS.</span></span>, known as SDS, which called for a politics of "participatory democracy" and criticized what its members saw as a cold and bureaucratic society. In 1964, students at the University of California at Berkeley challenged a ban on political activity on campus. The <span class="gloss" tabindex="0">Free Speech Movement<span class="gloss-tip"><span class="gloss-pron">free speech MOOV-ment</span>The 1964 student protest at Berkeley against a ban on political activity on campus.</span></span> used sit-ins borrowed from the civil rights movement, and it began a wave of campus protest. As the war in Vietnam grew, so did the antiwar movement. Teach-ins, marches, and draft-card burnings spread. In October 1967, about a hundred thousand protesters came to Washington, and many marched to the Pentagon.</p>
 <p>A smaller part of the youth culture turned away from politics altogether. This was the <span class="gloss" tabindex="0">counterculture<span class="gloss-tip"><span class="gloss-pron">KOWN-ter-kul-chur</span>A way of life in the 1960s that rejected the habits and values of the older generation.</span></span>, a way of life that rejected the habits and values of the older generation. Its members, called hippies, wore long hair and colorful clothes, experimented with drugs, listened to rock music, and talked of peace and love. In the "Summer of Love" of 1967, tens of thousands came to the Haight-Ashbury neighborhood of San Francisco. In August 1969, a huge music festival at Woodstock, in New York, drew about four hundred thousand people. Some saw this as a search for a freer and gentler way to live. Others, including many older Americans, saw it as a rejection of the work, family, and religion on which the republic depended.</p>
+<div class="optima-widget" data-wid="m14-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Some Americans read the <span class="gloss" tabindex="0">counterculture<span class="gloss-tip"><span class="gloss-pron">KOWN-ter-kul-chur</span>A way of life in the 1960s that rejected the habits and values of the older generation.</span></span> as a hunt for a kinder, more open way to live. Others read it as a turn against the work, family, and faith that a republic leans on.</div><details class="ow-reveal"><summary>Which worry weighs more with you, and what would you want to know before deciding? Decide first and jot down your answer before you open this.</summary><div class="ow-reveal-body">The lesson gives a reason to take each view seriously, and also a caution: the protests were varied, some had little to do with politics, and many Americans, probably most, took no part in any of them. So a careful historian would ask how many people each view really describes. Critics worried about the bonds between citizens. Defenders pointed to a wish for peace and a gentler life. You can hold both thoughts at once, and the question stays open.</div></details><button class="widget-reset">Reset</button></div>
 <p>Women organized too. In 1963, a writer named <span class="gloss" tabindex="0">Betty Friedan<span class="gloss-tip"><span class="gloss-pron">BET-ee free-DAN</span>The writer whose 1963 book The Feminine Mystique helped start a new women's movement.</span></span> published The Feminine Mystique, which said that many educated women were unhappy with a life limited to home and children. In 1966, Friedan and others founded the <span class="gloss" tabindex="0">National Organization for Women<span class="gloss-tip"><span class="gloss-pron">NASH-uh-nul or-gun-ih-ZAY-shun for WIM-in</span>A group founded in 1966 to push for equal treatment of women. It is often called NOW.</span></span>, or NOW, to push for equal treatment. The 1964 Civil Rights Act had banned job discrimination based on sex, but it was not always enforced. In 1972, Congress passed Title IX, a law that banned sex discrimination in education programs that received federal money, and its best-known effect was to open up school sports to girls and women. <span class="gloss" tabindex="0">Title IX<span class="gloss-tip"><span class="gloss-pron">TY-tul nyne</span>A 1972 law that banned sex discrimination in education programs that receive federal money.</span></span> was a lasting achievement. In the same year, Congress sent the Equal Rights Amendment to the states, but it fell a few states short of ratification. Women did not all agree, and some, such as the conservative activist Phyllis Schlafly, organized to oppose the amendment.</p>
 <p>Other groups pressed their claims. In California, <span class="gloss" tabindex="0">Cesar Chavez<span class="gloss-tip"><span class="gloss-pron">SAY-zar CHAH-vez</span>The leader who organized farmworkers into a union in California.</span></span> and Dolores Huerta organized farmworkers, who were mostly Mexican American, into a union. Using a nationwide grape boycott and a style of nonviolent protest borrowed from King, they won contracts in 1970. American Indian activists seized the island of Alcatraz in 1969 and protested the treatment of tribes. Among Black Americans, a different voice was heard. After the Voting Rights Act, some activists said that the movement had to go further. In 1966, Stokely Carmichael, the leader of SNCC, called for <span class="gloss" tabindex="0">Black Power<span class="gloss-tip"><span class="gloss-pron">blak POW-er</span>A call from the mid-1960s for Black Americans to build their own political and economic strength and take pride in their heritage.</span></span>, which urged Black Americans to build their own political and economic strength and to take pride in their heritage. To some, the phrase meant self-reliance. To others, it sounded like a break with the earlier movement. The meaning was debated within the Black community as well.</p>
 <p>Meanwhile, cities exploded. In the summer of 1965, a riot in the Watts neighborhood of Los Angeles left thirty-four people dead. In the summer of 1967, riots broke out in Newark and Detroit, where forty-three people died and federal troops were called in. A commission appointed by Johnson, the Kerner Commission, blamed white racism and poverty. Many white Americans reacted with fear and anger, and some began to question whether the Great Society was working.</p>
+<div class="optima-widget ow-scale" data-wid="m14-2-2" data-ra-skip><div class="widget-kicker">&#9889; ONE MOVEMENT OR MANY?</div><div class="widget-question">How united were the protest movements of the 1960s?</div><div class="widget-row" data-correct="3" data-fb="Yes. Students, women, farmworkers, and others wanted different things, and the lesson says most Americans took no part." data-hint="The lesson says the protests were varied. Who actually took part?"><div class="widget-options"><button data-choice="0" data-fb="Not quite. Students, women, farmworkers, and others wanted different things.">One movement, with one set of goals</button><button data-choice="1" data-fb="Not quite. The lesson describes groups with very different aims, not two.">Two movements, one for each party</button><button data-choice="2" data-fb="Not quite. These groups often disagreed, even within a single movement.">A few large groups that agreed on most things</button><button data-choice="3" data-fb="Yes. Students, women, farmworkers, and others wanted different things, and the lesson says most Americans took no part.">Many movements with different goals, and most Americans joined none</button><button data-choice="4" data-fb="Not quite. Some unrest turned violent, but the lesson describes organized movements with real goals.">No movements at all, only riots</button></div></div><button class="widget-reset">Reset</button></div>
 <p>The year 1968 was a breaking point. In January came the Tet Offensive. In March, Johnson said that he would not run again. On April 4, Martin Luther King Jr. was shot and killed in Memphis, Tennessee, where he had gone to support striking sanitation workers. Riots broke out in more than a hundred cities. On June 5, Senator Robert Kennedy, who had just won the California primary and was a leading candidate for president, was shot and killed in Los Angeles. In August, at the Democratic convention in Chicago, police and protesters fought in the streets, with the cameras running. The party split. In November, Richard Nixon, a Republican who promised "law and order" and an honorable end to the war, narrowly defeated Vice President Hubert Humphrey. A third-party candidate, George Wallace, carried five Southern states.</p>
 <p>Nixon had a theory about who was on his side. In a televised speech in November 1969, which you will read this week, he asked for the support of "the great silent majority of my fellow Americans." The <span class="gloss" tabindex="0">silent majority<span class="gloss-tip"><span class="gloss-pron">SY-lunt muh-JOR-ih-tee</span>Nixon's name for ordinary Americans who did not march or shout but supported the country and its policies.</span></span> meant ordinary working Americans who did not march or shout, but who went to work, paid their taxes, and supported the country. The speech helped Nixon, who was struggling to hold support for the war. He was right that these Americans existed. The voters of 1968 and 1972 were drawn in large numbers to a message that stressed order, patriotism, and tradition.</p>
+<div class="optima-widget ow-seq" data-wid="m14-2-3" data-ra-skip data-n="5" data-fb="That is the order. In one year, 1968 packed in a war shock, two killings, and a party split." data-hint="Start with the war news in January, then follow the spring and summer."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put the events of 1968 in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Surprise attacks hit more than a hundred towns and cities in South Vietnam</button><button data-pos="2">Johnson says he will not run again</button><button data-pos="3">King is shot and killed in Memphis</button><button data-pos="4">Robert Kennedy is shot and killed in Los Angeles</button><button data-pos="5">Police and protesters fight in the streets outside the Democratic convention</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The antiwar movement had its own tragic turning point. In April 1970, Nixon announced that American troops had entered Cambodia, and colleges erupted. On May 4, at <span class="gloss" tabindex="0">Kent State<span class="gloss-tip"><span class="gloss-pron">kent stayt</span>The Ohio university where National Guard soldiers shot into a crowd of protesters in May 1970 and killed four students.</span></span> University in Ohio, National Guard soldiers fired into a crowd of student protesters and killed four. Some of the dead had not even been protesting. Ten days later, two students were killed at Jackson State College in Mississippi. The nation was horrified. Many students stayed home for the rest of the year, and the sense of crisis deepened.</p>
 <p>How should a historian judge the 1960s? The classical republican looks at the bonds between citizens. In that light, the decade had real losses. Trust in government, which was high in 1960, fell steeply by 1970. The shared culture that radio and television had built in earlier decades began to break apart. On the other hand, many of the movements had pressed the republic to live up to its own promises, and they succeeded in several cases. The difficulty is that a nation can be both more just and less united. Nixon came to power on the promise to heal the divide. The next module shows how that worked out.</p></div>
 </div>
@@ -391,6 +427,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

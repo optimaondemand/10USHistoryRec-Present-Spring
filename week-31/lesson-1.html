@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -334,12 +367,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In November 1960, <span class="gloss" tabindex="0">John F. Kennedy<span class="gloss-tip"><span class="gloss-pron">jon eff KEN-uh-dee</span>The thirty-fifth president, elected in 1960 and assassinated in November 1963.</span></span>, a young senator from Massachusetts, won one of the closest elections in American history. At forty-three, he was the youngest man ever elected president. His inaugural address in January 1961 promised that the United States would "pay any price, bear any burden" to defend liberty. The test of those words came quickly, and it came in a place only ninety miles from Florida.</p>
 <p>In 1959, a rebel leader named <span class="gloss" tabindex="0">Fidel Castro<span class="gloss-tip"><span class="gloss-pron">fih-DEL KAS-troh</span>The communist leader who took power in Cuba in 1959 and ruled it for decades.</span></span> had overthrown the Cuban dictator Fulgencio Batista. Within two years, Castro had taken American property, put his opponents in jail, and turned to the Soviet Union for money and arms. The Eisenhower administration had begun a secret plan to train Cuban exiles to invade the island. Kennedy inherited the plan and approved it. On April 17, 1961, about fourteen hundred exiles landed at the Bay of Pigs, on Cuba's southern coast. The plan had expected that the Cuban people would rise up, and that American air power would help. Neither happened. Kennedy refused to send in American planes, and Castro's forces captured most of the invaders. The <span class="gloss" tabindex="0">Bay of Pigs<span class="gloss-tip"><span class="gloss-pron">bay uv pigz</span>The failed April 1961 invasion of Cuba by about fourteen hundred American-trained exiles.</span></span> was a humiliating failure. Kennedy took responsibility on television, and privately he admitted that he had been poorly advised. He also learned to be more careful about what the military and the CIA told him.</p>
 <p>Two months later, in Vienna, Kennedy met the Soviet leader <span class="gloss" tabindex="0">Nikita Khrushchev<span class="gloss-tip"><span class="gloss-pron">nih-KEE-tuh KROOSH-chef</span>The Soviet leader from 1953 to 1964.</span></span> for the first time. The meeting went badly. Khrushchev concluded that the young president was weak and could be pushed. He renewed a demand that the Western powers leave Berlin. Kennedy told the nation that Berlin was a vital interest. The real problem for Khrushchev was that thousands of East Germans were fleeing to the West through Berlin each month, including many of its most skilled workers. In the early morning of August 13, 1961, East German soldiers began to string barbed wire across the city. It soon became a concrete wall, and the <span class="gloss" tabindex="0">Berlin Wall<span class="gloss-tip"><span class="gloss-pron">ber-LIN wawl</span>The barrier built by East Germany in August 1961 to stop people from fleeing to West Berlin. It stood for twenty-eight years.</span></span> stood for twenty-eight years. Kennedy did not try to knock it down. Privately, he said that a wall was better than a war.</p>
+<div class="optima-widget ow-reflect" data-wid="m13-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Kennedy chose not to fight the East German wall in Berlin, judging it the lesser evil. When is it wise to put up with something you dislike to avoid a bigger danger? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That is the reasoning Kennedy used. The risk is that the other side may read your patience as weakness, as Khrushchev did after Vienna.">When the other choice could mean war</button><button data-response="A fair test. In Berlin, Kennedy accepted the wall without getting anything back. You can ask whether that was wise or whether it only avoided a fight.">Only if the other side gives something in return</button><button data-response="Many leaders have believed this. Notice that Khrushchev had already decided at Vienna that the young president could be pushed.">Almost never, because giving way invites more pushing</button><button data-response="That is often the honest answer. Kennedy had called Berlin a vital interest, yet he still let the wall stand.">It depends on what is at stake</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>In the summer of 1962, Khrushchev made a bold and risky move. He began to send medium-range nuclear missiles to Cuba, in secret. His reasons were mixed. He wanted to protect Cuba from an American invasion, and he wanted to even the balance of nuclear weapons, since the United States had missiles in Turkey and Italy that could reach the Soviet Union. He also hoped to gain an advantage in Berlin.</p>
 <p>On October 16, 1962, Kennedy was shown photographs, taken by a U-2 spy plane, that showed missile sites being built in Cuba. For thirteen days, the country came close to nuclear war. Kennedy gathered a group of advisers, which later became known as <span class="gloss" tabindex="0">ExComm<span class="gloss-tip"><span class="gloss-pron">EKS-kom</span>The Executive Committee of the National Security Council, the group of advisers Kennedy gathered during the Cuban Missile Crisis.</span></span>, short for the Executive Committee of the National Security Council. Their discussions, which Kennedy secretly taped, show a group of serious people who disagreed. The Joint Chiefs wanted air strikes followed by an invasion. Others thought that a strike would lead to a Soviet attack on Berlin, or on the United States itself. A few wanted to do nothing, and to accept that the Soviets had missiles too.</p>
 <p>Kennedy chose something in between. He ordered a naval blockade to stop Soviet ships carrying weapons to Cuba. The word "blockade" is an act of war under international law, so he called it a <span class="gloss" tabindex="0">quarantine<span class="gloss-tip"><span class="gloss-pron">KWOR-un-teen</span>Kennedy's name for the naval blockade of Cuba in 1962, chosen because a "blockade" is an act of war.</span></span>. On October 22, he went on television and told the nation about the missiles. He warned that any missile launched from Cuba would be treated as an attack by the Soviet Union, requiring a full response. Millions of Americans listened in fear. Some families stocked up on food. You will read the address this week.</p>
 <p>The crisis reached its peak over the weekend. On October 24, Soviet ships bound for Cuba stopped short of the quarantine line. Secretary of State Dean Rusk said, "We're eyeball to eyeball, and I think the other fellow just blinked." But the missiles in Cuba were still being finished. On Friday, October 26, Khrushchev sent a long, emotional letter offering to remove the missiles if the United States promised not to invade Cuba. On Saturday, October 27, a second and tougher letter arrived, demanding that the United States remove its missiles from Turkey. The same day, a Soviet missile shot down an American U-2 over Cuba and killed its pilot, Major Rudolf Anderson. Some advisers urged an immediate strike. Kennedy held back.</p>
+<div class="optima-widget ow-select" data-wid="m13-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHO WANTED WHAT?</div><div class="widget-question">Match each fact to the right part of the October 1962 story.</div><div class="widget-row" data-correct="3" data-fb="Yes. The Joint Chiefs wanted air strikes followed by an invasion. Others feared a strike would bring an attack on Berlin or on the United States." data-hint="Think about which group wanted the strongest military answer."><div class="widget-row-prompt">1. Which advice did the Joint Chiefs give during the crisis?</div><div class="widget-options"><button data-choice="0">Do nothing and accept that the Soviets had missiles too</button><button data-choice="1">Offer to remove the American missiles in Turkey at once</button><button data-choice="2">Wait quietly while the Soviets thought it over</button><button data-choice="3">Air strikes followed by an invasion</button></div></div><div class="widget-row" data-correct="1" data-fb="Yes. American missiles in Turkey and Italy could reach the Soviet Union, and he also hoped for an advantage in Berlin." data-hint="Look at where American missiles were already placed."><div class="widget-row-prompt">2. Besides protecting Cuba, what did Khrushchev hope to even out?</div><div class="widget-options"><button data-choice="0">The number of ships each navy kept near Cuba</button><button data-choice="1">The nuclear balance, since American missiles sat in Turkey and Italy</button><button data-choice="2">The trade between Cuba and Florida</button><button data-choice="3">The vote of the nations in the world&#x27;s assembly</button></div></div><div class="widget-row" data-correct="0" data-fb="Yes. He told the nation that a launch from Cuba would count as an attack by the Soviet Union." data-hint="His warning was firm, not a request for talks."><div class="widget-row-prompt">3. What did Kennedy warn on October 22 about any missile launched from Cuba?</div><div class="widget-options"><button data-choice="0">It would be treated as an attack by the Soviet Union, needing a full response</button><button data-choice="1">It would be answered with a letter of protest to Khrushchev</button><button data-choice="2">It would lead to talks about Turkey the next day</button></div></div><button class="widget-reset">Reset</button></div>
 <p>The solution was a mixture of firmness and compromise. Kennedy ignored the second letter and answered the first. His brother, Attorney General Robert Kennedy, told the Soviet ambassador privately that the American missiles in Turkey would be removed within a few months, though this could not be announced as part of a deal. On Sunday, October 28, Khrushchev agreed to take his missiles out of Cuba. The world let out its breath.</p>
 <p>How close was it? Later evidence suggests that the danger was greater than those in the room knew. Soviet commanders in Cuba had tactical nuclear weapons, and at sea, the crew of a Soviet submarine, cornered by American ships, nearly launched a nuclear torpedo. According to later accounts, an officer named Vasily Arkhipov refused to agree to the launch. Historians still debate the details. But the story is a good reminder of how the history of the century could have turned on one man's decision.</p>
+<div class="ow-group" data-wid="m13-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why was the danger greater than the people in the room knew?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Soviet commanders in Cuba had tactical nuclear weapons, and a cornered Soviet submarine nearly launched a nuclear torpedo. Historians still debate the details.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why could Robert Kennedy not announce the Turkey promise?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">He told the Soviet ambassador privately that the American missiles in Turkey would be removed within months, but it could not be announced as part of a deal.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Kennedy learn from the failed landing on Cuba&#x27;s coast in 1961?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">He learned to be more careful about what the military and the CIA told him. He took the blame on television, but privately he admitted that he had been poorly advised.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>Was Kennedy a brinkmanship gambler or a skilled statesman? The word <span class="gloss" tabindex="0">brinkmanship<span class="gloss-tip"><span class="gloss-pron">BRINK-mun-ship</span>Pushing a dangerous situation to the edge of disaster to make the other side back down.</span></span> means pushing a dangerous situation to the edge of disaster in order to make the other side back down. Critics say that Kennedy's own earlier mistakes, the Bay of Pigs and the Vienna meeting, helped to cause the crisis, and that he risked the world over missiles that did not really change the balance of power. Defenders say that he refused to bomb, avoided a trap, left Khrushchev a way out, and ended the crisis without war. Virtues like prudence, which is good judgment about what to do in a hard case, were on display here. So was luck.</p>
 <p>The crisis changed the Cold War. Both leaders had seen how close they came. A direct telephone line, the "hotline," was set up between Washington and Moscow in 1963. In August 1963, the United States, Britain, and the Soviet Union signed the <span class="gloss" tabindex="0">Limited Test Ban Treaty<span class="gloss-tip"><span class="gloss-pron">LIM-ih-tid test ban TREE-tee</span>The 1963 treaty among the United States, Britain, and the Soviet Union that banned nuclear tests in the air, in space, and underwater.</span></span>, which banned nuclear tests in the air, in space, and underwater. Khrushchev was removed from power in 1964, in part because of the Cuban humiliation. Kennedy did not live to see what came next. On November 22, 1963, he was shot and killed in Dallas, Texas. The next lesson turns to the man who took his place, and to the great domestic plan he would launch.</p></div>
 </div>
@@ -391,6 +427,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

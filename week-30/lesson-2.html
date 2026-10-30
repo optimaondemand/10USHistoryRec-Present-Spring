@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,13 +368,16 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>By 1960, the Supreme Court had ruled, and the buses of Montgomery were integrated. But in much of the South, daily life remained the same. A new group of Black leaders, many of them college students, decided that waiting for the courts was not enough. They chose <span class="gloss" tabindex="0">direct action<span class="gloss-tip"><span class="gloss-pron">dih-REKT AK-shun</span>Openly breaking an unjust rule or custom in order to force the public to face it.</span></span>, which means openly breaking an unjust local rule or custom in order to force the public to face it.</p>
 <p>On February 1, 1960, four Black students from North Carolina A&T sat down at a whites-only lunch counter at a Woolworth's store in Greensboro and asked to be served. They were refused. They stayed until closing time, and they returned the next day with more students. Within weeks, the <span class="gloss" tabindex="0">sit-in<span class="gloss-tip"><span class="gloss-pron">SIT-in</span>A protest in which people sit down in a place where they are refused service and stay until they are served or removed.</span></span> had spread to dozens of cities. Students sat quietly, dressed neatly, and did not strike back when they were cursed at, spat on, or hit. In April 1960, young activists formed the <span class="gloss" tabindex="0">Student Nonviolent Coordinating Committee<span class="gloss-tip"><span class="gloss-pron">STOO-dent non-VY-uh-lent koh-OR-dih-nay-ting kuh-MIT-ee</span>A group of young activists formed in 1960 to carry on sit-ins and other direct action. It is often called SNCC.</span></span>, or SNCC, to carry the work forward.</p>
 <p>In 1961, the Congress of Racial Equality sent mixed groups of Black and white riders on buses through the South to test a court order against segregation in bus stations. These <span class="gloss" tabindex="0">Freedom Riders<span class="gloss-tip"><span class="gloss-pron">FREE-dum RY-derz</span>Black and white activists who rode buses through the South in 1961 to test a ban on segregation in bus stations.</span></span> were attacked by mobs in Alabama. One bus was burned. President Kennedy was slow to act, since he did not want to anger Southern Democrats, but the violence was on the news every night. He sent federal marshals, and his brother, Attorney General Robert Kennedy, pressed the Interstate Commerce Commission to enforce the ban.</p>
+<div class="optima-widget" data-wid="m12-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">The <span class="gloss" tabindex="0">Freedom Riders<span class="gloss-tip"><span class="gloss-pron">FREE-dum RY-derz</span>Black and white activists who rode buses through the South in 1961 to test a ban on segregation in bus stations.</span></span> were attacked by mobs in Alabama, and Kennedy did not want to anger Southern Democrats.</div><details class="ow-reveal"><summary>What might Kennedy have done if cameras had not shown the violence on the news every night? Decide first and jot down two possibilities before you open this.</summary><div class="ow-reveal-body">The lesson says he was slow to act because he did not want to anger Southern Democrats. The nightly pictures made the violence hard for the country to ignore, and then he sent marshals. Without the pictures he might have waited longer. This is reasoning from the lesson, not a certain result.</div></details><button class="widget-reset">Reset</button></div>
 <p>The reasons for nonviolence were both moral and practical. For Martin Luther King Jr., nonviolence was grounded in his Christian faith and in the teachings of Mohandas Gandhi, who had led India's campaign for independence without arms. It was a principle, a way of loving one's enemies while refusing to obey an unjust law. It was also a smart strategy. When peaceful protesters were beaten by officers of the law, the injustice of the system was plain for the whole country to see. Not every leader held the same views. Some saw it mostly as a tool, to be used because it worked, and some in the movement grew impatient with it by the mid-1960s. You will weigh that question in this week's discussion.</p>
 <p>In the spring of 1963, King took the movement to Birmingham, Alabama, which he called the most segregated big city in America. The city's public safety commissioner, <span class="gloss" tabindex="0">Bull Connor<span class="gloss-tip"><span class="gloss-pron">bul KON-er</span>The Birmingham public safety commissioner who used police dogs and fire hoses on civil rights marchers in 1963.</span></span>, was a determined segregationist. King and his allies planned marches, boycotts, and sit-ins, and they were arrested in April. In jail, King answered a group of white clergymen who had called the protests "unwise and untimely." His reply, the "Letter from Birmingham Jail," explained why waiting was not an answer. You will read part of the letter this week. In it, he described the four steps of a nonviolent campaign and separated just laws from unjust ones. A just law, he said, is in line with moral law.</p>
 <p>In May, the movement made a bold choice and sent children and teenagers to march. Connor's men answered with police dogs and high-pressure fire hoses. Photographs and film of the scenes went around the world. President Kennedy said that the pictures made him sick. A few weeks later, on June 11, 1963, he gave a televised address, and asked Congress for a broad civil rights law. He called the issue a moral one, "as old as the Scriptures and as clear as the American Constitution." That night, Medgar Evers, a Mississippi NAACP leader, was shot and killed in his driveway.</p>
 <p>On August 28, 1963, about 250,000 people gathered in Washington for the <span class="gloss" tabindex="0">March on Washington<span class="gloss-tip"><span class="gloss-pron">march on WOSH-ing-ton</span>The August 28, 1963, gathering of about 250,000 people at the Lincoln Memorial for jobs and freedom.</span></span>. They stood on the National Mall before the Lincoln Memorial. It was one of the largest demonstrations the capital had seen. A. Philip Randolph, the man who had threatened a similar march in 1941, was its elder statesman. King's speech, which ended with the words "I have a dream," became one of the most famous in American history. Less than three weeks later, a bomb exploded at the Sixteenth Street Baptist Church in Birmingham and killed four young girls. Then, in November, Kennedy was assassinated, and the bill's fate seemed uncertain.</p>
+<div class="optima-widget ow-scale" data-wid="m12-2-2" data-ra-skip><div class="widget-kicker">&#9889; WHERE WOULD YOU PLACE IT?</div><div class="widget-question">Was nonviolence mainly a principle or mainly a tool for the movement?</div><div class="widget-row" data-correct="2" data-fb="Yes. For King it was a principle, and it was also smart strategy, while others saw it mostly as a tool." data-hint="The lesson says not every leader held the same views."><div class="widget-options"><button data-choice="0" data-fb="Not quite. For King it was grounded in his faith.">Only a tool</button><button data-choice="1" data-fb="Not quite. For King it was more than a tool.">Mostly a tool</button><button data-choice="2" data-fb="Yes. For King it was a principle, and it was also smart strategy, while others saw it mostly as a tool.">A principle for some leaders and a tool for others</button><button data-choice="3" data-fb="Not quite. Some leaders saw it mostly as a tool.">Mostly a principle</button><button data-choice="4" data-fb="Not quite. Some leaders saw it mostly as a tool, and some grew impatient with it.">Only a principle</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Lyndon Johnson, the new president, made the bill a memorial to Kennedy, and he used all of his skill as a Senate leader. The House passed it. In the Senate, Southern senators used a <span class="gloss" tabindex="0">filibuster<span class="gloss-tip"><span class="gloss-pron">FIL-ih-bus-ter</span>A way of blocking a Senate vote by talking without end.</span></span>, a way of blocking a vote by talking without end. It lasted for more than fifty days. Johnson and Senator Hubert Humphrey won over enough Republicans, led by Everett Dirksen of Illinois, and in June 1964, the Senate voted to end debate. The <span class="gloss" tabindex="0">Civil Rights Act of 1964<span class="gloss-tip"><span class="gloss-pron">SIV-il ryts akt uv nyne-TEEN SIX-tee-for</span>The law that banned segregation in public places and discrimination in employment.</span></span> became law on July 2. It banned segregation in hotels, restaurants, and other public places, and it outlawed discrimination in employment and in programs that got federal money. It was among the most significant laws in American history, and it had passed because the movement, the press, and a skillful president had worked together. Notice that it had also depended on Republican votes.</p>
 <p>But the right to vote was still blocked in much of the South. Many Black citizens who tried to register were turned away by a <span class="gloss" tabindex="0">literacy test<span class="gloss-tip"><span class="gloss-pron">LIT-er-uh-see test</span>A reading or understanding test that officials could grade unfairly to keep Black citizens from voting.</span></span>, a test of reading or understanding that officials could grade unfairly, or they were threatened with violence. In Selma, Alabama, only about two percent of eligible Black voters were registered. In March 1965, King and local leaders organized a march from Selma to the state capital in Montgomery. On March 7, state troopers attacked the marchers with clubs and tear gas on the Edmund Pettus Bridge, in an event called Bloody Sunday. Television carried the pictures to the nation. Eight days later, Johnson went before Congress and used the movement's own words: "We shall overcome."</p>
 <p>The <span class="gloss" tabindex="0">Voting Rights Act of 1965<span class="gloss-tip"><span class="gloss-pron">VOH-ting ryts akt uv nyne-TEEN SIX-tee-fyve</span>The law that banned literacy tests and sent federal examiners to counties that kept Black citizens from voting.</span></span> became law in August. It banned literacy tests, and it sent federal examiners to counties with a history of keeping Black citizens from voting. Registration among Black Southerners rose quickly, and Black officeholders appeared across the region within a few years.</p>
+<div class="optima-widget ow-seq" data-wid="m12-2-3" data-ra-skip data-n="5" data-fb="That is the order. Each event pushed the nation closer to action, from 1960 to 1965." data-hint="Start with the year 1960 and move forward to 1965."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Four students sit down at a lunch counter in Greensboro</button><button data-pos="2">Children march in Birmingham and are met with police dogs and fire hoses</button><button data-pos="3">About 250,000 people gather at the Lincoln Memorial</button><button data-pos="4">A law bans segregation in hotels, restaurants, and other public places</button><button data-pos="5">Troopers attack marchers on a bridge in Selma</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>By any measure, the movement had changed the republic. It had used peaceful protest to win laws that matched the principles of the Constitution. At the same time, it had a limit. Laws could end legal segregation, but they could not by themselves change the poverty and distrust that were left behind. The anger and impatience that grew from that gap were about to change the movement itself.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -392,6 +428,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

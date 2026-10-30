@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -336,12 +369,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>When Germany surrendered in May 1945, the leaders of the great powers knew that winning the war had only started their work. Europe and much of Asia lay in ruins. Britain and France were worn out and deep in debt. Only two countries came out of the war stronger. One was the United States, whose factories had grown to produce about half of the world's manufactured goods. The other was the Soviet Union, which had lost more than twenty million people but now held the largest army in Europe. The question was whether these two powers would build a lasting peace together, or divide the world between them.</p>
 <p>The United States had been through this once before. In 1919, Woodrow Wilson had asked the country to join a League of Nations, and the Senate had said no. Franklin Roosevelt had watched that happen, and he was determined not to repeat it. He planned a new organization early, and he brought leading senators into the planning. In the spring of 1945, delegates from fifty nations met in San Francisco to write the charter of the <span class="gloss" tabindex="0">United Nations<span class="gloss-tip"><span class="gloss-pron">yoo-NY-tid NAY-shunz</span>The international organization founded in 1945 to keep peace and help nations cooperate.</span></span>. This time the Senate approved it in July 1945, by a vote of 89 to 2.</p>
 <p>The new body had a design that showed how Roosevelt thought. Every member state had a seat in a General Assembly. But the real power sat in a smaller body, the <span class="gloss" tabindex="0">Security Council<span class="gloss-tip"><span class="gloss-pron">sih-KYOOR-ih-tee KOWN-sul</span>The body of the United Nations that can order action to keep the peace. Five nations hold permanent seats.</span></span>, which could order action to keep the peace. Five nations held permanent seats there: the United States, the Soviet Union, Britain, France, and China. Each one held a <span class="gloss" tabindex="0">veto<span class="gloss-tip"><span class="gloss-pron">VEE-toh</span>The power to block a decision by voting no, even if everyone else votes yes.</span></span>, which is the power to block a decision by voting no, even if every other member votes yes. Roosevelt believed that no peace could last unless the great powers agreed to it. He also knew that the veto might paralyze the council when those powers disagreed. That is exactly what happened in the years that followed.</p>
+<div class="optima-widget ow-reflect" data-wid="m10-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Imagine a group of five members in which each one can block any plan by voting no. How would you feel about working in it? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That was the idea. Roosevelt believed no peace could last unless the great powers agreed to it.">It would protect me from being outvoted</button><button data-response="That was the risk. The lesson says the design could paralyze the council when the great powers disagreed.">Nothing would ever get done</button><button data-response="Many nations did, in the years that followed, by working outside the council.">I would look for a way around it</button><button data-response="A good point. Blocking a small decision costs little, but blocking a decision about peace costs a great deal.">It depends on what is at stake</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The United States also tried to fix the economic problems that had helped cause the war. In July 1944, delegates from forty-four nations met at a resort in Bretton Woods, New Hampshire. The <span class="gloss" tabindex="0">Bretton Woods Conference<span class="gloss-tip"><span class="gloss-pron">BRET-un woodz KAHN-fer-ents</span>The 1944 meeting in New Hampshire where forty-four nations planned the postwar money system and created the International Monetary Fund and the World Bank.</span></span> set up two institutions. The <span class="gloss" tabindex="0">International Monetary Fund<span class="gloss-tip"><span class="gloss-pron">in-ter-NASH-uh-nul MON-uh-ter-ee fund</span>An organization created in 1944 to steady the value of national currencies and lend money to countries in short-term trouble.</span></span> was meant to steady the value of national currencies and lend money to countries in short-term trouble. The <span class="gloss" tabindex="0">World Bank<span class="gloss-tip"><span class="gloss-pron">wurld bangk</span>An organization created in 1944 to lend money for rebuilding and economic development.</span></span> was meant to lend money for rebuilding and development. The delegates also agreed that other currencies would be tied to the dollar, and the dollar would be tied to gold at thirty-five dollars an ounce. The goal was to avoid a repeat of the 1930s, when tariff wars and money troubles had choked trade. In the language of this course, it was an attempt to solve a first-order economic problem: how to make sure nations could trade and prosper.</p>
 <p>Meanwhile, the Big Three had met to decide the shape of the peace. In February 1945, Roosevelt, Churchill, and the Soviet leader <span class="gloss" tabindex="0">Joseph Stalin<span class="gloss-tip"><span class="gloss-pron">JOH-zef STAH-lin</span>The dictator who ruled the Soviet Union from the 1920s until his death in 1953.</span></span> gathered at the <span class="gloss" tabindex="0">Yalta Conference<span class="gloss-tip"><span class="gloss-pron">YAWL-tuh KAHN-fer-ents</span>The February 1945 meeting of Roosevelt, Churchill, and Stalin in the Crimea to plan the end of the war and the postwar peace.</span></span> in the Crimea. They agreed to divide a defeated Germany into zones of occupation. Stalin promised to enter the war against Japan after Germany fell. He also promised "free and unfettered elections" in Poland. Roosevelt, who was ill and tired, left Yalta hopeful. Two months later he was dead.</p>
 <p>His successor, Harry Truman, had been vice president for only eighty-two days. Roosevelt had told him almost nothing about the war's biggest secrets, including the atomic bomb. Truman had to learn quickly. At the Potsdam meeting in July 1945, he sat across the table from Stalin and found that the Yalta promises about Poland meant very little to the Soviet leader.</p>
 <p>The Red Army had driven the Germans out of Eastern Europe, and it did not leave. In Poland, Romania, Bulgaria, Hungary, and, after a coup in 1948, Czechoslovakia, local communists backed by Soviet power took control. Elections were rigged or put off. These countries became <span class="gloss" tabindex="0">satellite states<span class="gloss-tip"><span class="gloss-pron">SAT-uh-lyt stayts</span>Countries that keep the outward form of independence but are controlled by a stronger neighbor, such as the nations of Eastern Europe under Soviet power.</span></span>, which are nations that keep the outward form of independence but are controlled by a stronger neighbor. In March 1946, Winston Churchill spoke at a small college in Fulton, Missouri, with Truman sitting on the platform. "From Stettin in the Baltic to Trieste in the Adriatic," he said, "an iron curtain has descended across the Continent." The phrase <span class="gloss" tabindex="0">Iron Curtain<span class="gloss-tip"><span class="gloss-pron">EYE-urn KUR-tun</span>Winston Churchill's 1946 name for the line dividing communist-ruled Eastern Europe from the free nations of the West.</span></span> stuck.</p>
+<div class="ow-group" data-wid="m10-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Which five nations held a permanent seat on the council that could order action to keep the peace?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The United States, the Soviet Union, Britain, France, and China. Each could block a decision by voting no.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What were the two money institutions set up in 1944 meant to do?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">One was meant to steady the value of national currencies and lend to countries in short-term trouble. The other was meant to lend money for rebuilding and development.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; CAN YOU RECALL IT?</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">In 1946, Churchill spoke at a small college in Fulton, Missouri. What picture did he use?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">He said a dividing line had come down across Europe, from the Baltic Sea in the north to the Adriatic Sea in the south.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>Why did Stalin do this? Historians still argue about it, and the answer matters. One view says that Stalin was mainly worried about safety. Russia had been invaded twice by Germany in thirty years, and he wanted a belt of friendly states to protect him. A second view says that he was moved by his beliefs. A communist state, in this view, could not feel secure until its neighbors were communist too. A third says that the Soviet system, which ran on fear and a constant search for enemies, needed foreign threats to justify itself. The most careful historians do not choose just one. They point out that Stalin was a suspicious and ruthless man, and that his character, not just his country's geography, shaped the choices he made. A different Soviet leader might have acted differently.</p>
 <p>The Americans did not leave Europe, as they had in 1919, but they did something that Americans had always done after a war: they sent the soldiers home. Families demanded it, and thousands of troops held protests overseas. Between 1945 and 1947, the armed forces shrank from about twelve million men and women to fewer than two million. A republic does not like to keep a large army in peacetime, and the founders had warned against it. The cost was that, in 1946, the United States had far less force in Europe than the Soviet army.</p>
+<div class="optima-widget ow-select" data-wid="m10-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHY DID STALIN ACT AS HE DID?</div><div class="widget-question">Historians offer several explanations for Stalin's choices. Match each statement to the explanation it supports.</div><div class="widget-row" data-correct="1" data-fb="Right. This view stresses his wish to protect his country from another invasion." data-hint="Ask what worry about the past would push a leader to want a buffer."><div class="widget-row-prompt">1. Russia had been invaded twice by Germany in thirty years, so he wanted friendly states on his border.</div><div class="widget-options"><button data-choice="0">Belief in communism</button><button data-choice="1">Safety</button><button data-choice="2">A system that needed enemies</button><button data-choice="3">Stalin&#x27;s own character</button></div></div><div class="widget-row" data-correct="3" data-fb="Right. This view puts his ideas first." data-hint="Look for the explanation that points to what he believed."><div class="widget-row-prompt">2. A communist state could not feel secure until its neighbors were communist too.</div><div class="widget-options"><button data-choice="0">Safety</button><button data-choice="1">A system that needed enemies</button><button data-choice="2">Stalin&#x27;s own character</button><button data-choice="3">Belief in communism</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. This view looks at how the Soviet system worked, not only at one man." data-hint="This one is about how the whole system was built."><div class="widget-row-prompt">3. A system that ran on fear needed outside threats to justify itself.</div><div class="widget-options"><button data-choice="0">A system that needed enemies</button><button data-choice="1">Stalin&#x27;s own character</button><button data-choice="2">Belief in communism</button><button data-choice="3">Safety</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. This view points to his personal traits and the choices they shaped." data-hint="Look for the explanation that centers on the person."><div class="widget-row-prompt">4. He was suspicious and ruthless, and a different leader might have chosen differently.</div><div class="widget-options"><button data-choice="0">Safety</button><button data-choice="1">Belief in communism</button><button data-choice="2">Stalin&#x27;s own character</button><button data-choice="3">A system that needed enemies</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Even so, some troops stayed. American forces occupied western Germany, and General Douglas MacArthur ruled Japan, where he oversaw a new constitution that was written in 1946 and took effect in 1947. It gave the Japanese a parliament and the vote for women. In one article, Japan renounced war. The occupation of Japan is often seen as one of the most successful rebuilding projects in American history.</p>
 <p>By 1947, the wartime allies were no longer allies. Each side blamed the other. They did not fight a direct war, since each had the power to destroy the other, but they struggled for influence over every part of the world. Journalists began to call this struggle the <span class="gloss" tabindex="0">Cold War<span class="gloss-tip"><span class="gloss-pron">kohld wor</span>The long struggle between the United States and the Soviet Union after World War II, fought with spies, aid, alliances, and threats instead of direct combat between the two.</span></span>, because it was fought with spies, money, alliances, propaganda, and threats instead of direct combat. The next lesson explains how the United States answered the Soviet challenge, and why the strategy it chose became known by a single word.</p></div>
 </div>
@@ -393,6 +429,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

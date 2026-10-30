@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -333,12 +366,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>Many Americans who lived through the Depression and the war expected hard times to return when the fighting stopped. They did not. Between 1945 and 1960, the United States entered the greatest period of widespread prosperity that any large nation had ever seen. Wages rose, jobs were plentiful, and the average family had far more money than its parents had ever had. In 1958, the economist John Kenneth Galbraith wrote a book about it and called it The Affluent Society. Most Americans would have agreed with the title.</p>
 <p>Several causes worked together. The country had been spared the bombing that wrecked Europe and Asia, so its factories were intact, and the world needed what they made. Families had saved money during the war, when there was little to buy, and now they wanted to spend it. The GI Bill, which you met earlier in this course, sent millions of veterans to college and helped them buy homes. Strong unions pushed wages up in the steel, auto, and other industries, and by the middle of the decade about one worker in three belonged to a union. The government also spent heavily on defense. The Cold War, in other words, was one of the engines of the economy.</p>
 <p>Nothing shows the change better than housing. After years of Depression and war, the country was short of homes. A builder named William Levitt found a way to build them fast. On potato fields on Long Island, he used the assembly-line ideas of Henry Ford. Crews moved from lot to lot, and each did one job: laying foundations, framing, roofing, or painting. At <span class="gloss" tabindex="0">Levittown<span class="gloss-tip"><span class="gloss-pron">LEV-it-town</span>A planned suburb on Long Island, built quickly with assembly-line methods, that became the model for postwar suburbs.</span></span>, a house could be finished in a day. The homes were small and nearly identical, but a veteran could buy one for about seven thousand dollars, with little money down. Levittown and places like it spread across the country, and the <span class="gloss" tabindex="0">suburbs<span class="gloss-tip"><span class="gloss-pron">SUB-urbz</span>Residential communities on the edge of a city.</span></span>, which are residential communities on the edge of a city, became the new American neighborhood. By 1960, more Americans lived in suburbs than in either cities or on farms. Homeownership rose from under 45 percent in 1940 to over 60 percent in 1960.</p>
+<div class="optima-widget" data-wid="m11-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">After the war, the government kept spending heavily on defense, and the long struggle with the Soviet Union became one of the engines of the economy.</div><details class="ow-reveal"><summary>What might the postwar boom have looked like if the government had cut defense spending sharply after the war? Decide first and jot down two effects before you open this.</summary><div class="ow-reveal-body">The lesson names several other causes: factories the war had spared, savings that families wanted to spend, help for veterans, and strong unions. So the boom might still have happened, but with fewer jobs in defense factories and a different mix of industries. This is reasoning from the lesson, not a certain result.</div></details><button class="widget-reset">Reset</button></div>
 <p>Families grew too. Couples who had delayed marriage during the war now married young and had children in large numbers. The result was the <span class="gloss" tabindex="0">baby boom<span class="gloss-tip"><span class="gloss-pron">BAY-bee boom</span>The sharp rise in births in the United States from about 1946 to 1964.</span></span>, a sharp rise in births that lasted from about 1946 to 1964. About seventy-six million Americans were born in those years. Schools had to be built by the thousands, and companies saw a giant new market.</p>
 <p>Americans bought things as never before. Most families owned a car, and by the end of the decade, most had a television. Shows like I Love Lucy and Father Knows Best showed a national audience a certain picture of the good life. Advertising told people what they needed. Credit cards appeared. Shopping centers spread. Many people felt pressure to look and act as their neighbors did, and critics complained about <span class="gloss" tabindex="0">conformity<span class="gloss-tip"><span class="gloss-pron">kun-FOR-mih-tee</span>The habit of going along with the group instead of thinking and acting for yourself.</span></span>, the habit of going along with the group instead of thinking and acting for yourself. Religion also grew in public life. Congress added "under God" to the Pledge of Allegiance in 1954 and made "In God We Trust" the national motto in 1956, partly to stress the difference from atheistic communism.</p>
 <p>The car shaped the country. In 1956, Eisenhower signed the Federal-Aid Highway Act, which launched the <span class="gloss" tabindex="0">Interstate Highway System<span class="gloss-tip"><span class="gloss-pron">IN-ter-stayt HY-way SIS-tum</span>The national network of high-speed roads begun by the Federal-Aid Highway Act of 1956.</span></span>, a national network of high-speed roads. Its stated purposes were safety, trade, and national defense, since the roads would allow troops and supplies to move quickly if war came. The law promised about forty thousand miles of road and set aside the money, paid by a tax on gasoline. The highways tied the nation together. They also made it easy to live far from work, and they cut through many city neighborhoods, usually poor ones.</p>
 <p>Eisenhower himself fit the mood of the time. He had commanded the largest invasion in history, and he was a calm and popular president. He kept most New Deal programs, balanced the budget when he could, and held back military spending against the demands of his own generals. In January 1961, in his farewell address, he warned that a large permanent arms industry had grown up alongside the military. He called it the <span class="gloss" tabindex="0">military-industrial complex<span class="gloss-tip"><span class="gloss-pron">MIL-ih-tair-ee in-DUS-tree-ul KOM-pleks</span>Eisenhower's name for the close ties between the armed forces and the industries that make weapons.</span></span>. "We must never let the weight of this combination endanger our liberties," he said. Here was a general warning a republic about the effects of its own armed strength, a concern with deep roots in the founders' thinking.</p>
+<div class="optima-widget ow-seq" data-wid="m11-2-2" data-ra-skip data-n="4" data-fb="That is the order. The births came first, and the warning came in the last days of his presidency." data-hint="Start with the earliest year the lesson names for the surge in births."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Births begin to surge across the country</button><button data-pos="2">Congress adds two words to the Pledge of Allegiance</button><button data-pos="3">Eisenhower signs a law to build a national network of roads</button><button data-pos="4">Eisenhower warns about a permanent arms industry</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>In October 1957, the Soviet Union launched <span class="gloss" tabindex="0">Sputnik<span class="gloss-tip"><span class="gloss-pron">SPUT-nik</span>The first artificial satellite, launched by the Soviet Union in October 1957.</span></span>, the first artificial satellite, into orbit. Americans were stunned. If the Soviets could put a satellite in space, they might be able to place a nuclear weapon on a rocket aimed at the United States. Many blamed American schools. Congress responded in 1958 with the <span class="gloss" tabindex="0">National Defense Education Act<span class="gloss-tip"><span class="gloss-pron">NASH-uh-nul dih-FENSE ej-oo-KAY-shun akt</span>The 1958 law that gave federal money for science, math, and language teaching and for student loans.</span></span>, which gave money for science, math, and foreign language teaching, and for student loans. NASA was founded that same year. So Sputnik, another contingent event, pushed the federal government into education in a way it had never been before.</p>
-<p>Not everyone shared in the prosperity. Black families were shut out of much of it. Levittown at first refused to sell to Black buyers, and federal lending practices often favored white neighborhoods and marked Black ones as risky. Many Black workers stayed in the lowest-paid jobs. In the countryside, farm families in Appalachia and the South stayed poor. In 1962, Michael Harrington wrote a book called The Other America, arguing that tens of millions of Americans were poor and mostly unseen. In 1960, roughly one in five Americans lived below the poverty line. Women, too, found their choices narrower than the television image suggested, since most of the better-paying jobs went to men.</p>
+<p>Not everyone shared in the prosperity. Black families were shut out of much of it. Levittown at first refused to sell to Black buyers, and federal lending practices often favored white neighborhoods and marked Black ones as risky. Many Black workers stayed in the lowest-paid jobs. In the countryside, farm families in Appalachia and the South stayed poor. In 1962, Michael Harrington wrote a book called The Other America, arguing that tens of millions of Americans were poor and mostly unseen. In 1960, roughly one in five Americans lived in poverty. Women, too, found their choices narrower than the television image suggested, since most of the better-paying jobs went to men.</p>
+<div class="optima-widget ow-scale" data-wid="m11-2-3" data-ra-skip><div class="widget-kicker">&#9889; WHERE WOULD YOU PLACE IT?</div><div class="widget-question">How widely was the postwar prosperity shared?</div><div class="widget-row" data-correct="3" data-fb="Yes. Production grew and most families shared in it, but about one in five Americans lived in poverty." data-hint="The lesson says most families shared in it, but it also gives a number for those who did not."><div class="widget-options"><button data-choice="0" data-fb="Not quite. Wages rose and jobs were plentiful for most families.">Almost no one</button><button data-choice="1" data-fb="Not quite. More than half of families shared in it.">About half of families</button><button data-choice="2" data-fb="Close, but the lesson says most families shared in it.">Many families, with large groups left out</button><button data-choice="3" data-fb="Yes. Production grew and most families shared in it, but about one in five Americans lived in poverty.">Most families, though about one in five stayed poor</button><button data-choice="4" data-fb="Not quite. The lesson says Black families, farm families, and many women were left out of much of it.">All families equally</button></div></div><button class="widget-reset">Reset</button></div>
 <p>So the affluent society was real, and it was unequal. By the standards of the first-order economic problem, it was a stunning success: production grew, and most families shared in it. By another standard, that of a common life in which every citizen has a fair chance, the picture was mixed. In the next module, you will see how Americans who were left out did not wait quietly. They went to court, to the streets, and to the ballot box.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -389,6 +425,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>
