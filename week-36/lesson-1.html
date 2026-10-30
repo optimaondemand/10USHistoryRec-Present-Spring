@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -332,11 +365,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>On the morning of Tuesday, September 11, 2001, nineteen men from al-Qaeda hijacked four passenger airplanes. They flew two of the planes into the twin towers of the World Trade Center in New York, and both towers collapsed within two hours. A third plane struck the Pentagon, the headquarters of the American military, near Washington. The fourth was headed toward the Capitol or the White House, but its passengers, who had learned of the other attacks by telephone, fought back, and it crashed in a field in Pennsylvania. Nearly three thousand people died, the greatest loss of life in an attack on American soil in the nation's history. Hundreds of the dead were firefighters and police officers who had run into the buildings to save others.</p>
 <p>President George W. Bush was reading to schoolchildren in Florida when he was told. That evening, he spoke to the nation and said that America would make no distinction between the terrorists and those who harbored them. Three days later, he stood in the rubble in New York with a bullhorn, and a rescue worker shouted that he could not hear him. "I can hear you," Bush answered. "The rest of the world hears you." The country was united as it had not been since Pearl Harbor. Flags appeared on houses and cars, and lines formed to donate blood.</p>
 <p>Congress acted quickly. On September 14, it passed the <span class="gloss" tabindex="0">Authorization for Use of Military Force<span class="gloss-tip"><span class="gloss-pron">aw-thor-ih-ZAY-shun for YOOS uv MIL-ih-tair-ee FORS</span>The resolution Congress passed on September 14, 2001, that allowed the president to use force against those who planned or helped the attacks.</span></span>, a resolution that allowed the president to use "all necessary and appropriate force" against those who had planned or helped the attacks. It passed almost unanimously, 98 to 0 in the Senate and 420 to 1 in the House. It was broad and it had no end date. You may remember the Gulf of Tonkin Resolution, which also gave a president wide powers in a short time. Some critics have argued that the new law, like the old one, was stretched far beyond what its authors expected, and that Congress gave up too much of its role.</p>
+<div class="optima-widget ow-reflect" data-wid="m18-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Congress passed a broad law three days after the attacks, with almost no votes against it. When a country is in shock, what matters most in a decision like that? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That is a strong reason, and it is why nearly everyone in Congress voted yes that week. Others ask what is lost when there is no time for hard questions.">Acting quickly, since delay could cost lives</button><button data-response="The lesson notes that the law had no end date and that critics said it was stretched. A limit can keep emergency powers from becoming permanent.">Setting limits, such as an end date</button><button data-response="Only one member of the House voted no. Sometimes a lone voice sees what others miss, and sometimes it does not.">Hearing from the few who disagree</button><button data-response="That is how many people felt at the time. The lesson shows a later debate over whether that trust was stretched too far.">Trusting leaders to use the power wisely</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The intelligence pointed to Osama bin Laden, who was sheltered in Afghanistan by the <span class="gloss" tabindex="0">Taliban<span class="gloss-tip"><span class="gloss-pron">TAL-ih-ban</span>A strict Islamist group that ruled most of Afghanistan from the late 1990s until 2001 and sheltered al-Qaeda.</span></span>, a strict Islamist group that had taken control of most of the country in the 1990s. Bush demanded that the Taliban hand him over. They refused. In October 2001, American planes began to bomb Afghanistan, and American special forces joined Afghan fighters on the ground, with allies from Britain and other countries. The Taliban government fell within weeks. But bin Laden escaped into the mountains near Pakistan, and the Taliban was not destroyed. It regrouped, and a long fight began.</p>
 <p>At home, the government moved to prevent another attack. In October 2001, Congress passed the <span class="gloss" tabindex="0">USA PATRIOT Act<span class="gloss-tip"><span class="gloss-pron">yoo-ess-ay PAY-tree-ut AKT</span>A 2001 law that gave police and intelligence agencies new powers to track suspected terrorists and share information.</span></span>, which gave law-enforcement and intelligence agencies new powers to track suspects, to share information between agencies, and to tap phones and watch communications. In 2002, Congress created the <span class="gloss" tabindex="0">Department of Homeland Security<span class="gloss-tip"><span class="gloss-pron">dih-PART-munt uv HOHM-land sih-KYOOR-ih-tee</span>A department created in 2002 that brought together twenty-two agencies to protect the country from attack.</span></span>, which brought together twenty-two agencies, including the Coast Guard and the Secret Service, into one department. Airports installed new security, and a new agency took over screening of passengers. These measures were popular at first. Over time, however, a debate grew about whether the government had gone too far in gathering information on its own citizens. Supporters said that no further attack of this size occurred on American soil for many years, and that the powers were needed. Critics argued that they threatened liberty and the Fourth Amendment's protection against unreasonable searches. A classical republic has always had to balance order against freedom, and this period is a fresh case.</p>
+<div class="ow-group" data-wid="m18-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did the fight in Afghanistan last long after its government fell?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Bin Laden escaped into the mountains near Pakistan, and the strict Islamist group that had ruled the country was not destroyed. It regrouped, and a long fight began.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the department created in 2002 bring together?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Twenty-two agencies, including the Coast Guard and the Secret Service, in one department.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How did Americans feel about the new security measures at first, and later?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">At first, the measures were popular. Over time, a debate grew about whether the government had gone too far in gathering information on its own citizens.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>The second war was far more controversial. In 2002, the Bush administration argued that Iraq, under Saddam Hussein, had <span class="gloss" tabindex="0">weapons of mass destruction<span class="gloss-tip"><span class="gloss-pron">WEP-unz uv MASS dih-STRUK-shun</span>Nuclear, chemical, or biological weapons that can kill large numbers of people.</span></span>, a term for nuclear, chemical, or biological weapons that can kill large numbers of people, and that he might give them to terrorists. Saddam had used chemical weapons in the past, and he had refused to let inspectors work freely. In October 2002, Congress authorized the use of force. In March 2003, American and British troops invaded Iraq. They took Baghdad in three weeks, and Saddam was captured that December. In May, Bush stood on an aircraft carrier beneath a banner that read "Mission Accomplished."</p>
 <p>But the mission was not accomplished. No stockpiles of weapons of mass destruction were found, and the claim that had been made to justify the war proved to be mistaken. A major report later concluded that the intelligence had been faulty. More important, the American government had no plan for governing the country after Saddam's fall. Looting broke out, and the army was disbanded. An <span class="gloss" tabindex="0">insurgency<span class="gloss-tip"><span class="gloss-pron">in-SUR-jun-see</span>An armed rebellion against an occupying power or a new government.</span></span>, an armed rebellion against an occupying power or a new government, spread, and for years, the war turned into a struggle against both Sunni and Shiite militias and foreign fighters. By 2006, Iraq was near civil war. In 2007, Bush ordered a "surge" of about thirty thousand more troops and a new strategy of protecting the population. Violence fell. The war in Iraq cost the lives of nearly 4,500 American service members and many times that number of Iraqis.</p>
 <p><span class="gloss" tabindex="0">Barack Obama<span class="gloss-tip"><span class="gloss-pron">buh-RAHK oh-BAH-muh</span>The 44th president, from 2009 to 2017, and the first African American president.</span></span>, an Illinois senator who had opposed the Iraq War from the beginning, won the election of 2008 and became the first African American president. He withdrew most American troops from Iraq in 2011, and he sent more to Afghanistan. On May 2, 2011, a team of Navy SEALs killed Osama bin Laden in a compound in Pakistan. Yet the Taliban remained in the field. The war in Afghanistan was now the longest in American history. In 2021, under President Joe Biden, the last American troops left in August, and the Taliban took Kabul within days. Some twenty-four hundred Americans had died there, along with many thousands of Afghans.</p>
+<div class="optima-widget ow-select" data-wid="m18-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHAT THE RECORD SHOWS</div><div class="widget-question">Choose the best answer for each question.</div><div class="widget-row" data-correct="2" data-fb="Yes. The argument was that Iraq had such weapons and might give them to terrorists. The lesson adds that the claim proved to be mistaken." data-hint="Think about what the lesson says Iraq was believed to have, and who might receive it."><div class="widget-row-prompt">1. In 2002 the Bush administration argued that Iraq was a danger. Which reason did it give?</div><div class="widget-options"><button data-choice="0">Iraq&#x27;s army had marched into Kuwait for a second time and threatened Saudi Arabia again</button><button data-choice="1">Iraq&#x27;s government had sheltered bin Laden, and he was believed to be hiding in Baghdad</button><button data-choice="2">Iraq was thought to have nuclear, chemical, or biological weapons that it might give to terrorists</button><button data-choice="3">Other nations had asked the United States to remove Iraq&#x27;s ruler from power</button></div></div><div class="widget-row" data-correct="3" data-fb="Yes. About thirty thousand more troops and a new plan to protect the population. The lesson says violence fell." data-hint="A surge is an increase, not a pullback."><div class="widget-row-prompt">2. In 2007 Bush ordered a 'surge' in Iraq. What was it?</div><div class="widget-options"><button data-choice="0">A pullback of American troops from the cities, so that Iraqi forces could take over alone</button><button data-choice="1">A new law that gave the president control over Iraq&#x27;s oil, to pay for the war</button><button data-choice="2">A bombing campaign meant to break the militias and end the war within a few weeks</button><button data-choice="3">About thirty thousand more troops, with a new plan to protect the Iraqi population</button></div></div><div class="widget-row" data-correct="0" data-fb="Yes. Most troops left Iraq in 2011, and more went to Afghanistan, where the war went on." data-hint="Remember that he had opposed the Iraq War from the start."><div class="widget-row-prompt">3. <span class="gloss" tabindex="0">Obama<span class="gloss-tip"><span class="gloss-pron">buh-RAHK oh-BAH-muh</span>The 44th president, from 2009 to 2017, and the first African American president.</span></span> had opposed the Iraq War from the beginning. After he won in 2008, what did he do?</div><div class="widget-options"><button data-choice="0">He withdrew most American troops from Iraq in 2011 and sent more to Afghanistan</button><button data-choice="1">He kept every troop in Iraq until 2020 and pulled all of them out of Afghanistan at once</button><button data-choice="2">He sent another thirty thousand troops to Iraq and cut the force in Afghanistan</button><button data-choice="3">He ended both wars within one year by signing a peace treaty with his enemies</button></div></div><button class="widget-reset">Reset</button></div>
 <p>The war on terror left a mixed record. There was no second attack on the scale of September 11, and al-Qaeda's leadership was broken. But the wars were long, costly, and in the end, uncertain. Contingency is clear here: if the intelligence about Iraq had been correct, or if the occupation had been better planned, events might have gone differently. The great questions of this week reach beyond these wars. What should America's goals be in the world, and what should it not try to do? The next lesson takes up those larger questions.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -387,6 +423,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

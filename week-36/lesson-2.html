@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -330,11 +363,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In the years after September 11, the world changed in ways that few people had expected. The unipolar moment faded. Other nations grew stronger, America's economy took a heavy blow, and the American people grew sharply divided about the country's place in the world. Because these events are recent, historians have less distance from them, and the facts are still disputed. Still, the main trends can be traced.</p>
 <p>The first blow was economic. In the early 2000s, banks lent huge sums for home mortgages, many to buyers who could not afford them. Prices of homes rose quickly, and investors bought complicated financial products that depended on mortgages being repaid. When the housing bubble burst in 2007 and 2008, those debts could not be paid, and large banks and investment firms faced collapse. In September 2008, Lehman Brothers, a giant investment bank, failed. Credit froze, and stock prices fell by about half. Congress and the Federal Reserve rescued banks and some other firms with hundreds of billions of dollars, which was bitterly unpopular. The result was the <span class="gloss" tabindex="0">Great Recession<span class="gloss-tip"><span class="gloss-pron">GRAYT rih-SESH-un</span>The severe economic downturn that began with the financial crisis of 2007 and 2008. It was the worst since the 1930s.</span></span>, the worst economic downturn since the 1930s. Millions of people lost their jobs and their homes, and unemployment rose to ten percent in 2009. Recovery was slow. The crisis damaged Americans' trust in banks, in the government, and in the experts who had said that such a thing could not happen.</p>
 <p>While America fought in the Middle East and recovered from the crisis, China was rising. After Mao's death in 1976, its leaders had begun to allow private farming and private business, while keeping the Communist Party in firm control. China joined the <span class="gloss" tabindex="0">World Trade Organization<span class="gloss-tip"><span class="gloss-pron">WURLD TRAYD or-guh-nih-ZAY-shun</span>An international body, founded in 1995, that sets rules for trade among its member nations.</span></span>, the body that sets rules for trade between nations, in 2001. Its factories grew rapidly, and its goods filled American stores. Within about two decades, China went from a poor country to the second-largest economy in the world, and it built a modern army and navy. China's leaders, especially Xi Jinping, who took power in 2012, claimed a larger role in Asia, built islands in the South China Sea, and expanded the country's reach with loans and projects across Africa, Asia, and Europe. Americans had expected that trade would make China freer and more like the West. That did not happen, and the debate over how to deal with the country, whether by cooperation, competition, or both, became one of the leading questions of American foreign policy.</p>
+<div class="optima-widget" data-wid="m18-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Many Americans expected that trade would make China freer and more like the West. That did not happen.</div><details class="ow-reveal"><summary>Suppose it had happened. How might the debate over China have looked? Decide first and jot down your guess before you open this.</summary><div class="ow-reveal-body">The lesson does not say, so any answer is reasoning rather than fact. One possibility is that the debate would have been about cooperation, with less talk of rivalry. Another is that China would still have grown stronger and sought a larger role, and the argument would have been about how to respond. What the lesson does show is that Americans held an expectation, and when it failed, the question became one of cooperation, competition, or both. A forecast can shape policy, and a forecast can be wrong.</div></details><button class="widget-reset">Reset</button></div>
 <p>Russia also returned to the stage. After the Soviet collapse, the country had suffered years of poverty and disorder. In 2000, Vladimir Putin, a former KGB officer, became its leader. Over time, he rebuilt the state and the army and set aside many of the freedoms that had come with the fall of communism. He spoke of the end of the Soviet Union as a catastrophe. In 2008, Russia fought a short war with Georgia. In 2014, it seized Crimea from Ukraine in an <span class="gloss" tabindex="0">annexation<span class="gloss-tip"><span class="gloss-pron">an-ek-SAY-shun</span>The formal taking of a territory by a stronger country.</span></span>, the formal taking of a territory by a stronger power, and backed a rebellion in eastern Ukraine. In February 2022, it launched a full invasion of Ukraine, the largest war in Europe since 1945. The United States and its NATO allies responded with sanctions and with arms for Ukraine, but they did not send their own troops. Many of the old ideas of the Cold War, such as deterrence and the danger of nuclear escalation, returned to debate.</p>
 <p>Other countries also gained weight. India, Brazil, Turkey, and the oil-rich states of the Gulf pursued their own interests and refused to take sides. Terrorist groups and cyberattackers could do damage without armies. Today people speak of a <span class="gloss" tabindex="0">multipolar world<span class="gloss-tip"><span class="gloss-pron">mul-tih-POH-ler WURLD</span>A world in which several great and middle powers, not just one or two, shape events.</span></span>, one in which several great and middle powers, rather than one or two, shape events. In a multipolar world, no single country can set the rules. America remains very strong, with the world's largest economy by many measures and a military unmatched in its reach, but it can no longer expect to get its way simply by asking. History shows that this is the usual condition of nations. Some thinkers believe the moment of unrivaled power was the exception.</p>
+<div class="optima-widget ow-scale" data-wid="m18-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW UNUSUAL WAS IT?</div><div class="widget-question">Look across history. How unusual were the years when one country had no rival?</div><div class="widget-row" data-correct="1" data-fb="Yes. The lesson calls several powers the usual condition of nations, though some thinkers weigh it differently." data-hint="The lesson says what is usual for nations, and what some thinkers call the exception."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson says the world of several powers is the usual condition.">Ordinary: it is the usual state of the world</button><button data-choice="1" data-fb="Yes. The lesson calls several powers the usual condition of nations, though some thinkers weigh it differently.">Unusual: several great powers is the more common condition</button><button data-choice="2" data-fb="Not quite. The lesson does not say it had never happened before.">Unique: it had never happened before and has not happened since</button><button data-choice="3" data-fb="Not quite. The lesson itself compares the years of one power with how nations usually stand.">Unknowable: historians cannot compare one period with another</button></div></div><button class="widget-reset">Reset</button></div>
 <p>At home, Americans grew more divided. By many measures, the two parties were farther apart on basic questions than in decades, and fewer voters moved between them. Scholars call this <span class="gloss" tabindex="0">polarization<span class="gloss-tip"><span class="gloss-pron">poh-ler-ih-ZAY-shun</span>A division of a society into opposing camps that distrust each other.</span></span>, a division of a society into opposing camps that distrust each other. The causes are argued: changes in the news and in social media, where people tend to hear only those who agree with them; the sorting of voters by region, income, and education; and the long sense that institutions had failed. Several elections in this period were decided by narrow margins, and disputes over results and over the rules of voting grew sharper. In 2020, a global pandemic of COVID-19 killed more than a million Americans, closed schools and businesses, and brought new fights over how to balance health and freedom. A republic can survive disagreement, but it needs enough shared affection among its citizens to settle quarrels peacefully. Many of the thinkers you have studied, from Aristotle to Tocqueville, would say that this habit is the true foundation of self-government.</p>
 <p>What should America do in such a world? Here, Americans disagree, and thoughtful people hold different views. Some believe that the United States should lead and defend an open order of alliances and trade, because the price of withdrawal would be higher than the cost of leadership. Others believe that America has overreached, that it should concentrate on its own borders, economy, and people, and that it should avoid foreign wars that do not serve vital interests. Others seek a middle path: keep the alliances that matter most, use force rarely, and strengthen the country at home as the basis of strength abroad.</p>
 <p>This old argument stretches back to the beginning of the republic. In 1796, as he left office, George Washington wrote a Farewell Address to the American people. He warned against "permanent alliances" with foreign nations, and he advised the country to extend its trade but to have "as little political connection as possible" with others. He also urged citizens to guard their unity, and to avoid party spirit, which he feared could be used by foreign powers and ambitious men. You will read excerpts this week. Washington did not say that America should never act abroad; he said it should do so for its own interests and its own peace, and he expected the United States to grow strong enough to choose its course. Notice that the question of how far to go in the world and the question of unity at home are bound together in his advice. Whether it is wise for the twenty-first century is for you to decide.</p>
+<div class="optima-widget ow-seq" data-wid="m18-2-3" data-ra-skip data-n="5" data-fb="That is the order, from 2001 to 2022." data-hint="Use the years given in the lesson. The pandemic came before the largest war in Europe since 1945."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">China joins the body that sets rules for trade between nations</button><button data-pos="2">A giant investment bank fails and lending freezes</button><button data-pos="3">Russia seizes Crimea from Ukraine</button><button data-pos="4">A global pandemic closes schools and businesses</button><button data-pos="5">Russia launches a full invasion of Ukraine</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>You have now followed the American story from the end of Reconstruction to the present day. You have seen a republic survive wars, depressions, and scandals, and you have seen it make serious mistakes. You have seen how leaders' choices, and sometimes chance, changed events. As you take up the final discussion, remember that you are now one of the people who will help to decide what comes next. The country you have studied is a trust, and it will pass to you.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -385,6 +421,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

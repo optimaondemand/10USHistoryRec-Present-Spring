@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -333,11 +366,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In 1991, the Cold War ended, and the United States was left as the strongest country in the world. No other nation could match its economy, its military, or its reach. A commentator named Charles Krauthammer called this a "unipolar moment." A <span class="gloss" tabindex="0">unipolar world<span class="gloss-tip"><span class="gloss-pron">yoo-nih-POH-ler WURLD</span>A world with one great power, with no rival of equal strength.</span></span> is one with a single great power, like a magnet with one pole. It is the opposite of the Cold War, when two superpowers each balanced the other. Some Americans hoped that the moment would last for a long time. Others warned that no country holds such a position forever. In this lesson, you will see how the United States used its power in the years after 1989, and what limits it met.</p>
 <p>The first test came in the Middle East. In August 1990, Iraq's dictator, <span class="gloss" tabindex="0">Saddam Hussein<span class="gloss-tip"><span class="gloss-pron">sah-DAHM hoo-SAYN</span>The dictator of Iraq from 1979 until 2003. His invasion of Kuwait led to the Persian Gulf War.</span></span>, sent his army into the small oil-rich country of Kuwait and took it in a few hours. Saddam had just finished a long and costly war with Iran, and he owed large debts to Kuwait. Now he controlled a large share of the world's oil, and his army threatened Saudi Arabia, the greatest oil producer of all. President <span class="gloss" tabindex="0">George H. W. Bush<span class="gloss-tip"><span class="gloss-pron">JORJ aych DUB-ul-yoo BUSH</span>The 41st president, from 1989 to 1993. He led the coalition in the Persian Gulf War.</span></span> was a World War II navy pilot, a former head of the CIA, and an experienced diplomat. He said, "This will not stand."</p>
 <p>Bush set out to build a <span class="gloss" tabindex="0">coalition<span class="gloss-tip"><span class="gloss-pron">koh-uh-LISH-un</span>A group of nations or groups that join together for a common purpose.</span></span>, a group of nations joined for a common purpose. He worked through the United Nations Security Council, where the Soviet Union, in its last year, voted with the United States instead of using its veto. More than thirty countries joined, including Britain, France, Egypt, and Saudi Arabia, and many shared the cost. Bush also asked Congress for approval, and in January 1991, Congress voted to authorize the use of force. The vote was close, 52 to 47 in the Senate. Nothing like this had been seen since Korea: a war fought under a UN resolution, with allies, and with Congress involved. In his address to Congress in September 1990, which you will read this week, Bush spoke of a "new world order," in which nations would work together to oppose aggression.</p>
+<div class="optima-widget ow-reflect" data-wid="m17-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Bush could have answered Iraq's invasion alone. Instead he first asked other nations to join him, and he also asked Congress. When you take on a hard task, what matters most about having others with you? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That was part of the story here: many of the more than thirty countries shared the cost. Friends can carry a load that no one could carry alone.">Sharing the cost and the work</button><button data-response="Bush made that kind of argument when he spoke of nations working together against aggression. Some would add that it makes a leader answer for what he does.">Their agreement makes the effort fair</button><button data-response="A fair worry. The more members a group has, the harder it can be to agree. The lesson shows one case where leaders chose to build the group first.">Waiting for others can slow you down</button><button data-response="Many people would answer that way. A small problem may need no help, but a big one may need many hands.">It depends on how big the problem is</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The <span class="gloss" tabindex="0">Persian Gulf War<span class="gloss-tip"><span class="gloss-pron">PER-zhun GULF WOR</span>The 1991 war in which a coalition led by the United States drove Iraq's army out of Kuwait.</span></span> began on January 17, 1991, with a huge air campaign. Cruise missiles and stealth planes hit Iraqi targets, and television audiences watched the first "live" war. On February 24, the ground attack began. In about a hundred hours, coalition forces drove Iraq's army out of Kuwait and destroyed a large part of it. American losses were light, fewer than 150 killed in combat, and Iraqi losses were many times higher. Bush then stopped. He did not march on Baghdad to remove Saddam, because he believed that this would break the coalition and leave America in charge of a hostile country. Saddam stayed in power, and he crushed uprisings by Kurds and Shiites that Americans had encouraged. Critics said the war was left unfinished. Defenders said the goal, to free Kuwait, had been reached, and that Bush had avoided a trap. It is a good example of a leader deciding what to leave undone.</p>
 <p>Despite the victory, Bush lost the election of 1992. The war had made him popular, but an economic downturn made voters worry about jobs, and a third-party candidate, the Texas businessman Ross Perot, took many votes. The winner was the governor of Arkansas, <span class="gloss" tabindex="0">Bill Clinton<span class="gloss-tip"><span class="gloss-pron">BIL KLIN-tun</span>The 42nd president, from 1993 to 2001. He was a Democrat and the former governor of Arkansas.</span></span>, a young Democrat who promised to focus "like a laser" on the economy. Clinton was a gifted speaker, and he had a quick mind for policy. He also proved to be careful about the political center. He declared that "the era of big government is over," and in 1996 he signed a law that reformed welfare by setting time limits on benefits and requiring work.</p>
+<div class="optima-widget ow-select" data-wid="m17-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHAT THE LESSON SAYS</div><div class="widget-question">Choose the best answer for each question.</div><div class="widget-row" data-correct="3" data-fb="Yes. Iraq now held much of the world&#x27;s oil, and Saudi Arabia, the greatest producer of all, was threatened." data-hint="Look at what Iraq now controlled and which larger country it threatened."><div class="widget-row-prompt">1. Iraq took Kuwait in a few hours. Why did that alarm leaders far beyond Kuwait?</div><div class="widget-options"><button data-choice="0">Kuwait was the greatest oil producer of all, and Iraq had now taken it for itself</button><button data-choice="1">The long war with Iran had only just begun, and a wider war in the region was feared</button><button data-choice="2">Iraq&#x27;s army had already marched into Saudi Arabia and taken its capital within days</button><button data-choice="3">Iraq now held a large share of the world&#x27;s oil, and its army threatened Saudi Arabia</button></div></div><div class="widget-row" data-correct="0" data-fb="Yes. In its last year, the Soviet Union voted with the United States instead of blocking the effort." data-hint="Think about what the Soviet Union chose not to do."><div class="widget-row-prompt">2. Bush sought a vote of world leaders against Iraq. In its last year, what did the Soviet Union do about it?</div><div class="widget-options"><button data-choice="0">It joined the United States in the vote instead of blocking it</button><button data-choice="1">It blocked the vote, so Bush had to act without the support of other nations</button><button data-choice="2">It sent troops to Kuwait on the side of Iraq</button><button data-choice="3">It asked for the vote to wait until Congress had acted</button></div></div><div class="widget-row" data-correct="1" data-fb="Yes. The ground attack took about a hundred hours, and Iraq&#x27;s losses were many times higher than American losses." data-hint="Remember how quickly the ground attack went, and where Bush chose to stop."><div class="widget-row-prompt">3. Which statement about the ground war fits the lesson?</div><div class="widget-options"><button data-choice="0">It dragged on for many months, and American forces lost far more people than the enemy did</button><button data-choice="1">Iraq&#x27;s army was driven out in about a hundred hours, and its losses were many times those of the Americans</button><button data-choice="2">It ended with a march on Baghdad, where Iraq&#x27;s ruler was removed from power and put on trial</button><button data-choice="3">It was fought by American forces alone, because every other country had refused to take part</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Clinton's most important economic decision was to follow Bush on free trade. The <span class="gloss" tabindex="0">North American Free Trade Agreement<span class="gloss-tip"><span class="gloss-pron">north uh-MAIR-ih-kun FREE trayd uh-GREE-munt</span>A treaty, called NAFTA, that removed most trade barriers among the United States, Canada, and Mexico. It took effect in 1994.</span></span>, or NAFTA, removed most trade barriers among the United States, Canada, and Mexico. Bush had signed it. After a bitter fight in Congress, in which many labor unions and many members of Clinton's own party opposed it, Clinton won its passage in 1993. Supporters said that free trade would lower prices and open new markets. Opponents said it would send factory jobs to Mexico. The truth is mixed. Trade grew sharply, and consumers gained from lower prices. But some towns that depended on manufacturing were hit hard, and the pain was real for the people who lived there. In 1995, the United States also helped create a new international body to set rules for trade among its members, and over the following years, trade with China grew rapidly.</p>
 <p>At the same time, the economy took off. Much of the growth came from a new technology. The Internet had been a tool for scientists and the military. In the 1990s, it spread to homes, with the World Wide Web, web browsers, and online companies such as Amazon and Google. Investors poured money into any business with ".com" in its name. The <span class="gloss" tabindex="0">dot-com boom<span class="gloss-tip"><span class="gloss-pron">DOT-kom BOOM</span>The rush of investment in internet companies in the late 1990s that drove the stock market to new heights before many of the companies failed.</span></span> pushed the stock market to new heights. Unemployment fell to about four percent by 2000, and for the first time in decades, the federal government took in more money than it spent. Not all of this was lasting. In 2000 and 2001, many internet companies failed, and stock prices fell. An old lesson was learned again: speculation can run ahead of reality.</p>
 <p>The decade was a test of how America would use its power without a rival. In some places, it acted, as when it helped end the war in Bosnia in 1995 and bombed Serbian forces in Kosovo in 1999. In others, it held back or failed. In 1993, eighteen American soldiers died in Somalia in a street battle in Mogadishu, and Clinton pulled out. In 1994, in Rwanda, about eight hundred thousand people were killed in a genocide, and the world did not act. American leaders drew a hard lesson from Somalia and were reluctant to send troops to places where no vital interest seemed to be at stake. They also wondered what role a country with no rival should play.</p>
+<div class="ow-group" data-wid="m17-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the United States do in Bosnia in 1995 and in Kosovo in 1999?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It helped end the war in Bosnia, and it bombed Serbian forces in Kosovo. In these places, it acted.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Bush hope a &#x27;new world order&#x27; would bring?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A world in which nations would work together to oppose aggression. He spoke of it in his address to Congress in September 1990.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What question did the years after 1989 leave for a country with no rival?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">What role it should play. The lesson shows places where it acted and places where it held back.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>For many Americans, the 1990s felt like a time of peace and wealth, a holiday from history. That feeling is the subject of this week's discussion, which asks whether the peace was real or only a pause. The next lesson looks at three signs of trouble that were visible in these years: terrorism, immigration, and a presidential election that was decided in the courts.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -388,6 +424,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

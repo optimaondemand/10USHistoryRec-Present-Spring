@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -334,11 +367,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>The 1990s felt safe, but several dangers were growing in plain sight. This lesson looks at three of them: terrorism, the debate over immigration, and a shaky presidential election. They differ in every way, yet each tested the habits and institutions of the republic.</p>
 <p>Terrorism first. Terrorism is the use of violence against civilians to frighten a population and to force a change in policy. Americans had met it before, but in the 1990s, it grew larger. In February 1993, a truck bomb exploded in the garage under the World Trade Center in New York, killing six people and injuring more than a thousand. The towers did not fall. The men behind it were caught, tried in court, and sent to prison, and many Americans treated the case as a crime to be punished rather than as a war. In April 1995, an American-born man named Timothy McVeigh bombed a federal building in Oklahoma City and killed 168 people, showing that terrorists could be homegrown. Neither event changed how most Americans thought about their safety.</p>
 <p>A more dangerous enemy was taking shape abroad. <span class="gloss" tabindex="0">Osama bin Laden<span class="gloss-tip"><span class="gloss-pron">oh-SAH-mah bin LAH-den</span>The founder of al-Qaeda and the planner of the September 11 attacks. He was killed by American forces in 2011.</span></span> was the son of a rich Saudi family who had joined the Afghan resistance against the Soviets in the 1980s. He founded <span class="gloss" tabindex="0">al-Qaeda<span class="gloss-tip"><span class="gloss-pron">al-KY-duh</span>An Islamist terrorist network founded by Osama bin Laden. It carried out the attacks of September 11, 2001.</span></span>, an Islamist terrorist network, and turned against the United States. He objected above all to the presence of American troops in Saudi Arabia, home to Islam's holiest places, after the Gulf War. In February 1998, he and several allies issued a <span class="gloss" tabindex="0">fatwa<span class="gloss-tip"><span class="gloss-pron">FAHT-wah</span>An Arabic word for a religious ruling. Bin Laden issued one in 1998 that called for attacks on Americans.</span></span>, which is a religious ruling, declaring that Muslims should kill Americans anywhere. You will read an excerpt this week. Most Muslim scholars and leaders rejected such claims, and the great majority of Muslims, then and now, have nothing to do with terror. But his group acted on its words.</p>
+<div class="optima-widget" data-wid="m17-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Bin Laden objected above all to American troops in Saudi Arabia after the war to free Kuwait. Suppose those troops had gone home soon after the war.</div><details class="ow-reveal"><summary>What might have followed? Decide first and jot down your guess before you open this.</summary><div class="ow-reveal-body">The lesson does not say, so any answer is reasoning rather than fact. One possibility is that he would have found other grievances, since the lesson says he objected 'above all' to the troops, which suggests there were others, and he had already turned against the United States. Another is that his message would have had less appeal. What the lesson does show is that most Muslim scholars and leaders rejected his claims, and that the great majority of Muslims have nothing to do with terror. A cause rarely has only one root, and historians weigh the roots against each other instead of choosing one.</div></details><button class="widget-reset">Reset</button></div>
 <p>Al-Qaeda attacked in August 1998, setting off truck bombs at the American embassies in Kenya and Tanzania. More than two hundred people died, most of them Africans. Clinton ordered missile strikes on training camps in Afghanistan and on a factory in Sudan. In October 2000, suicide bombers in a small boat hit the destroyer USS Cole in a harbor in Yemen, killing seventeen sailors. Officials warned of a bigger threat to come. But there was no agreement on what to do about it, and Americans, tired of war, had little appetite for another one. The government also had trouble sharing information between agencies, such as the CIA and the FBI. As you will see in the next lesson, those warnings proved all too accurate.</p>
 <p>The second theme was immigration. The Immigration and Nationality Act of 1965, which you read about earlier, had ended the old quota system based on national origin. By the 1990s, most new immigrants came from Latin America and Asia, not Europe, and the foreign-born share of the population was rising again. Many came legally, to join family or to work. Many others entered without permission, mostly across the long border with Mexico. In 1986, Congress tried to settle the matter with the <span class="gloss" tabindex="0">Immigration Reform and Control Act<span class="gloss-tip"><span class="gloss-pron">im-ih-GRAY-shun rih-FORM and kun-TROHL AKT</span>A 1986 law that made it illegal to knowingly hire workers without legal status, and that gave amnesty to nearly three million people already living in the country.</span></span>. It made it illegal for employers to knowingly hire people without legal status. It also offered <span class="gloss" tabindex="0">amnesty<span class="gloss-tip"><span class="gloss-pron">AM-nes-tee</span>A general pardon that a government gives to a group of people for breaking a law.</span></span>, a general pardon, to nearly three million people who had been in the country since 1982. Supporters expected that the law would stop the flow of illegal immigration. It did not. Employers found ways around the new rules, enforcement was weak, and the numbers grew.</p>
+<div class="optima-widget ow-seq" data-wid="m17-2-2" data-ra-skip data-n="5" data-fb="That is the order, from the immigration law of 1965 to the embassy bombings of 1998." data-hint="Look for the years in the lesson. The two events of 1998 came last."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from the earliest to the latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Congress ends the old limits based on national origin</button><button data-pos="2">Congress makes it illegal to knowingly hire workers without legal status</button><button data-pos="3">A truck bomb explodes in the garage under the World Trade Center</button><button data-pos="4">Bin Laden and his allies call for attacks on Americans everywhere</button><button data-pos="5">Truck bombs hit American embassies in Kenya and Tanzania</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The debate was hard because both sides had a point. Those who wanted more immigration said that newcomers had always built the country, that they took jobs few others wanted, and that they brought energy and ambition. Those who wanted less said that a nation must control its own borders, that the rule of law should not reward those who break it, and that very large numbers made it harder to join newcomers into one people. A classical republican would see a genuine problem in both views: a republic needs citizens who share loyalty to its common good, and it also needs the talents of new people. The first part, becoming one people, has always been the work of schools, churches, and daily life, more than of laws. In 1994, California voters passed a measure to cut off public services to illegal immigrants, which a court later struck down. The argument continued into the next century, and it is still unsettled.</p>
 <p>The third theme was the election of 2000. Vice President Al Gore, a Democrat, ran against <span class="gloss" tabindex="0">George W. Bush<span class="gloss-tip"><span class="gloss-pron">JORJ DUB-ul-yoo BUSH</span>The 43rd president, from 2001 to 2009. He was the governor of Texas and the son of the 41st president.</span></span>, the governor of Texas and the son of the former president. The race was extremely close. On election night, networks called Florida for Gore, then for Bush, and then said it was too close to call. Whoever won Florida would win the <span class="gloss" tabindex="0">Electoral College<span class="gloss-tip"><span class="gloss-pron">ih-lek-TOR-ul KOL-ij</span>The system in which each state casts electoral votes for president. A candidate needs a majority of the 538 votes to win.</span></span>, the system by which each state casts electoral votes, and the candidate with a majority of the 538 votes becomes president. Gore had won more votes nationwide, as had happened only a few times before, but Bush led in Florida by only a few hundred votes.</p>
 <p>Florida law required a machine <span class="gloss" tabindex="0">recount<span class="gloss-tip"><span class="gloss-pron">REE-kount</span>A second counting of ballots to check the result of an election.</span></span>, which is a second counting of the ballots. Then Gore asked for hand recounts in several counties. Ballots there had been punched with a stylus, and some were only partly punched. The tiny bits of paper became known as "hanging chads" and "dimpled chads." Officials argued over how to decide the voters' intent. Both sides sent lawyers, and the matter moved through the state courts for five weeks. In the end, it reached the Supreme Court. In <span class="gloss" tabindex="0">Bush v. Gore<span class="gloss-tip"><span class="gloss-pron">BUSH VER-sus GOR</span>The 2000 Supreme Court case that stopped the Florida recount and decided the presidential election.</span></span>, on December 12, the Court ruled five to four that the recount, as it was being done, did not give equal treatment to all voters, and that there was no time to set up a fair one. The recount stopped, and Bush won Florida by 537 votes and the presidency by a margin of 271 electoral votes to 266.</p>
+<div class="optima-widget ow-scale" data-wid="m17-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID SMALL DETAILS MATTER?</div><div class="widget-question">The way paper ballots were punched in Florida became a fight in court. How much did small details like this matter to the result of the election?</div><div class="widget-row" data-correct="2" data-fb="Yes. With a margin of only a few hundred votes, how the ballots were counted could decide the state, and with it the presidency." data-hint="Look at how small the margin in Florida was."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson shows the court fights over how to count these ballots.">They did not matter at all</button><button data-choice="1" data-fb="Not quite. The lesson says the margin in Florida was only a few hundred votes.">They mattered a little, since the margin was wide</button><button data-choice="2" data-fb="Yes. With a margin of only a few hundred votes, how the ballots were counted could decide the state, and with it the presidency.">They mattered a great deal, since the margin was only a few hundred votes</button><button data-choice="3" data-fb="Not quite. The lesson also names the Court&#x27;s ruling about equal treatment, and the work of Florida&#x27;s officials and lawyers.">They were the only thing that mattered</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Many people felt that the outcome was unfair. Gore's supporters said that the Court had stopped a count of the ballots, and Bush's supporters said that Florida officials had followed the law. Yet something notable happened next. Gore accepted the result, and said that he disagreed with the decision but would respect it. The transfer of power took place in peace, and no one called out the army. That fact says much about the health of the republic. The country had been through a very close election, in the hands of lawyers and judges, and it held together. Within a year, it would be tested in a much harsher way.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -389,6 +425,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>
