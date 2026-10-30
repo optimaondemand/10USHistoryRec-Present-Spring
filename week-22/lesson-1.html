@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -338,13 +371,16 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In November 1928, Americans elected <span class="gloss" tabindex="0">Herbert Hoover<span class="gloss-tip"><span class="gloss-pron">HER-bert HOO-ver</span>The mining engineer and relief organizer who was elected president in 1928. He led the nation as the Great Depression began.</span></span> president in a landslide. Hoover was an orphan from Iowa who had become a rich mining engineer. During the Great War, he organized food relief for starving Belgium and then ran the nation's wartime food program. As Secretary of Commerce in the 1920s, he was known as the great manager of American prosperity. In his speech accepting the nomination, he said, "We in America today are nearer to the final triumph over poverty than ever before in the history of any land." Few Americans doubted him.</p>
 <p>The stock market was one reason. The <span class="gloss" tabindex="0">stock market<span class="gloss-tip"><span class="gloss-pron">stok MAR-kit</span>The place where people buy and sell shares, which are small pieces of ownership in companies.</span></span> is where people buy and sell shares, or small pieces of ownership, in companies. Through the 1920s, stock prices climbed. Between 1925 and September 1929, the average price of leading stocks more than tripled. For the first time, many middle-class families bought stocks, not just the rich. Stories of easy fortunes brought in even more buyers. Many of them practiced <span class="gloss" tabindex="0">buying on margin<span class="gloss-tip"><span class="gloss-pron">BY-ing on MAR-jin</span>Buying stocks by paying only a small part of the price and borrowing the rest from a broker. It brings big profits if prices rise and big losses if they fall.</span></span>. That means paying only a small part of a stock's price, often ten to twenty percent, and borrowing the rest from a broker. If the stock's price rose, the buyer made a large profit on a small amount of money. If it fell, the broker demanded repayment right away. This kind of <span class="gloss" tabindex="0">speculation<span class="gloss-tip"><span class="gloss-pron">spek-yuh-LAY-shun</span>Betting that prices will rise in order to make a quick profit, instead of investing for the long term.</span></span>, betting on prices to rise instead of investing for the long term, can turn a boom into a bubble.</p>
 <p>The bubble burst in October 1929. On Thursday, October 24, prices plunged. Leading bankers pooled money to buy shares and calm the panic, and prices steadied for a few days. Then the selling began again. On Tuesday, October 29, a day known as <span class="gloss" tabindex="0">Black Tuesday<span class="gloss-tip"><span class="gloss-pron">blak TOOZ-day</span>October 29, 1929, the day of the worst stock market crash, when more than sixteen million shares were traded.</span></span>, more than sixteen million shares changed hands, a record. Buyers on margin were wiped out, because their brokers demanded money they did not have. Fortunes disappeared in days. Prices kept sliding for almost three years. By the summer of 1932, stocks had lost close to ninety percent of their value.</p>
+<div class="optima-widget ow-reflect" data-wid="m4-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Picture a family in 1929 with a little savings, just before the crash. Neighbors are getting rich in stocks. What would you have done? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Many ordinary families did, and stories of easy fortunes pulled in more buyers. Watch what happens to people who borrowed to buy.">Put some in stocks</button><button data-response="A careful choice. But the lesson will show that in those days banks had no government insurance on deposits, so even savers could lose.">Keep it in a bank</button><button data-response="Waiting is a choice too. Most Americans did not own stocks at all, and you will see how the crash still reached them.">Wait and watch</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>A stock crash by itself does not explain a decade of misery. Most Americans did not own stocks. The crash was the match, but the fuel had been piling up. Many banks had made poor loans. In those days, there was no government insurance on deposits. When people heard rumors that a bank was in trouble, they rushed to take out their money. Such a <span class="gloss" tabindex="0">bank run<span class="gloss-tip"><span class="gloss-pron">bangk run</span>A sudden rush by many depositors to withdraw their money because they fear their bank will fail. Banks lend out most of their deposits, so a run can ruin even a healthy bank.</span></span> could ruin even a healthy bank, because banks lend out most of what they take in. Between 1930 and 1933, roughly nine thousand banks failed, and their customers lost their savings. The <span class="gloss" tabindex="0">Federal Reserve<span class="gloss-tip"><span class="gloss-pron">FED-er-ul rih-ZURV</span>The nation's central bank, created in 1913. It controls the supply of money and credit.</span></span>, the nation's central bank, could have flooded the system with money to calm the panic. Instead, many economists now believe, it let the supply of money shrink, which made lending dry up and prices fall.</p>
 <p>Then came a mistake in trade policy. A <span class="gloss" tabindex="0">tariff<span class="gloss-tip"><span class="gloss-pron">TAIR-if</span>A tax on imported goods.</span></span> is a tax on imported goods. Farmers and factory owners had long asked for high tariffs to protect them from foreign competition. In June 1930, Congress passed the <span class="gloss" tabindex="0">Smoot-Hawley Tariff<span class="gloss-tip"><span class="gloss-pron">SMOOT-HAW-lee TAIR-if</span>A 1930 law that raised tariffs on thousands of imported goods. Other countries struck back and world trade collapsed.</span></span>, which raised rates on thousands of goods. More than a thousand economists signed a petition asking Hoover to veto it. He signed it anyway. Other countries struck back with tariffs of their own, and world trade collapsed. American farmers and factories lost foreign customers they could not afford to lose.</p>
 <p>The crisis was also worldwide. European nations owed large war debts to the United States, and many had borrowed American money to rebuild. When American lending dried up, the shock spread across the ocean. Most nations were also tied to the <span class="gloss" tabindex="0">gold standard<span class="gloss-tip"><span class="gloss-pron">gohld STAN-derd</span>A system in which a nation's money is worth a fixed amount of gold. It made it hard for governments to add money to the economy in a crisis.</span></span>, a system that fixed the value of money to a set amount of gold. It made it hard for governments to put more money into their economies when trouble came. Britain left the gold standard in 1931, and the United States left it in 1933. Countries that left it sooner generally began to recover sooner.</p>
+<div class="ow-group" data-wid="m4-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did many economists say the nation&#x27;s central bank could have done to calm the panic?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Flood the system with money.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the central bank do instead, according to those economists?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It let the supply of money shrink, so lending dried up and prices fell.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">By the summer of 1932, how much value had leading stocks lost?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Close to ninety percent.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>By 1933, about one worker in four had no job, and the nation's output had fallen by roughly a third. Americans began calling the disaster the <span class="gloss" tabindex="0">Great Depression<span class="gloss-tip"><span class="gloss-pron">grayt dih-PRESH-un</span>The worst economic crisis in American history. It began with the 1929 crash and lasted through the 1930s.</span></span>.</p>
 <p>How did Hoover respond? He is often pictured as a man who did nothing, and that picture is unfair. Hoover believed in action, but of a certain kind. He thought the government should encourage cooperation but not take over. He believed that relief for the poor should come from families, churches, local charities, and state governments. A direct federal handout, he feared, would weaken the independence and character of citizens. So he urged business leaders to keep wages up and avoid layoffs. He created a Federal Farm Board and expanded public works, including a huge dam on the Colorado River. In January 1932, he asked Congress to create the <span class="gloss" tabindex="0">Reconstruction Finance Corporation<span class="gloss-tip"><span class="gloss-pron">rek-un-STRUK-shun fih-NANS kor-puh-RAY-shun</span>A government agency created in 1932 to lend money to banks, railroads, and other large businesses so they would not collapse.</span></span>, which lent money to banks, railroads, and insurance companies so they would not collapse. In 1932, he also signed a large tax increase to balance the budget. Many economists now think that move deepened the slump.</p>
 <p>Evaluate Hoover as you would any leader, by his habits of character and their results. His virtues were real. He was honest, hardworking, and deeply generous in his own way. His rescue of Belgian civilians had saved millions. But he held to his principles even as the evidence mounted against them. He found it hard to speak warmly to a frightened public, and many Americans came to feel that he did not understand their fear. Meanwhile, the voluntary system he trusted was overwhelmed. Private charities and local governments ran out of money well before the need ran out.</p>
 <p>It is tempting to say the Depression was bound to happen, or that Hoover alone caused it. Neither claim is sound. The crash was shaped by decisions, and different decisions were possible. If the Federal Reserve had acted differently, the bank failures might have been smaller. If Hoover had vetoed the tariff, world trade might have fallen less. If the banking crisis had been faced early and boldly, the panic might have been contained. No one can say for sure what would have happened. What we know is that a collection of human choices, made in a hurry and under pressure, helped turn a financial shock into the worst economic crisis in American history.</p>
+<div class="optima-widget ow-select" data-wid="m4-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHAT MIGHT HAVE CHANGED?</div><div class="widget-question">Each row asks about a different path. Pick what might have changed. No one can know for sure.</div><div class="widget-row" data-correct="1" data-fb="Possibly. The lesson says the bank failures might have been smaller, though no one can say for sure." data-hint="Think about what a shrinking money supply did to banks."><div class="widget-row-prompt">1. Suppose the central bank had acted differently in the early 1930s. What might have been smaller?</div><div class="widget-options"><button data-choice="0">The size of the tax on imports</button><button data-choice="1">The number of bank failures</button><button data-choice="2">The number of shares traded</button></div></div><div class="widget-row" data-correct="0" data-fb="Possibly. Other countries struck back with taxes of their own, so trade might have fallen less." data-hint="Think about what other countries did in reply."><div class="widget-row-prompt">2. Suppose Hoover had vetoed the <span class="gloss" tabindex="0">Smoot-Hawley Tariff<span class="gloss-tip"><span class="gloss-pron">SMOOT-HAW-lee TAIR-if</span>A 1930 law that raised tariffs on thousands of imported goods. Other countries struck back and world trade collapsed.</span></span>. What might have fallen less?</div><div class="widget-options"><button data-choice="0">World trade</button><button data-choice="1">The price of gold</button><button data-choice="2">The drought on the Plains</button></div></div><div class="widget-row" data-correct="2" data-fb="Possibly. The lesson says the panic might have been contained." data-hint="Think about what spread from bank to bank."><div class="widget-row-prompt">3. Suppose leaders had faced the banking crisis early and boldly. What might have been contained?</div><div class="widget-options"><button data-choice="0">The drought on the Plains</button><button data-choice="1">The size of the 1928 landslide</button><button data-choice="2">The panic</button></div></div><button class="widget-reset">Reset</button></div>
 <p>In the next lesson, you will leave the stock exchange and go home with ordinary American families. How did they live when the money ran out? And what did they ask of their government?</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

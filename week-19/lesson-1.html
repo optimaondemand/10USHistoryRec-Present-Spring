@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -339,13 +372,16 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>On November 11, 1918, the guns of the Great War fell silent. The <span class="gloss" tabindex="0">Armistice<span class="gloss-tip"><span class="gloss-pron">AR-mih-stis</span>An agreement to stop fighting. The Armistice of November 11, 1918, ended the Great War's fighting but did not settle the peace.</span></span> stopped the fighting, but it did not write the peace. That job fell to President Woodrow Wilson, and he did something no sitting president had ever done. He sailed to Europe to join the peace talks in person. Crowds in Paris, London, and Rome cheered him as a hero. Wilson carried a plan, the <span class="gloss" tabindex="0">Fourteen Points<span class="gloss-tip"><span class="gloss-pron">FOR-teen points</span>President Wilson's January 1918 plan for peace. The last point called for a league of nations.</span></span>, which he had announced to Congress in January 1918. The last point called for a "general association of nations" to keep the peace. That idea became the <span class="gloss" tabindex="0">League of Nations<span class="gloss-tip"><span class="gloss-pron">leeg uv NAY-shunz</span>The international organization created by the Treaty of Versailles to keep the peace. The United States never joined it.</span></span>.</p>
 <p>The League was meant to work like a promise among neighbors. Its Covenant, or founding document, asked members to settle quarrels by talking, to wait before going to war, and to act together against any nation that attacked another. Every member would have a seat in an Assembly, and the great powers would sit on a smaller Council. Its home would be Geneva, in Switzerland. Wilson cared about it more than about any other part of the peace.</p>
 <p>Wilson was a former college president and a scholar of government. He was brilliant and sincere, and he also had a stubborn streak. He disliked giving ground once he believed he was right. At Paris, he won the League, but he gave up much else to get it. Britain and France wanted to punish Germany and make it pay. The <span class="gloss" tabindex="0">Treaty of Versailles<span class="gloss-tip"><span class="gloss-pron">TREE-tee uv ver-SY</span>The 1919 treaty that ended the Great War with Germany. It blamed Germany for the war and created the League of Nations.</span></span>, signed on June 28, 1919, blamed Germany for the war and charged it heavy payments. Wilson tied the League to the treaty itself, so the Senate could not approve one without the other. That choice would matter a great deal.</p>
+<div class="optima-widget ow-reflect" data-wid="m1-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Think about a time you wanted something so much that you gave up other things to get it. Looking back, how did it feel? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Sometimes the thing we want most really is worth the cost. Keep that feeling in mind as you read what Wilson gave up to win the League, and what it cost him later.">It was worth it</button><button data-response="Hindsight is clear. Wilson made his choices at Paris without knowing how the Senate would vote. Notice what he could not see yet.">I wish I had waited</button><button data-response="Holding firm can be a strength. As you read on, weigh when firmness helps and when it leaves no room to bargain.">I would do it again</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Under the Constitution, a treaty needs the approval of two-thirds of the Senate. To <span class="gloss" tabindex="0">ratify<span class="gloss-tip"><span class="gloss-pron">RAT-ih-fy</span>To give official approval. The Senate must approve a treaty by a two-thirds vote to ratify it.</span></span> a treaty means to give that approval. Wilson, a Democrat, faced a Senate where Republicans held a narrow majority after the 1918 elections. The man who led the Republican side was Senator <span class="gloss" tabindex="0">Henry Cabot Lodge<span class="gloss-tip"><span class="gloss-pron">HEN-ree KAB-ut loj</span>The Massachusetts senator who led Senate opposition to the Treaty of Versailles without changes. He chaired the Foreign Relations Committee.</span></span> of Massachusetts, chairman of the Foreign Relations Committee. Lodge was a historian, a writer, and a hard political fighter. He and Wilson disliked each other deeply, and the feeling was old.</p>
 <p>The Senate split three ways. About a dozen senators, called <span class="gloss" tabindex="0">irreconcilables<span class="gloss-tip"><span class="gloss-pron">ih-REK-un-sy-luh-bulz</span>The senators who opposed joining the League of Nations on any terms.</span></span>, opposed the League on any terms. Most Democrats stood with Wilson. In the middle were senators who would accept the League if it came with changes. Lodge led this group. He drew up a list of <span class="gloss" tabindex="0">reservations<span class="gloss-tip"><span class="gloss-pron">rez-er-VAY-shunz</span>Changes or conditions that the Senate attaches to a treaty before it will approve it.</span></span>, which are changes or conditions attached to a treaty. The most important one dealt with <span class="gloss" tabindex="0">Article 10<span class="gloss-tip"><span class="gloss-pron">AR-tih-kul ten</span>The part of the League of Nations Covenant that promised members would protect one another against attack. Senator Lodge feared it could pull the United States into war without a vote of Congress.</span></span> of the Covenant. Article 10 promised that members would protect one another from attack, an idea called <span class="gloss" tabindex="0">collective security<span class="gloss-tip"><span class="gloss-pron">kuh-LEK-tiv sih-KYOOR-ih-tee</span>The idea that nations should protect one another from attack by promising to act together against an aggressor.</span></span>. Lodge feared that this promise could drag the nation into a foreign war without a vote of Congress. Under the Constitution, only Congress can declare war. For Lodge, this was no small point. It went to the heart of who rules in a republic.</p>
 <p>Wilson believed the American people stood with him, and in September 1919 he set out to prove it. He took a speaking tour of the West, riding more than eight thousand miles by train. He spoke almost every day, sometimes twice. He was already worn out from the long months in Paris. On September 25, after a speech in Pueblo, Colorado, he broke down and the tour ended. A week later, in the White House, he suffered a severe stroke that paralyzed his left side. For months, few outsiders saw him. His wife, Edith, and his doctor controlled who could. The president was never again fully able to lead the fight.</p>
 <p>The Senate voted on November 19, 1919. First came the treaty with Lodge's reservations. Wilson urged his Democratic allies to vote no, because he thought the changes would weaken the League, and the treaty failed. Next came the treaty with no changes. Lodge's followers and the irreconcilables voted no, and it failed too. A third try in March 1920 also fell short of two-thirds.</p>
+<div class="optima-widget ow-select" data-wid="m1-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; THE SENATE FIGHT</div><div class="widget-question">Check how well you followed the Senate fight.</div><div class="widget-row" data-correct="2" data-fb="Right. The middle group would accept the League if changes came with it." data-hint="Think about who would say yes, but only with conditions."><div class="widget-row-prompt">1. A senator wants the League, but only if changes come with it. Which group does this senator belong to?</div><div class="widget-options"><button data-choice="0">Wilson&#x27;s Democratic allies</button><button data-choice="1">Senators who opposed the League on any terms</button><button data-choice="2">The middle group led by Lodge</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. He thought the changes would weaken the League, and the treaty failed." data-hint="Remember what Wilson feared the changes would do."><div class="widget-row-prompt">2. Wilson told his Democratic allies how to vote on the treaty with changes attached. What did he tell them?</div><div class="widget-options"><button data-choice="0">Vote yes, to save at least part of the League</button><button data-choice="1">Vote no, because he thought the changes would weaken the League</button><button data-choice="2">Stay home, so the vote would not count</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. A treaty needs two-thirds of the Senate, and the third try fell short too." data-hint="Recall how many votes a treaty needs."><div class="widget-row-prompt">3. In March 1920 the Senate tried a third time. What happened?</div><div class="widget-options"><button data-choice="0">It again fell short of two-thirds</button><button data-choice="1">It passed by a narrow margin</button><button data-choice="2">Wilson pulled it back before any vote</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Many historians think the League could have passed if Wilson had accepted a deal. But nobody can be sure. Perhaps Lodge would have kept adding demands. Perhaps a healthy Wilson would have bargained, as he had in Paris. Perhaps a sick Wilson simply could not bend. The outcome depended on stubborn men, bad health, and old grudges. It was not written in advance, and a few changed choices might have changed it.</p>
 <p>The voters had their say in 1920. Republican <span class="gloss" tabindex="0">Warren G. Harding<span class="gloss-tip"><span class="gloss-pron">WOR-en jee HAR-ding</span>The Republican who won the 1920 presidential election by promising a return to normalcy. He died in office in 1923.</span></span> promised a "return to <span class="gloss" tabindex="0">normalcy<span class="gloss-tip"><span class="gloss-pron">NOR-mul-see</span>Warren Harding's word for a calm return to ordinary life after the war and years of reform.</span></span>," a calmer life after years of war and reform. He beat Democrat James M. Cox in a landslide, taking more than sixty percent of the vote. The League had become tied to Wilson's name, and many voters were tired of crusades. The United States never joined the League of Nations.</p>
 <p>Staying out of the League did not mean hiding from the world. In July 1921, Congress ended the state of war with Germany, and Harding signed the resolution. That same year, Secretary of State Charles Evans Hughes invited the great naval powers to the <span class="gloss" tabindex="0">Washington Naval Conference<span class="gloss-tip"><span class="gloss-pron">WASH-ing-tun NAY-vul KON-fer-uns</span>The 1921 to 1922 meeting where the great naval powers agreed to limit the size of their battleship fleets.</span></span>. Hughes opened it with a stunning offer. The United States would scrap ships it was building if Britain and Japan did the same. The treaty that followed set a ratio for the largest warships. For every five tons of battleships Britain or the United States kept, Japan could keep three. The Senate approved it in 1922. It was a major agreement made outside the League. The Republic would work with other nations, but on its own terms, treaty by treaty, with the Senate watching.</p>
+<div class="ow-group" data-wid="m1-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Hughes offer when the naval conference opened?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The United States would scrap ships it was building if Britain and Japan did the same.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">For every five tons of battleships Britain or the United States kept, how many tons could Japan keep?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Three tons.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Where did this agreement come from, since the nation stayed out of the League?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">From a conference that Hughes invited the naval powers to attend. The Senate approved the treaty in 1922.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>Was this a wise choice? Defenders of Lodge said a republic must keep the power over war and peace in the hands of its own elected representatives. Critics said America had helped win the war and then walked away from the peace, leaving Britain and France to carry a burden they could not carry alone. Both arguments have force. A nation's first duty is its own defense, and defense depends on a government that can deliberate and act. But a world without American weight in its councils proved less stable than Wilson had hoped. The price of that choice would not come due for another twenty years.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -396,6 +432,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

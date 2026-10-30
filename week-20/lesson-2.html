@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -336,12 +369,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>Even at under $300, a Model T was a lot of money for a family whose whole income might be $1,500 a year. <span class="gloss" tabindex="0">Mass production<span class="gloss-tip"><span class="gloss-pron">mas pruh-DUK-shun</span>Making huge numbers of identical goods cheaply, using standard parts, machines, and an assembly line.</span></span> and the <span class="gloss" tabindex="0">assembly line<span class="gloss-tip"><span class="gloss-pron">uh-SEM-blee lyn</span>A way of building something in which the product moves past workers who each stay in one place and do one small job.</span></span> had solved the problem of making goods cheaply. Now a new problem appeared. Factories could turn out more cars, radios, and washing machines than people could pay for in cash. If the buyers could not be found, the factories would sit idle. The answer was a new way to pay.</p>
 <p>That answer was <span class="gloss" tabindex="0">credit<span class="gloss-tip"><span class="gloss-pron">KRED-it</span>An arrangement that lets a buyer take a product now and pay for it later.</span></span>, which means buying something now and paying for it later. For most of American history, debt carried a stain. Parents taught children the old rule of thrift, which is to save first and buy later. But in 1919, General Motors created the <span class="gloss" tabindex="0">General Motors Acceptance Corporation<span class="gloss-tip"><span class="gloss-pron">JEN-er-ul MOH-terz ak-SEP-tuns kor-puh-RAY-shun</span>The lending company General Motors created in 1919 to help customers buy its cars on credit.</span></span> to lend money to people who wanted to buy its cars. The loan took the form of an <span class="gloss" tabindex="0">installment plan<span class="gloss-tip"><span class="gloss-pron">in-STAWL-ment plan</span>A way of buying in which the buyer pays a small amount down and the rest in monthly payments. If the buyer misses payments, the seller can take the product back.</span></span>. A buyer paid a small amount down and the rest in monthly payments. If the buyer missed payments, the seller could take the product back. Ford resisted the idea for years, then gave in and offered his own plan. By the end of the decade, most new cars were sold on credit.</p>
 <p>Credit spread to other goods. People bought radios, refrigerators, vacuum cleaners, washing machines, and furniture this way. Economists call these <span class="gloss" tabindex="0">consumer durables<span class="gloss-tip"><span class="gloss-pron">kun-SOO-mer DOOR-uh-bulz</span>Goods meant to last for years, such as cars, radios, refrigerators, and washing machines.</span></span>, meaning goods meant to last for years. Electric power was reaching more and more city homes, and families wanted the gadgets that went with it. A new kind of advertising helped. Ads no longer just described a product. They sold a feeling, such as status, comfort, or the fear of being left behind.</p>
+<div class="optima-widget" data-wid="m2-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Imagine General Motors had never started its lending company in 1919.</div><details class="ow-reveal"><summary>Would factories still have found enough buyers for cars? Decide first and jot down your answer and one reason before you open this.</summary><div class="ow-reveal-body">Factories could make more than families could pay for in cash, so something had to change. The General Motors lending company showed one way, and Ford gave in later and offered his own <span class="gloss" tabindex="0">installment plan<span class="gloss-tip"><span class="gloss-pron">in-STAWL-ment plan</span>A way of buying in which the buyer pays a small amount down and the rest in monthly payments. If the buyer misses payments, the seller can take the product back.</span></span>. Other firms or banks might have found a similar way, so the idea was not tied to one company. But the lesson also shows that old habits of thrift stood in the way, so the change was not certain, and nobody can say exactly when it would have come.</div></details><button class="widget-reset">Reset</button></div>
 <p>Credit even fed a boom in land. In the mid-1920s, thousands of buyers rushed to Florida, putting down small deposits on lots they had never seen. Many planned not to live there at all but to sell the contract to someone else at a higher price. For a while, prices soared, and whole towns went up almost overnight. Then buyers ran short, and in September 1926 a powerful hurricane struck Miami. The boom collapsed. Florida's bust came three years before the nation's, and it was an early warning that a rise in prices fed by borrowed money can fall as quickly as it rose.</p>
 <p>The car business also shows how much one leader's choices can matter. <span class="gloss" tabindex="0">Alfred P. Sloan<span class="gloss-tip"><span class="gloss-pron">AL-fred pee SLOHN</span>The president of General Motors from 1923 who built a ladder of car brands and yearly style changes, and who helped General Motors pass Ford in sales.</span></span> became president of General Motors in 1923. He saw that buyers were changing. Once most families owned a car, they wanted a better one. Sloan built a ladder of brands, from the cheap Chevrolet at the bottom to the costly Cadillac at the top, so a family could move up as its income grew. He offered bright colors and changed styles every year. Ford's <span class="gloss" tabindex="0">Model T<span class="gloss-tip"><span class="gloss-pron">MOD-ul tee</span>Henry Ford's tough, simple car, first sold in 1908. By 1927, fifteen million had been built.</span></span> was famous for its plain looks and its limits. Ford had once joked that buyers could have any color they wanted, as long as it was black. In 1927, General Motors passed Ford as the nation's top seller, and Ford had to close his plants for months to retool. The <span class="gloss" tabindex="0">Ford<span class="gloss-tip"><span class="gloss-pron">HEN-ree ford</span>The Michigan carmaker who built the Model T and introduced the moving assembly line.</span></span> story had a hard lesson in it. The man who had invented a new way to build a car had failed to see that customers wanted more than a cheap one.</p>
 <p>What was Washington doing during these years? Warren Harding died suddenly in August 1923, and Vice President Calvin Coolidge took over. Harding's administration had been stained by scandal, including a bribery case in which a cabinet officer went to prison. Coolidge was quiet and honest, and he restored trust. Both men followed a policy of <span class="gloss" tabindex="0"><i>laissez-faire</i><span class="gloss-tip"><span class="gloss-pron">leh-say FAIR</span>A French phrase meaning "let it be." In economics, it describes a policy in which the government mostly leaves business alone.</span></span>, a French phrase meaning "let it be." In economics, it means the government mostly leaves business alone. The Treasury Secretary, <span class="gloss" tabindex="0">Andrew Mellon<span class="gloss-tip"><span class="gloss-pron">AN-droo MEL-un</span>A very wealthy banker who served as Treasury Secretary in the 1920s and pushed for tax cuts.</span></span>, was one of the richest men in the country. He pushed for tax cuts and smaller government spending. The top tax rate on the highest incomes fell from 73 percent in 1920 to 25 percent by the middle of the decade. Mellon argued that lower taxes would encourage people to invest and build. Many critics replied that the cuts mainly helped the wealthy.</p>
 <p>The prosperity was real. Output per worker rose, wages for factory workers rose, and unemployment stayed low for most of the decade. Millions of families lived better than their parents had. Yet not everyone shared in the good times. Farmers had grown rich during the war, but when European farms recovered, prices for crops fell hard. Many farmers were stuck with debts that they had taken on in the boom. Coal miners and textile workers faced low pay and weak demand. Many Black Southerners remained poor. Large parts of the countryside went without electricity. As late as 1930, only about one farm in ten had electric power.</p>
+<div class="optima-widget ow-scale" data-wid="m2-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW WIDELY SHARED?</div><div class="widget-question">The prosperity of the 1920s was real. How widely was it shared?</div><div class="widget-row" data-correct="2" data-fb="Yes. Wages rose and many families lived better, but farmers, miners, textile workers, many Black Southerners, and most rural homes without power were left out." data-hint="Think about the families who gained and the groups the lesson names as left out."><div class="widget-options"><button data-choice="0" data-fb="Not quite. Wages rose and unemployment stayed low for most of the decade.">Almost no one</button><button data-choice="1" data-fb="Not quite. Millions of families lived better than their parents had.">A few people</button><button data-choice="2" data-fb="Yes. Wages rose and many families lived better, but farmers, miners, textile workers, many Black Southerners, and most rural homes without power were left out.">Many, but not all</button><button data-choice="3" data-fb="Not quite. The lesson names several groups who missed out on the good times.">Nearly everyone</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Was credit a good thing? Its defenders said it let ordinary families enjoy comforts that only the rich had once known. They also said that making regular payments taught discipline. It kept factories busy and workers employed. Its critics saw a danger in it. Credit pulls future income into the present. A family that buys a car on installments has promised part of its future pay to someone else. A nation of such families may spend more than it would have, because the bill seems far away. Older writers on republican virtue worried about this very thing. A people that cannot restrain its appetites, they said, will find that its freedom is built on sand.</p>
 <p>Both sides were right about something. Credit worked well as long as jobs and wages held steady. It worked badly when they did not. As household debt rose through the 1920s, so did the number of families whose spending depended on income that might vanish. One question hangs over this lesson. What happens to a country built on credit if the credit stops? Within a few years, Americans would learn the answer.</p>
+<div class="optima-widget ow-seq" data-wid="m2-2-3" data-ra-skip data-n="4" data-fb="That is the order. It shows the risk: a family had promised part of its future pay to someone else." data-hint="Start with what the buyer does before driving away."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put the steps of buying a car on installments in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">The buyer pays a small amount down</button><button data-pos="2">The buyer takes the car home and pays a bit each month</button><button data-pos="3">The buyer misses some payments</button><button data-pos="4">The seller takes the car back</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Next week, you will see how the new wealth and the new machines changed American culture, and how those changes divided Americans as well as joined them.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -392,6 +428,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

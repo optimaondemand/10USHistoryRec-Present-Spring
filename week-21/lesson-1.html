@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -339,12 +372,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In November 1920, a radio station in Pittsburgh called <span class="gloss" tabindex="0">KDKA<span class="gloss-tip"><span class="gloss-pron">kay dee kay AY</span>The Pittsburgh radio station that broadcast the 1920 presidential election results, one of the first regular radio stations in the country.</span></span> did something new. It told a few thousand listeners who had won the presidential election, as the results came in. Few people owned a set. But within ten years, about four in ten American homes had one, and many families bought theirs on the <span class="gloss" tabindex="0">installment plan<span class="gloss-tip"><span class="gloss-pron">in-STAWL-ment plan</span>A way of buying in which the buyer pays a small amount down and the rest in monthly payments. If the buyer misses payments, the seller can take the product back.</span></span>. Radio was among the most wanted of the new <span class="gloss" tabindex="0">consumer durables<span class="gloss-tip"><span class="gloss-pron">kun-SOO-mer DOOR-uh-bulz</span>Goods meant to last for years, such as cars, radios, refrigerators, and washing machines.</span></span>.</p>
 <p>Radio was a <span class="gloss" tabindex="0">broadcast<span class="gloss-tip"><span class="gloss-pron">BRAWD-kast</span>A radio or television message sent out to everyone at once.</span></span>, which means a message sent out to everyone at once. Before radio, news traveled by newspaper, mail, and train, and it arrived at different times in different places. Now a farm family in Kansas and a shop clerk in Boston could hear the same voice at the same moment. In 1926, a company called NBC linked stations into the first national network, and CBS followed in 1927. Listeners heard news, sermons, comedy, baseball games, and dance bands. Advertisers paid for most of it. That made American radio different from radio in Britain, where the government ran the service. Radio also changed politics. In 1924, the party conventions were broadcast for the first time, and in 1925 millions heard President Coolidge take his oath of office. Voters could now judge a candidate's voice as well as his words.</p>
 <p>Movies were an even bigger draw. Tens of millions of Americans went to the theater each week. Audiences made <span class="gloss" tabindex="0">celebrities<span class="gloss-tip"><span class="gloss-pron">suh-LEB-rih-tee</span>A famous person whose face and private life are known to many strangers.</span></span> of actors like Charlie Chaplin and Mary Pickford, people whose faces and private lives were known to strangers across the country. In 1927, the film The Jazz Singer added spoken words and songs to a feature film. These new <span class="gloss" tabindex="0">talkies<span class="gloss-tip"><span class="gloss-pron">TAW-keez</span>Movies with recorded sound and spoken words. They replaced silent films after 1927.</span></span> almost ended silent films within a few years. Hollywood, California, became the capital of an industry that sent the same stories to every town in the nation.</p>
+<div class="optima-widget ow-reflect" data-wid="m3-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Think about the songs, shows, and games that nearly everyone you know has heard of. Where do you usually first run into them? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="Then you know how a shared culture feels. In the 1920s, radio and movies made the same thing happen for the first time.">Online or on my phone</button><button data-response="People still pass things along that way. Radio and movies added something new: strangers far apart enjoying the same thing at once.">From friends or family</button><button data-response="Local places still shape what we know. In the 1920s, many local traditions began to fade as national tastes took over.">From school or my community</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Together, radio, movies, newspapers, and magazines created a <span class="gloss" tabindex="0">mass culture<span class="gloss-tip"><span class="gloss-pron">mas KUL-chur</span>A culture shared by a whole nation through radio, movies, newspapers, and magazines instead of by one town or group.</span></span>. That means a culture shared by the whole nation, instead of by one town or one group. Americans in different places began to sing the same songs, laugh at the same jokes, and cheer for the same heroes. Sports offered heroes of their own, and newspapers and radio announcers turned athletes into household names. In 1927, Babe Ruth hit sixty home runs in a single season, and fans followed every game by radio and newspaper.</p>
 <p>The greatest hero of the decade came from the air. On May 20, 1927, a 25-year-old airmail pilot named <span class="gloss" tabindex="0">Charles Lindbergh<span class="gloss-tip"><span class="gloss-pron">chahrlz LIND-berg</span>The pilot who flew alone from New York to Paris in 1927 and became the best-known hero of the decade.</span></span> took off from New York in a small plane called the Spirit of St. Louis. He flew alone, with no radio and no parachute. Thirty-three hours later, he landed in Paris to an enormous cheering crowd. Several other fliers had died trying to cross the Atlantic. Lindbergh won because of careful planning, steady nerves, and the stubbornness to stay awake and keep going. He is a good example of the "great man" in history, a person whose courage and skill shaped what others thought was possible. Millions of Americans who had never met him felt proud to share his country.</p>
 <p>Another part of mass culture was music. <span class="gloss" tabindex="0">Jazz<span class="gloss-tip"><span class="gloss-pron">jaz</span>A style of music born in the Black neighborhoods of New Orleans. It mixes blues, ragtime, and church music and leaves room for improvising.</span></span> was born in the Black neighborhoods of New Orleans. It mixed the blues, ragtime, and church music into a new sound with plenty of room for improvising. As Black families moved from the rural South to northern cities, a movement later called the <span class="gloss" tabindex="0">Great Migration<span class="gloss-tip"><span class="gloss-pron">grayt my-GRAY-shun</span>The movement of millions of Black Americans from the rural South to cities in the North and West, which grew rapidly during and after the Great War.</span></span>, they brought their music with them. Chicago and New York became centers of jazz. Louis Armstrong and Duke Ellington became stars. Records and radio carried the music to white and Black listeners alike. The writer F. Scott Fitzgerald gave the decade its nickname, the "Jazz Age." Young women who wore short skirts and bobbed hair, called <span class="gloss" tabindex="0">flappers<span class="gloss-tip"><span class="gloss-pron">FLAP-er</span>A young woman of the 1920s who wore short skirts and bobbed hair. Flappers became a symbol of the Jazz Age.</span></span>, became its symbol. Women had won the right to vote across the nation with the 19th Amendment in 1920, and many young women took new freedoms in work, dress, and public life. Older Americans often disapproved. The popular picture of the flapper was exaggerated, but it showed that styles and manners really were changing.</p>
+<div class="optima-widget ow-select" data-wid="m3-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; THE NEW CULTURE</div><div class="widget-question">Check what you remember about the people and tools of the new culture.</div><div class="widget-row" data-correct="2" data-fb="Right. He flew alone, with no radio and no parachute." data-hint="Think about what he did not have with him."><div class="widget-row-prompt">1. <span class="gloss" tabindex="0">Lindbergh<span class="gloss-tip"><span class="gloss-pron">chahrlz LIND-berg</span>The pilot who flew alone from New York to Paris in 1927 and became the best-known hero of the decade.</span></span> flew alone across the Atlantic in 1927. What helped him succeed where others had died?</div><div class="widget-options"><button data-choice="0">A crew of navigators and a radio to guide him</button><button data-choice="1">A plane built and paid for by the government</button><button data-choice="2">Careful planning, steady nerves, and stubbornness</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. Chicago and New York became centers of this music later, as Black families moved north." data-hint="Look for the place where the blues, ragtime, and church music mixed."><div class="widget-row-prompt">2. Where was <span class="gloss" tabindex="0">jazz<span class="gloss-tip"><span class="gloss-pron">jaz</span>A style of music born in the Black neighborhoods of New Orleans. It mixes blues, ragtime, and church music and leaves room for improvising.</span></span> born?</div><div class="widget-options"><button data-choice="0">Black neighborhoods of New Orleans</button><button data-choice="1">Harlem, in New York City</button><button data-choice="2">The movie studios of Hollywood</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. Advertisers paid for most of it." data-hint="Think about who wanted to reach all those listeners."><div class="widget-row-prompt">3. Who paid for most American radio programs, unlike the government-run service in Britain?</div><div class="widget-options"><button data-choice="0">Listeners, through yearly fees</button><button data-choice="1">Advertisers</button><button data-choice="2">Congress</button></div></div><button class="widget-reset">Reset</button></div>
 <p>In Harlem, a neighborhood of New York City, Black writers, artists, and musicians produced a flowering of creative work called the <span class="gloss" tabindex="0">Harlem Renaissance<span class="gloss-tip"><span class="gloss-pron">HAR-lum REN-uh-sahns</span>A flowering of Black writing, art, and music in the 1920s centered in the Harlem neighborhood of New York City.</span></span>. Among its poets was <span class="gloss" tabindex="0">Langston Hughes<span class="gloss-tip"><span class="gloss-pron">LANG-stun hyoos</span>A poet of the Harlem Renaissance who wrote about Black life and American hopes.</span></span>, who wrote in clear, strong language about Black life and American hopes. In his poem "I, Too," he answered those who would keep him out of the national family. "I, too, sing America," he wrote. Hughes and his friends insisted that Black Americans were not outsiders to the national story. They were part of its making. This was a bold claim in a country where segregation was still the law across the South and the custom in much of the North. Black performers often played to white audiences in clubs where Black patrons were not welcome.</p>
 <p>Was this new shared culture good for the Republic? The classical republican tradition says that a political community needs citizens who feel a common affection for one another beyond their families and neighborhoods. Mass culture may have helped. Millions of people now had common stories, common songs, and a common set of heroes. When Lindbergh landed in Paris, a whole nation felt pride at once. That is a kind of bond.</p>
 <p>Yet the bond had limits. Mass culture was bought and sold. Advertisers shaped what people heard, and entertainment companies chased profit before anything else. Many local traditions faded as national tastes took over. And some Americans were kept from the shared experience, or were welcome only as entertainers. Some critics said that cheering for the same hero is a thin kind of unity. Others replied that in a country as large as the United States, any common feeling is a good thing.</p>
+<div class="ow-group" data-wid="m3-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">How could shared songs, stories, and heroes help a political community?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">They give citizens a common affection beyond family and neighborhood. When Lindbergh landed in Paris, a whole nation felt pride at once.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What limits did the lesson name on that bond?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Culture was bought and sold, local traditions faded, and some Americans were kept out or welcomed only as entertainers.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did defenders say to critics who called it a thin kind of unity?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">In a country as large as the United States, any common feeling is a good thing.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>The question matters because the next lesson shows what happened when Americans disagreed about what their shared life should be. The same decade that produced the Jazz Age also produced fierce fights over alcohol, race, religion, and who counted as a "real American." You will decide this week which description fits the 1920s better.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

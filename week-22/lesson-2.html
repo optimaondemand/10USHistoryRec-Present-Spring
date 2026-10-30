@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -338,12 +371,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>By 1932, about one American worker in four had no job. Economists measure this with the <span class="gloss" tabindex="0">unemployment rate<span class="gloss-tip"><span class="gloss-pron">un-em-PLOY-ment rayt</span>The share of people who want to work but cannot find a job.</span></span>, the share of people who want to work but cannot find a job. The country had no unemployment insurance and no federal system of relief. A worker who lost a job often lost the family's income at once. Savings had often disappeared in the <span class="gloss" tabindex="0">bank runs<span class="gloss-tip"><span class="gloss-pron">bangk run</span>A sudden rush by many depositors to withdraw their money because they fear their bank will fail. Banks lend out most of their deposits, so a run can ruin even a healthy bank.</span></span> you read about last time. Families fell behind on their mortgage payments, and banks took their homes in a <span class="gloss" tabindex="0">foreclosure<span class="gloss-tip"><span class="gloss-pron">for-KLOH-zhur</span>A bank's taking of a home or farm when the owner cannot make the mortgage payments.</span></span>. Farm families lost their land the same way.</p>
 <p>Daily life changed in many small ways. Families doubled up, with grandparents, cousins, and grown children crowding under one roof. Couples put off marriage, and the birth rate fell. Many teenagers left school to work or left home to ride freight trains in search of jobs, and there were hundreds of thousands of them. Those who lost their homes built shacks out of crates and scrap metal on the edges of cities. These shantytowns were bitterly named <span class="gloss" tabindex="0">Hoovervilles<span class="gloss-tip"><span class="gloss-pron">HOO-ver-vil</span>A shantytown built by homeless people during the Great Depression and bitterly named after the president.</span></span>, after the president. In the cities, hungry people stood in a <span class="gloss" tabindex="0">breadline<span class="gloss-tip"><span class="gloss-pron">BRED-lyn</span>A line of hungry people waiting for free food from a charity or church.</span></span> outside churches and charities waiting for free food. Many felt deep shame. They had always worked hard, and now they could not feed their families.</p>
 <p>It is also true that three out of four workers still had jobs, even in the worst year. For those who kept working, falling prices made the paycheck go further. The <span class="gloss" tabindex="0">Great Depression<span class="gloss-tip"><span class="gloss-pron">grayt dih-PRESH-un</span>The worst economic crisis in American history. It began with the 1929 crash and lasted through the 1930s.</span></span> was a catastrophe for millions, but it was not the same catastrophe for everyone.</p>
+<div class="optima-widget" data-wid="m4-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Picture two families in 1932. In one, a parent still has a job. In the other, a parent has lost one.</div><details class="ow-reveal"><summary>Why would the Depression feel so different in each home? Decide first and jot down two reasons before you open this.</summary><div class="ow-reveal-body">For the family with a job, falling prices made the paycheck go further. For the family that lost one, the income stopped at once, because there was no unemployment insurance and no federal system of help. They might lose savings to a <span class="gloss" tabindex="0">bank run<span class="gloss-tip"><span class="gloss-pron">bangk run</span>A sudden rush by many depositors to withdraw their money because they fear their bank will fail. Banks lend out most of their deposits, so a run can ruin even a healthy bank.</span></span> or their home to <span class="gloss" tabindex="0">foreclosure<span class="gloss-tip"><span class="gloss-pron">for-KLOH-zhur</span>A bank's taking of a home or farm when the owner cannot make the mortgage payments.</span></span>. The lesson says the <span class="gloss" tabindex="0">Great Depression<span class="gloss-tip"><span class="gloss-pron">grayt dih-PRESH-un</span>The worst economic crisis in American history. It began with the 1929 crash and lasted through the 1930s.</span></span> was a catastrophe for millions, but not the same catastrophe for everyone.</div></details><button class="widget-reset">Reset</button></div>
 <p>People also found ways to lift their spirits. Movie theaters stayed busy, because a dime bought a few hours of escape. Families gathered around the radio for comedy, music, and baseball. In 1935, a board game called Monopoly, in which players buy property and grow rich, became a surprise hit. Historians often note the irony of a nation of poor families playing at wealth. It suggests that Americans held on to hope even when their daily lives gave them little reason.</p>
 <p>Some groups were hit much harder. Black Americans were often "last hired, first fired." In some northern cities, Black unemployment ran twice as high as white unemployment, or worse. In the South, Black sharecroppers and farm workers had been poor before the crash, and now they had almost nothing. Local relief offices often helped white families first. Mexican Americans in the Southwest and elsewhere faced a different pressure. Officials in many cities and counties pushed families to leave the country, a policy called <span class="gloss" tabindex="0">repatriation<span class="gloss-tip"><span class="gloss-pron">ree-pay-tree-AY-shun</span>Sending people back to their country of origin. In the Depression, hundreds of thousands of people of Mexican descent, many of them American citizens, were pushed to leave.</span></span>. Hundreds of thousands of people went to Mexico, some under pressure and some by force, and many of them were American citizens who had been born in the United States.</p>
 <p>On the Great Plains, nature added a second disaster. Farm prices had been falling since the 1920s. Then, beginning in 1931, a severe drought struck. In earlier years, farmers had plowed up the tough prairie grass to plant wheat, and now nothing held the soil in place. Winds lifted the dry dirt into huge clouds, some of them miles high, that turned noon into night. The region came to be called the <span class="gloss" tabindex="0">Dust Bowl<span class="gloss-tip"><span class="gloss-pron">dust bohl</span>The region of the Great Plains hit by drought and giant dust storms in the 1930s. Many farm families left it.</span></span>. Crops died, animals choked, and families gave up. Hundreds of thousands left the Plains, and many headed west to California in old trucks piled high with their belongings.</p>
 <p>What did Americans do when the money ran out? The republican tradition says that a healthy civic culture produces cooperation without orders from above, and this happened across the country. Neighbors shared food. Churches ran soup kitchens. Lodges, unions, and local charities collected money. People traded work for meals. <span class="gloss" tabindex="0">President Hoover<span class="gloss-tip"><span class="gloss-pron">HER-bert HOO-ver</span>The mining engineer and relief organizer who was elected president in 1928. He led the nation as the Great Depression began.</span></span> had counted on exactly this kind of voluntary help, and for a time it worked. But the scale of the disaster was too great. Cities went broke, and some could not pay their teachers. Private charity ran dry. In 1931, New York's governor, <span class="gloss" tabindex="0">Franklin D. Roosevelt<span class="gloss-tip"><span class="gloss-pron">FRANK-lin dee ROH-zuh-velt</span>The governor of New York who was elected president in 1932 and served until 1945.</span></span>, set up a state relief program with state money, and some other states followed. <span class="gloss" tabindex="0">Relief<span class="gloss-tip"><span class="gloss-pron">rih-LEEF</span>Money or goods given directly to people in need.</span></span>, in this sense, means money or goods given directly to people in need. The question was whether the national government should provide it.</p>
+<div class="optima-widget ow-scale" data-wid="m4-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW WELL DID IT HOLD UP?</div><div class="widget-question"><span class="gloss" tabindex="0">Hoover<span class="gloss-tip"><span class="gloss-pron">HER-bert HOO-ver</span>The mining engineer and relief organizer who was elected president in 1928. He led the nation as the Great Depression began.</span></span> counted on voluntary help from families, churches, and charities. How well did that hold up as hard times went on?</div><div class="widget-row" data-correct="1" data-fb="Yes. Neighbors, churches, and lodges did help, but cities went broke and private charity ran dry before the need did." data-hint="The lesson says it worked for a time. What happened as the need grew?"><div class="widget-options"><button data-choice="0" data-fb="Not quite. Neighbors, churches, and lodges did help.">It never helped anyone</button><button data-choice="1" data-fb="Yes. Neighbors, churches, and lodges did help, but cities went broke and private charity ran dry before the need did.">It worked for a time, then was overwhelmed</button><button data-choice="2" data-fb="Not quite. Cities went broke and private charity ran dry.">It worked so well that nothing more was needed</button><button data-choice="3" data-fb="Not quite. The scale of the disaster was too great for it.">It grew stronger as hard times went on</button></div></div><button class="widget-reset">Reset</button></div>
 <p>The sharpest test came in the summer of 1932. In 1924, Congress had promised veterans of the Great War a bonus, but not to be paid until 1945. With no jobs, many veterans wanted the money right away. In the spring and summer, thousands of them marched to Washington. Together with their families, perhaps twenty thousand or more camped in shacks and tents, many of them across the Anacostia River from the Capitol. They called themselves the <span class="gloss" tabindex="0">Bonus Army<span class="gloss-tip"><span class="gloss-pron">BOH-nus AR-mee</span>Thousands of Great War veterans who camped in Washington in 1932 to demand early payment of a promised bonus. Army troops drove them out in July.</span></span>. The House passed a bill to pay the bonus early, but the Senate voted it down on June 17. Many veterans then went home, but thousands stayed.</p>
 <p>On July 28, police tried to clear some buildings that the veterans occupied. Shots were fired, and two veterans were killed. Hoover then ordered the Army to clear the area. General <span class="gloss" tabindex="0">Douglas MacArthur<span class="gloss-tip"><span class="gloss-pron">DUG-lus muk-AR-thur</span>The Army general who led the troops that drove the Bonus Army out of Washington in 1932.</span></span> led the troops, which included infantry, cavalry with drawn sabers, and tanks. They used tear gas and drove the veterans across the river. MacArthur went farther than the president had ordered. He crossed the bridge and cleared the main camp, which went up in flames, even though Hoover had told the troops to stay on the near side. Americans watched the scene in newsreels. Hoover claimed that many of the veterans were Communists and criminals, but investigators found that most were genuine veterans. The country was shocked at the sight of soldiers turning on men who had once worn the same uniform.</p>
+<div class="optima-widget ow-seq" data-wid="m4-2-3" data-ra-skip data-n="5" data-fb="That is the order. The country was shocked to see soldiers turn on men who had once worn the same uniform." data-hint="Start with why the veterans came, then follow the clash."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put the events of the summer of 1932 in order. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Thousands of veterans march to Washington and camp there</button><button data-pos="2">The Senate votes down a bill to pay their bonus early</button><button data-pos="3">Police try to clear some buildings, and two veterans are killed</button><button data-pos="4">Soldiers with tanks and cavalry drive the veterans across the river</button><button data-pos="5">The main camp goes up in flames</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Whatever Hoover intended, the damage was done. It raised a hard question about the Republic. Who commands the Army, and how far may it go in dealing with citizens who are protesting? You will read Hoover's own explanation of these events in the next page.</p>
 <p>That November, voters gave their answer to the larger question. Roosevelt, the Democratic governor of New York, defeated Hoover in a landslide. He carried forty-two of the forty-eight states. But the new president would not take office until March 1933. In the long wait, the banks kept failing and the country sank deeper. The story of what Roosevelt did when he arrived is the subject of the next week.</p></div>
 </div>
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

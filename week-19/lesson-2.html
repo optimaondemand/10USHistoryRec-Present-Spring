@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -339,12 +372,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>Americans hoped the end of the war would bring peace at home. Instead, 1919 brought fear. Prices had jumped during the war, and wages had not kept up. Workers who had held back from striking during the war now wanted raises. In 1919, about four million workers walked off their jobs, a record. In February, some sixty-five thousand workers in Seattle shut down much of the city in a <span class="gloss" tabindex="0">general strike<span class="gloss-tip"><span class="gloss-pron">JEN-er-ul stryk</span>A strike in which workers in many different industries stop working at once. Seattle had one in February 1919.</span></span>. In September, most of Boston's police force went on strike, and looting broke out in the streets. Governor <span class="gloss" tabindex="0">Calvin Coolidge<span class="gloss-tip"><span class="gloss-pron">KAL-vin KOO-lij</span>The governor of Massachusetts who ended the Boston police strike in 1919. He became vice president in 1921 and president in 1923, and he won election in his own right in 1924.</span></span> called out the state guard and ended the strike. "There is no right to strike against the public safety by anybody, anywhere, any time," he said. The line made him famous across the country. That same month, 350,000 steelworkers struck, and their employers painted them as dangerous radicals. The steel strike collapsed in early 1920.</p>
 <p>The unrest was not only about labor and radicals. The summer of 1919 also brought racial violence, later called the Red Summer. In more than two dozen cities, white mobs attacked Black neighborhoods, and Black residents, many of them returning soldiers, fought back. In Chicago, a riot that began at a beach in July left thirty-eight people dead and about a thousand families, most of them Black, without homes. Black Americans had fought for their country overseas. Now they came home to a country that seemed to be at war with itself.</p>
 <p>Many Americans tied these strikes to a larger fear. In 1917, the <span class="gloss" tabindex="0">Bolsheviks<span class="gloss-tip"><span class="gloss-pron">BOHL-shih-viks</span>The Communists who took power in Russia in 1917. Many Americans feared they wanted to spark revolutions in other countries.</span></span> had seized power in Russia and built a Communist government. They called on workers everywhere to overthrow their own governments. Then, in 1919, <span class="gloss" tabindex="0">anarchists<span class="gloss-tip"><span class="gloss-pron">AN-er-kists</span>People who believe that governments should be abolished. A few anarchists used bombs in the years after the Great War.</span></span> began mailing bombs to public figures. On June 2, bombs went off in eight cities on the same night. One wrecked the front of the Washington home of Attorney General <span class="gloss" tabindex="0">A. Mitchell Palmer<span class="gloss-tip"><span class="gloss-pron">AY MICH-ul PAHL-mer</span>The attorney general who led the Palmer Raids against suspected radicals in 1919 and 1920.</span></span>. Palmer and his family were unhurt, but the man who carried the bomb was killed. Many Americans were shocked. They feared a revolution was near. That fear is called the <span class="gloss" tabindex="0">Red Scare<span class="gloss-tip"><span class="gloss-pron">red skair</span>The widespread fear of Communists and radicals in 1919 and 1920, named for the red flag of communism.</span></span>, named for the red flag of communism.</p>
+<div class="optima-widget" data-wid="m1-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Imagine the bombs of June 1919 had never been mailed. The strikes, the Russian Revolution, and the fear of radicals would all still be there.</div><details class="ow-reveal"><summary>Would Americans still have backed large raids on suspected radicals? Decide first and jot down your answer and one reason before you open this.</summary><div class="ow-reveal-body">The lesson shows several pressures at work. Strikes had already frightened many people, and the <span class="gloss" tabindex="0">Bolsheviks<span class="gloss-tip"><span class="gloss-pron">BOHL-shih-viks</span>The Communists who took power in Russia in 1917. Many Americans feared they wanted to spark revolutions in other countries.</span></span> in Russia made a revolution at home seem possible. But the bombs, including one at the Attorney General's own home, turned worry into shock. Without them, the public might have been slower to accept raids, though nobody can say for sure. Other events might have supplied the same push. What you can judge is how much the bombs mattered compared with the strikes and the fear of revolution.</div></details><button class="widget-reset">Reset</button></div>
 <p>Palmer answered with force. His Justice Department set up a unit to track radicals, and a young lawyer named J. Edgar Hoover ran it. In November 1919 and again in January 1920, federal agents carried out the <span class="gloss" tabindex="0">Palmer Raids<span class="gloss-tip"><span class="gloss-pron">PAH-mer raydz</span>Arrests of thousands of suspected radicals by federal agents in 1919 and 1920, often without warrants.</span></span>. On one night in January, they arrested thousands of people in more than thirty cities. Many were seized without warrants. Some were held for days, beaten, or denied lawyers. Most were not dangerous. Many had done nothing more than join a union or a club for people from their old country. Hundreds of people who were not citizens faced <span class="gloss" tabindex="0">deportation<span class="gloss-tip"><span class="gloss-pron">dee-por-TAY-shun</span>Forcing a person who is not a citizen to leave the country.</span></span>, which means being forced to leave the country. In December 1919, a ship called the Buford carried 249 of them to Russia, including the famous anarchist Emma Goldman.</p>
 <p>What stopped the raids? Law and common sense. Louis F. Post, an official in the Labor Department, reviewed the deportation cases. He found that agents had broken the rules, and he canceled many orders. Judges criticized the raids. A group of prominent lawyers published a report calling them lawless. Then Palmer predicted a wave of violence on May 1, 1920. Police stood ready across the country, and nothing happened. Palmer looked foolish, and the Scare faded. A bomb on Wall Street in September 1920 killed dozens of people, but by then the public mood had changed. The fear left one more famous case behind. In May 1920, Massachusetts police arrested two Italian immigrants and anarchists, Nicola Sacco and Bartolomeo Vanzetti, for a robbery and murder. Many people then and since have doubted that the trial was fair, and some felt the two men were judged for their beliefs and their birthplace as much as for the evidence. Others believed the verdict was right. Both men were executed in 1927.</p>
 <p>The Red Scare shows how a republic can stumble on its first duty, keeping order. Real violence had occurred, and a government must protect its people. But a republic also promises to rule by law that treats everyone the same way. In trying to reach the first goal, Palmer gave up the second. Palmer hoped to win the Democratic nomination for president in 1920. Historians still weigh how much ambition shaped his choices. What is clear is that the raids made him famous, and then they ruined him.</p>
+<div class="optima-widget ow-seq" data-wid="m1-2-2" data-ra-skip data-n="5" data-fb="That is the order. Violence set off the raids, and law and common sense, not more force, brought the Scare to an end." data-hint="Start with what frightened people, then look for what answered it."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events of 1919 and 1920 in the order they happened. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Workers in Seattle shut down much of the city</button><button data-pos="2">Bombs go off in eight cities on the same night</button><button data-pos="3">Federal agents arrest thousands of people in more than thirty cities</button><button data-pos="4">A Labor Department official cancels many orders to send people out of the country</button><button data-pos="5">May Day passes without the violence that was predicted</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Fear of radicals joined an older worry, fear of newcomers. Between 1900 and 1914, millions of immigrants had arrived, many from southern and eastern Europe. After the war, many Americans expected another surge. <span class="gloss" tabindex="0">Nativism<span class="gloss-tip"><span class="gloss-pron">NAY-tiv-iz-um</span>The belief that people born in a country should be favored over immigrants.</span></span>, the belief that native-born residents should be favored over immigrants, grew strong. In 1921, Congress passed the <span class="gloss" tabindex="0">Emergency Quota Act<span class="gloss-tip"><span class="gloss-pron">ih-MER-jun-see KWOH-tuh akt</span>A 1921 law that limited immigration by letting in only three percent of the number of people from each country already living in the United States in 1910.</span></span>. A <span class="gloss" tabindex="0">quota<span class="gloss-tip"><span class="gloss-pron">KWOH-tuh</span>A fixed limit on how many people or things may be allowed in.</span></span> is a fixed limit. The law let in only three percent of the number of people from each country who had been living in the United States in 1910. That held total immigration to about 357,000 a year, down from more than 800,000 the year before.</p>
 <p>The <span class="gloss" tabindex="0">Immigration Act of 1924<span class="gloss-tip"><span class="gloss-pron">im-ih-GRAY-shun akt uv nyn-TEEN TWEN-tee-for</span>A law that cut immigration quotas to two percent of each nationality's 1890 population and shut out nearly all Asian immigrants.</span></span> went further. It cut the share to two percent and moved the starting date back to 1890. That date was chosen on purpose. In 1890, far fewer southern and eastern Europeans were living in the country, so the new law favored people from northern and western Europe. The act also shut out nearly all immigrants from Asia. Immigrants from Canada and Latin America were not under the quotas. President Coolidge signed the bill. The system stayed in place, with changes, for more than forty years.</p>
 <p>Supporters made serious arguments. A republic, they said, needs citizens who share loyalties, language, and habits, and a flood of strangers can strain schools, neighborhoods, and wages. Critics answered that earlier immigrants had also been feared, and they had still become Americans. They said it was wrong to judge people by their ancestors instead of their character. Both sides spoke in the name of the common good. They disagreed about who could be part of it.</p>
+<div class="optima-widget ow-scale" data-wid="m1-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID IT MATTER?</div><div class="widget-question">The 1924 law moved its starting date back to 1890. How much did that choice depend on a wish to favor some newcomers over others?</div><div class="widget-row" data-correct="3,4" data-fb="Yes. The lesson says the date was chosen on purpose, because far fewer southern and eastern Europeans lived in the country in 1890." data-hint="Look again at what the lesson says about why that date was chosen."><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson says the date was chosen on purpose.">Not at all</button><button data-choice="1" data-fb="Not quite. The lesson says the date was chosen on purpose.">A little</button><button data-choice="2" data-fb="Not quite. The lesson says the choice was deliberate, and it favored northern and western Europe.">Somewhat</button><button data-choice="3" data-fb="Yes. The date was chosen on purpose to favor northern and western Europe, though supporters also named worries about schools, neighborhoods, and wages.">Mostly</button><button data-choice="4" data-fb="Close. The date was chosen on purpose, but supporters also gave other reasons, such as strain on schools, neighborhoods, and wages.">Entirely</button></div></div><button class="widget-reset">Reset</button></div>
 <p>By 1921, the country was tired. Harding promised <span class="gloss" tabindex="0">normalcy<span class="gloss-tip"><span class="gloss-pron">NOR-mul-see</span>Warren Harding's word for a calm return to ordinary life after the war and years of reform.</span></span>, and many hoped that meant calm. The country had just refused to join the <span class="gloss" tabindex="0">League of Nations<span class="gloss-tip"><span class="gloss-pron">leeg uv NAY-shunz</span>The international organization created by the Treaty of Versailles to keep the peace. The United States never joined it.</span></span>, turned away its radicals with raids, and then closed its door to many immigrants. Together, these choices show a nation pulling back from the world. Next week, you will see that the same years also saw the most dramatic economic change in the country's history. A man in Michigan was about to change how Americans worked, traveled, and spent.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

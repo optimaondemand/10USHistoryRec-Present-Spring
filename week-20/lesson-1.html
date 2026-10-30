@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -336,11 +369,14 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In 1908, a new car cost far more than most families earned in a year. Cars were toys for the rich. Henry Ford wanted something different. <span class="gloss" tabindex="0">Henry Ford<span class="gloss-tip"><span class="gloss-pron">HEN-ree ford</span>The Michigan carmaker who built the Model T and introduced the moving assembly line.</span></span> was a Michigan farm boy who had trained as a machinist and an engineer. He wanted to build a car that ordinary families could buy. In October 1908, his company released the <span class="gloss" tabindex="0">Model T<span class="gloss-tip"><span class="gloss-pron">MOD-ul tee</span>Henry Ford's tough, simple car, first sold in 1908. By 1927, fifteen million had been built.</span></span>. It was tough, simple, and easy to repair. It sat high enough to bounce over rough dirt roads. It cost $850. That was a fair price for the time, but it was still out of reach for many families. Ford made it his mission to push the price down.</p>
 <p>How did he do it? Part of the answer was <span class="gloss" tabindex="0">interchangeable parts<span class="gloss-tip"><span class="gloss-pron">in-ter-CHAYN-juh-bul parts</span>Pieces made so exactly alike that any one of them will fit any product of the same kind.</span></span>. These are pieces made so exactly alike that any one will fit any car. A mechanic no longer had to file and fit each piece by hand. Gunmakers in New England had used the idea in the early 1800s, but no one had ever applied it on Ford's scale. The little car soon earned a nickname, the "Tin Lizzie," and a flood of jokes. But the larger part of the answer came in 1913, at Ford's plant in Highland Park, Michigan. Before then, workers had walked from car to car, building each one in a single spot. Ford's engineers tried something new. They set the car's frame on a moving line and brought it to the workers. Each worker stayed in place and did one small job. The idea of a moving line had been used by Chicago meatpackers, and Ford's men borrowed it. The result was the <span class="gloss" tabindex="0">assembly line<span class="gloss-tip"><span class="gloss-pron">uh-SEM-blee lyn</span>A way of building something in which the product moves past workers who each stay in one place and do one small job.</span></span>. The time needed to build a car's chassis, or frame, fell from more than twelve hours to about an hour and a half.</p>
 <p>Ford also used ideas from an engineer named <span class="gloss" tabindex="0">Frederick W. Taylor<span class="gloss-tip"><span class="gloss-pron">FRED-rik DUB-ul-yoo TAY-ler</span>An engineer who timed workers with a stopwatch to find the one best way to do each job. His ideas were called scientific management.</span></span>. Taylor timed workers with a stopwatch and tried to find the "one best way" to do each job. His method was called <span class="gloss" tabindex="0">scientific management<span class="gloss-tip"><span class="gloss-pron">sy-un-TIF-ik MAN-ij-ment</span>A system developed by Frederick Taylor that studied and timed each task to find the most efficient way to do it.</span></span>. Put the three ideas together, and you have <span class="gloss" tabindex="0">mass production<span class="gloss-tip"><span class="gloss-pron">mas pruh-DUK-shun</span>Making huge numbers of identical goods cheaply, using standard parts, machines, and an assembly line.</span></span>, the making of huge numbers of identical goods at low cost. The Model T's price fell below $300 in the 1920s. By 1927, Ford had built fifteen million of them. He also built a giant plant at River Rouge, near Detroit, and owned the forests, mines, and ships that supplied it. This is called <span class="gloss" tabindex="0">vertical integration<span class="gloss-tip"><span class="gloss-pron">VER-tih-kul in-tuh-GRAY-shun</span>Owning every stage of making a product, from raw materials to the finished good.</span></span>, which means controlling every stage of production from raw materials to the finished product.</p>
+<div class="optima-widget ow-reflect" data-wid="m2-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Think about something you use every day that was made in huge numbers, such as a phone, shoes, or a game controller. How do you feel about millions of people owning the very same thing? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That is the heart of what Ford&#x27;s methods did. Making many identical things cut the price, and more families could buy them.">I like it, because it was cheap enough for me</button><button data-response="Many people do. As you read on, think about what was gained and what was lost when goods and jobs became so uniform.">I prefer something one of a kind</button><button data-response="Most of us don&#x27;t. Notice as you read how much of daily life depends on this way of making things.">I never thought about it</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>The work was not pleasant. Jobs on the line were fast, dull, and tiring. Workers quit in huge numbers, and this <span class="gloss" tabindex="0">turnover<span class="gloss-tip"><span class="gloss-pron">TURN-oh-ver</span>How often workers quit and must be replaced. High turnover is costly because each new worker has to be trained.</span></span> cost Ford money, because every new worker had to be trained. In January 1914, Ford announced the <span class="gloss" tabindex="0">Five-Dollar Day<span class="gloss-tip"><span class="gloss-pron">fyv DOL-er day</span>Henry Ford's 1914 wage of five dollars a day, about double the usual factory pay. It cut worker turnover sharply.</span></span>. It was about double the usual factory wage. Crowds of job seekers lined up outside his gates, and in the cold some of them rioted. Ford said that high pay would also create customers, since workers could now afford the cars they built. His motives were mixed, and historians still debate them. What is clear is that the plan worked. Quitting dropped sharply, and Ford's rivals had to raise wages too.</p>
 <p>The high wage came with strings. Ford set up a Sociological Department. Its inspectors visited workers' homes to check on their habits. A worker who drank, kept a messy house, or lived in ways Ford disliked could lose part of the pay. Some workers accepted this as help. Many resented it as an employer reaching into their private lives. It raises an old question. How far should anyone, a company or a government, go in shaping the character of fellow citizens?</p>
 <p>Ford is a good example of how one person's strengths and weaknesses can shape an era. His virtues were real. He had imagination, he kept trying after two earlier car companies failed, and he cared about producing something ordinary people could use. But he was also stubborn. He kept building the same car long after buyers wanted more. Other companies offered color, comfort, and new styles each year. Ford held on to the Model T until 1927, when he shut his factories for months to build a new model. By then, General Motors had passed him as the top seller. Ford also used his own newspaper in the early 1920s to print hateful lies about Jewish Americans, and he apologized in 1927. A fair account must record both his gifts and his faults.</p>
+<div class="ow-group" data-wid="m2-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What kept Ford going after two earlier car companies failed?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">His imagination and his wish to build something ordinary people could use. Both were real strengths.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What flaw let a rival pass him in 1927?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Stubbornness. He kept building one car long after buyers wanted color, comfort, and new styles.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Besides the factory, what did Ford&#x27;s company control at River Rouge?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The forests, mines, and ships that supplied it.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>The car changed American life. It needed steel, glass, rubber, and oil, so whole industries grew up around it. It needed paved roads, gas stations, repair shops, and roadside restaurants. By 1929, there were more than 23 million cars on American roads, about one for every five people. Farm families were no longer stuck miles from the nearest town. Women gained new freedom to travel and run errands on their own. Some Black families valued the car because it let them avoid segregated trains and buses, though finding a place to eat or sleep on the road could be hard in many parts of the country. A family could drive to church, to a market, or to a relative in the next county. Towns that sat on the new highways grew. Towns that did not were sometimes left behind. Blacksmiths, stable owners, and some railroads lost business.</p>
 <p>Did the car make Americans freer? In some ways, clearly yes. People could move, shop, work, and visit as they chose. In other ways, the story is mixed. Cars made workers dependent on factory jobs, and the assembly line took away much of the pride of craft that earlier workers felt. Both sides of the story belong in an honest account, and you will return to the question in this week's discussion.</p>
+<div class="optima-widget ow-select" data-wid="m2-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHO GAINED, WHO LOST?</div><div class="widget-question">The car changed life in different ways for different people. Check each case.</div><div class="widget-row" data-correct="1" data-fb="Right. Farm families were no longer stuck miles from the nearest town." data-hint="Think about distance and how often they could travel."><div class="widget-row-prompt">1. A farm family lives miles from the nearest town in the 1920s. What did the car change most for them?</div><div class="widget-options"><button data-choice="0">They no longer needed to farm for a living</button><button data-choice="1">They were no longer stuck so far from town</button><button data-choice="2">They were forced to move into a city</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. Blacksmiths, stable owners, and some railroads lost business." data-hint="Who needed horses once cars were everywhere?"><div class="widget-row-prompt">2. A blacksmith or a stable owner in a small town in the 1920s. What likely happened to the business?</div><div class="widget-options"><button data-choice="0">It grew along with the new cars</button><button data-choice="1">It stayed about the same as before</button><button data-choice="2">It lost customers</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. Towns on the new highways grew, and towns that were not on them were sometimes left behind." data-hint="Think about where the travelers and trucks went."><div class="widget-row-prompt">3. Two towns, one on a new highway and one far from it. What did the lesson say often followed?</div><div class="widget-options"><button data-choice="0">The highway town grew, and the other was sometimes left behind</button><button data-choice="1">Both towns grew at the same pace</button><button data-choice="2">The town far from the highway grew faster</button></div></div><button class="widget-reset">Reset</button></div>
 <p>None of this was fixed in advance. If Ford's early companies had not failed, he might never have learned the lessons that produced the Model T. If the moving line had been tried first by a rival, a different company might have led the age. Ford was not simply carried along by large forces. He made choices, some wise and some foolish, and those choices changed the country.</p>
 <p>One problem remained, and it was a new one. The factories could now make more cars than most families could pay for in cash. The next lesson explains how Americans solved that problem, and what the solution cost them.</p></div>
 </div>
@@ -392,6 +428,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>
