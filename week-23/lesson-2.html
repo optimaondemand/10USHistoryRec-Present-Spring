@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -340,11 +373,14 @@
 <p>Workers took the New Deal's promises seriously. The recovery act had said that workers could organize and bargain, and in 1934 strikes broke out in Toledo, Minneapolis, and San Francisco. Some turned violent, and several strikers were killed. They showed that millions of workers wanted a real voice in their working lives, and next week's lessons will show how the government answered.</p>
 <p>The limits of federal help could also be deadly. In the 1930s, hundreds of Great War veterans were sent to the Florida Keys to work on relief projects, building a highway across the islands. On Labor Day, 1935, one of the strongest hurricanes ever to strike the United States hit the Keys. The rescue train sent to carry the men out arrived too late, and hundreds of veterans died. Many Americans were angry, and some remembered the Bonus Army marchers who had been driven from Washington three years earlier. The disaster raised hard questions about who was responsible for the safety of citizens who worked for the government.</p>
 <p>The New Deal drew critics from both sides. On the left, some people said that Roosevelt had not gone far enough. <span class="gloss" tabindex="0">Huey Long<span class="gloss-tip"><span class="gloss-pron">HYOO-ee lawng</span>A powerful Louisiana governor and senator who proposed the Share Our Wealth plan. He was shot and killed in 1935.</span></span>, the powerful senator from Louisiana, offered a plan he called <span class="gloss" tabindex="0">Share Our Wealth<span class="gloss-tip"><span class="gloss-pron">shair our welth</span>Huey Long's plan to limit private fortunes and give every family a basic income and a home.</span></span>. It would limit the size of private fortunes and give every family a basic income and a home. By 1935, tens of thousands of Share Our Wealth clubs had sprung up. Roosevelt's advisers feared that Long might run for president in 1936 and split the Democratic vote. In September 1935, Long was shot at the state capitol in Baton Rouge and died. A California doctor, Francis Townsend, proposed that every American over sixty be paid two hundred dollars a month, if they spent it within the month. The <span class="gloss" tabindex="0">Townsend Plan<span class="gloss-tip"><span class="gloss-pron">TOWN-zend plan</span>Dr. Francis Townsend's proposal to pay every American over sixty two hundred dollars a month, on the condition that they spend it within the month.</span></span> gathered millions of supporters. <span class="gloss" tabindex="0">Father Coughlin<span class="gloss-tip"><span class="gloss-pron">FAH-ther chahrlz KOG-lin</span>A Catholic priest from Michigan whose radio program reached millions of listeners. He first supported Roosevelt and then turned against him.</span></span>, a Catholic priest in Michigan, had one of the biggest radio audiences in the country. He first supported Roosevelt, then turned against him.</p>
+<div class="optima-widget" data-wid="m5-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question"><span class="gloss" tabindex="0">Huey Long<span class="gloss-tip"><span class="gloss-pron">HYOO-ee lawng</span>A powerful Louisiana governor and senator who proposed the Share Our Wealth plan. He was shot and killed in 1935.</span></span> had tens of thousands of <span class="gloss" tabindex="0">Share Our Wealth<span class="gloss-tip"><span class="gloss-pron">shair our welth</span>Huey Long's plan to limit private fortunes and give every family a basic income and a home.</span></span> clubs behind him by 1935, and Roosevelt's advisers worried he might run for president.</div><details class="ow-reveal"><summary>What might the next election have looked like if he had lived to run? Decide first and jot down two possibilities before you open this.</summary><div class="ow-reveal-body">His advisers feared that he would split the Democratic vote. Whether he would have run, and how many votes he would have drawn, nobody can know. This is contingency: one shooting in September 1935 removed a possible rival from the story. A careful historian says what was possible, not what was certain.</div></details><button class="widget-reset">Reset</button></div>
 <p>On the right, critics said the New Deal went too far. In 1934, a group of wealthy businessmen and conservative Democrats, including former presidential candidate Al Smith, founded the <span class="gloss" tabindex="0">American Liberty League<span class="gloss-tip"><span class="gloss-pron">uh-MER-ih-kun LIB-er-tee leeg</span>A group formed in 1934 by wealthy businessmen and conservative Democrats who argued that the New Deal threatened property rights and the Constitution.</span></span>. They argued that the New Deal threatened property, freedom, and the Constitution. Roosevelt answered sharply. In 1936, he attacked what he called the "economic royalists" who opposed him. Voters gave him a verdict. Democrats gained seats in the 1934 midterm elections, which is unusual for the president's party. In 1936, Roosevelt won forty-six of the forty-eight states.</p>
 <p>A deeper question ran under the debate. The Constitution divides power between the national government and the states, an arrangement called <span class="gloss" tabindex="0">federalism<span class="gloss-tip"><span class="gloss-pron">FED-er-ul-iz-um</span>The system in which power is divided between the national government and the state governments.</span></span>. Many New Deal programs were run through the states and cities. The states also differed from one another. Justice Louis Brandeis had argued in 1932 that this was a strength. In his words, "a single courageous State may, if its citizens choose, serve as a laboratory; and try novel social and economic experiments without risk to the rest of the country." In 1932, Wisconsin became the first state to pass unemployment insurance. Later, the federal government built a national system on lessons learned from experiments like that one.</p>
+<div class="optima-widget ow-seq" data-wid="m5-2-2" data-ra-skip data-n="5" data-fb="That is the order. The recovery after 1933 was real, but the downturn at the end showed how fragile it was." data-hint="Start with the state experiment, then follow the years forward."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">Wisconsin passes the first state unemployment insurance law</button><button data-pos="2">Strikes break out in Toledo, Minneapolis, and San Francisco</button><button data-pos="3">A hurricane strikes the Florida Keys on Labor Day</button><button data-pos="4">Roosevelt wins forty-six of the forty-eight states</button><button data-pos="5">Output drops and unemployment climbs again</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Sharing power also had a price. Local control meant that local prejudices often shaped the results. Under the <span class="gloss" tabindex="0">Agricultural Adjustment Act<span class="gloss-tip"><span class="gloss-pron">ag-rih-KUL-chur-ul uh-JUST-ment akt</span>A 1933 New Deal law that paid farmers to grow less, so that the prices of crops would rise.</span></span>, payments for cutting crops went mostly to landowners. In the South, many owners used the money to buy machines and to evict their tenants, including <span class="gloss" tabindex="0">sharecroppers<span class="gloss-tip"><span class="gloss-pron">SHAIR-krop-erz</span>Farmers who work land owned by someone else and pay for it with a share of the crop.</span></span>, who worked land for a share of the crop. Black farmers were hit hard. The <span class="gloss" tabindex="0">Civilian Conservation Corps<span class="gloss-tip"><span class="gloss-pron">sih-VIL-yun kon-ser-VAY-shun kor</span>A New Deal program that hired young unemployed men to plant trees, build trails, and fight soil erosion. About three million served.</span></span> kept its camps segregated. Roosevelt needed the votes of Southern Democrats in Congress, and many of them chaired powerful committees. To pass his bills, he often accepted rules that left much of the power in local hands. It was a trade, and it shows why historians describe the New Deal as a mixed achievement. It helped millions and left some of the neediest outside its reach.</p>
 <p>The states also took part in a different decision that year. Prohibition ended in 1933. Congress proposed the <span class="gloss" tabindex="0">21st Amendment<span class="gloss-tip"><span class="gloss-pron">TWEN-tee-furst uh-MEND-ment</span>The 1933 constitutional amendment that repealed the 18th Amendment and ended Prohibition. It is the only amendment ratified by special state conventions instead of state legislatures.</span></span>, which repealed the 18th, and then it did something unusual. It asked the states to ratify it not through their legislatures, but through special conventions elected by voters. It remains the only amendment ratified that way. The conventions voted to repeal in December 1933. Repeal reflected a lesson that Americans had learned over thirteen years. A law that a large part of the people refuse to obey weakens the respect for law itself. It also reflected the power of ordinary voters to correct a constitutional mistake, using the Constitution's own rules.</p>
 <p>So what was the New Deal? Some Americans saw it as an emergency measure, a set of temporary steps to get the country through a crisis. Others saw it as the start of a permanent change in the relationship between citizens and their government. Both views had some truth. Some programs ended quickly. The Supreme Court would soon strike down others. Yet many lasted, including deposit insurance, rules for the stock market, and the <span class="gloss" tabindex="0">Tennessee Valley Authority<span class="gloss-tip"><span class="gloss-pron">TEN-uh-see VAL-ee aw-THOR-ih-tee</span>A New Deal agency that built dams on the Tennessee River to control floods and make cheap electricity.</span></span>, which still makes power in the South. After the 1930s, Americans expected the national government to take responsibility for the nation's economic security in a way they had not before.</p>
+<div class="optima-widget ow-scale" data-wid="m5-2-3" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID IT MATTER?</div><div class="widget-question">In many places, the people who ran a program decided who received its help, and their prejudices showed. How much did this shape the results of the <span class="gloss" tabindex="0">New Deal<span class="gloss-tip"><span class="gloss-pron">noo deel</span>The name Roosevelt gave to his program of relief, recovery, and reform to fight the Great Depression.</span></span>?</div><div class="widget-row" data-correct="2,3" data-fb="Yes. Local prejudice shaped who received help, and that is one reason historians call these programs a mixed achievement." data-hint="The lesson says local control often shaped results, but it also says the programs helped millions."><div class="widget-options"><button data-choice="0" data-fb="Not quite. Payments went mostly to landowners, and camps stayed segregated.">Hardly at all</button><button data-choice="1" data-fb="Not quite. The lesson gives several examples of unequal results.">A little</button><button data-choice="2" data-fb="Yes. Local prejudice shaped who received help, and the programs still helped millions.">Quite a bit</button><button data-choice="3" data-fb="Accepted, but the lesson does not rank the causes. It says the programs helped millions and left some of the neediest out.">More than any other factor</button></div></div><button class="widget-reset">Reset</button></div>
 <p>That change raised constitutional questions that Roosevelt could not avoid. Could Congress really regulate the whole national economy? Could it give the president so much power? Next week, you will see how the Supreme Court answered, and what Roosevelt did when it said no.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

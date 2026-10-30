@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -337,12 +370,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>After Pearl Harbor, Americans wanted to strike back at Japan. But Roosevelt and <span class="gloss" tabindex="0">Winston Churchill<span class="gloss-tip"><span class="gloss-pron">WIN-stun CHUR-chil</span>The prime minister of Britain from 1940, who led his country through most of the war.</span></span> met in Washington in December 1941 and made a hard decision. Germany was the stronger enemy. If it conquered the Soviet Union and Britain, it would control all of Europe and its industry. The two leaders agreed to defeat Germany first, while holding Japan back in the Pacific. This plan is known as <span class="gloss" tabindex="0">Europe First<span class="gloss-tip"><span class="gloss-pron">YUR-up furst</span>The Allied plan to defeat Germany before Japan.</span></span>. It was unpopular with many Americans, but it shaped the whole war. They also agreed to accept nothing less than <span class="gloss" tabindex="0">unconditional surrender<span class="gloss-tip"><span class="gloss-pron">un-kun-DISH-un-ul suh-REN-der</span>A surrender in which the losing side gives up completely, with no bargaining over terms.</span></span>, which means that the enemy must give up completely, with no bargaining over terms. The two nations were now fighting together, along with the Soviet Union and others, as the <span class="gloss" tabindex="0">Allied Powers<span class="gloss-tip"><span class="gloss-pron">AL-yd POW-urz</span>The nations that fought the Axis in World War II, led by Britain, the Soviet Union, and the United States.</span></span>. Their enemies were the <span class="gloss" tabindex="0">Axis Powers<span class="gloss-tip"><span class="gloss-pron">AK-sis POW-urz</span>Germany, Italy, and Japan, the nations that fought the Allies in World War II.</span></span>.</p>
 <p>The first American battles against Germany took place in North Africa. In November 1942, American and British troops landed in Morocco and Algeria. In their first big fight, at the Kasserine Pass in Tunisia in February 1943, American soldiers were badly beaten by experienced German troops. They learned fast. By May 1943, the Axis forces in Africa had surrendered. In July, the Allies invaded Sicily, and Italy soon changed sides, though German troops fought on in Italy for almost two more years.</p>
 <p>The largest land battles, however, were on the Eastern Front. At Stalingrad, in the winter of 1942 to 1943, the Soviet army trapped and destroyed a German army. American help was important here. Under the <span class="gloss" tabindex="0">Lend-Lease<span class="gloss-tip"><span class="gloss-pron">lend LEES</span>A 1941 law that let the president lend or lease weapons and supplies to any country whose defense he thought vital to the United States.</span></span> program, the United States sent the Soviet Union hundreds of thousands of trucks, as well as food and fuel. Stalin kept asking for a second front in Western Europe. The Western Allies could not yet provide one, and the Soviets bore the weight of the war on land for most of three years.</p>
+<div class="optima-widget ow-reflect" data-wid="m8-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">A commander must send thousands of soldiers into danger. What should weigh most on that person's mind? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That weight is real. Commanders also know that waiting can cost lives too. Watch how one commander handled it.">The lives of the soldiers</button><button data-response="Winning matters, because a lost battle can cost more lives later. But a goal alone does not tell you how much risk is acceptable.">The goal the army must reach</button><button data-response="Taking responsibility is part of leadership. Notice what a famous general wrote the night before a great invasion.">Who will take the blame if it fails</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>In the meantime, Americans were turning out weapons by the thousands, and the air war against Germany began. American bombers flew in the daytime from bases in England, and British bombers flew at night. The air raids damaged German industry and killed many civilians. They also cost the Allies terrible losses, since bomber crews suffered some of the highest death rates of the war.</p>
 <p>The invasion of France came on June 6, 1944, known as <span class="gloss" tabindex="0">D-Day<span class="gloss-tip"><span class="gloss-pron">DEE-day</span>June 6, 1944, the day the Allies landed on the beaches of Normandy, France.</span></span>. General <span class="gloss" tabindex="0">Dwight D. Eisenhower<span class="gloss-tip"><span class="gloss-pron">dwyt dee EYE-zun-how-er</span>The American general who commanded the Allied armies in Europe and later became president.</span></span>, the Supreme Allied Commander, led the operation. The night before, he wrote a short note taking responsibility in case it failed. More than 150,000 troops crossed the English Channel in the largest invasion from the sea in history. They landed on five beaches in Normandy. At a beach codenamed Omaha, the American troops met fierce fire from cliffs above and suffered about two thousand casualties on the first day. Yet by nightfall, the Allies had a hold on the coast. Many things could have gone wrong. Bad weather had forced a one-day delay, and Eisenhower had to decide in a short break in the clouds. Had he waited longer, the next good weather might have been weeks away.</p>
 <p>Paris was freed in August. By September, the Allies were at Germany's border. Then, in December 1944, the Germans launched a surprise attack through the forests of the Ardennes, creating a bulge in the Allied line. The <span class="gloss" tabindex="0">Battle of the Bulge<span class="gloss-tip"><span class="gloss-pron">BAT-ul uv thuh BULJ</span>The last great German attack in the West, begun in December 1944. It failed by late January 1945.</span></span> was the largest battle the United States Army ever fought. American soldiers held the town of Bastogne, and by late January the German attack had failed. In the spring, the Allies crossed the Rhine. Roosevelt died on April 12, 1945, and the vice president took the oath of office. On April 30, Hitler killed himself in Berlin. Germany surrendered on May 8, 1945.</p>
+<div class="ow-group" data-wid="m8-1-2" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did the general in charge write the night before the invasion of France?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A short note taking responsibility in case it failed.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What happened on the beach codenamed Omaha on the first day?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">American troops met fierce fire from cliffs above and suffered about two thousand casualties. Yet by nightfall the Allies had a hold on the coast.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What happened at the town of Bastogne in December 1944?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">American soldiers held it during the surprise German attack, and by late January the attack had failed.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>Now we turn to the worst crime of the war. Beginning in 1933, the Nazi government persecuted the Jews of Germany. After the invasion of the Soviet Union in 1941, it began a plan to murder all the Jews of Europe. In January 1942, officials met at a villa near Berlin and discussed how to carry out the plan. The result is called the <span class="gloss" tabindex="0">Holocaust<span class="gloss-tip"><span class="gloss-pron">HOL-uh-kawst</span>The murder of about six million Jews, and millions of other people, by the Nazi government and its helpers.</span></span>. German forces and their helpers shot hundreds of thousands of Jews in towns and ravines in the East. Millions more were sent by train to killing centers, such as Auschwitz, Treblinka, and Sobibor, where most were killed at once in gas chambers. Others died of hunger, disease, and forced labor in <span class="gloss" tabindex="0">concentration camp<span class="gloss-tip"><span class="gloss-pron">kon-sun-TRAY-shun kamp</span>A prison where people are held without trial, often in terrible conditions. The Nazis used such camps to imprison and kill their victims.</span></span> prisons, which were set up to hold people without trial. About six million Jews were killed. The Nazis also murdered millions of other people, including Roma, Poles, Soviet prisoners, and disabled people.</p>
 <p>What did Americans know? Reports began to arrive in 1942. In August of that year, a representative of the World Jewish Congress in Switzerland sent a cable saying he had heard of a German plan to kill all of the Jews of Europe. Officials at the State Department doubted the report and at first held back the message. By the end of 1942, the news had been confirmed, and in December, the Allied governments, including the United States, publicly condemned the killing. In 1943, American and British officials met in Bermuda to discuss refugees, and little came of it. Immigration laws were strict, and those laws and the State Department's rules kept the number of refugees low. In early 1944, a report from officials in the Treasury Department accused the State Department of failing to act. Soon after, Roosevelt created the <span class="gloss" tabindex="0">War Refugee Board<span class="gloss-tip"><span class="gloss-pron">wor REF-yoo-jee bord</span>A United States agency, created in January 1944, to help rescue people in danger from Nazi persecution.</span></span>, which helped to save tens of thousands of lives by working with neutral countries and by supporting rescue efforts, including the work of the Swedish diplomat Raoul Wallenberg. Historians still argue about how much more might have been done, and how soon. That question is the subject of this week's discussion.</p>
 <p>The American army also met the horror directly. In April 1945, its soldiers reached camps such as Buchenwald and Dachau. Eisenhower visited one camp and ordered that the local German townspeople be brought through it. He asked photographers and reporters to record what he saw, so that no one could say later that it had not happened. Many of the men who liberated the camps never forgot what they had found.</p>
+<div class="optima-widget ow-select" data-wid="m8-1-3" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHAT DID OFFICIALS DO?</div><div class="widget-question">Check what you learned about what Americans knew and what they did.</div><div class="widget-row" data-correct="3" data-fb="Right. By the end of 1942 the news was confirmed, and the Allied governments condemned the killing in public." data-hint="Recall how the officials first judged the report."><div class="widget-row-prompt">1. In August 1942 a representative in Switzerland cabled that Germany planned to kill all of the Jews of Europe. What did State Department officials do at first?</div><div class="widget-options"><button data-choice="0">Announced it to the public at once</button><button data-choice="1">Passed it to the newspapers</button><button data-choice="2">Asked Congress to change the immigration laws</button><button data-choice="3">Doubted the report and held back the message</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. Soon after, Roosevelt created a new board for rescue." data-hint="The report named the department that handled refugees and visas."><div class="widget-row-prompt">2. In early 1944 a report from Treasury Department officials accused whom of failing to act?</div><div class="widget-options"><button data-choice="0">The State Department</button><button data-choice="1">The Army</button><button data-choice="2">The Swedish government</button><button data-choice="3">The Allied governments as a whole</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. It helped to save tens of thousands of lives. Historians still argue about how much more might have been done." data-hint="Think about rescue work carried out through neutral countries."><div class="widget-row-prompt">3. Soon after, Roosevelt created the <span class="gloss" tabindex="0">War Refugee Board<span class="gloss-tip"><span class="gloss-pron">wor REF-yoo-jee bord</span>A United States agency, created in January 1944, to help rescue people in danger from Nazi persecution.</span></span>. What did it do?</div><div class="widget-options"><button data-choice="0">Wrote new immigration laws</button><button data-choice="1">Tried the Nazi leaders in court</button><button data-choice="2">Worked with neutral countries to rescue people</button><button data-choice="3">Ran the camps after liberation</button></div></div><button class="widget-reset">Reset</button></div>
 <p>The defeat of Germany showed the republic at its best and at its limits. It showed the power of free workers and free industry to make the weapons of victory. It showed the courage of ordinary soldiers. The Holocaust showed what happens when a modern state has no limits on its power and no respect for human dignity. It was, in the end, the strongest possible argument against the totalitarian idea.</p>
 <p>The war was far from over, however. In the Pacific, Americans were fighting a different enemy, across thousands of miles of ocean.</p></div>
 </div>
@@ -394,6 +430,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

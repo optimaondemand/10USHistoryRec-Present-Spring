@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -338,13 +371,16 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>The winter of 1932 to 1933 was the lowest point of the Great Depression. Banks were closing across the country. In February, the governor of Michigan shut every bank in his state, and other governors followed. President Hoover and President-elect Roosevelt, who disliked each other, could not agree on a joint plan. The old president had little power left, and the new one could not act until his inauguration on March 4. The country waited.</p>
 <p>The man who was about to take command was <span class="gloss" tabindex="0">Franklin D. Roosevelt<span class="gloss-tip"><span class="gloss-pron">FRANK-lin dee ROH-zuh-velt</span>The governor of New York who was elected president in 1932 and served until 1945.</span></span>. He came from a wealthy New York family and was a distant cousin of Theodore Roosevelt. In 1921, at the age of thirty-nine, he was struck by polio and never walked unaided again. He refused to give up public life. He later served as governor of New York, and the long fight to rebuild his body had taught him how to keep going. His cheerful manner and his skill as a politician were as important as any of his plans. He also drew strength from his wife, Eleanor, who traveled the country and reported back on what she saw, and he chose talented people for his cabinet. One of them, Frances Perkins, became Secretary of Labor and the first woman ever to serve in a president's cabinet.</p>
 <p>Just three weeks before he took office, his career nearly ended. On February 15, 1933, in Miami, a gunman named Giuseppe Zangara fired at Roosevelt as he sat in an open car. The bullets missed him. One of them struck Chicago's mayor, Anton Cermak, who died. It is worth pausing on that moment. If Zangara's aim had been a little different, the nation would have faced the banking crisis under Vice President John Nance Garner, a very different man. This is what historians mean by contingency. The great events of the Depression were shaped by chance as well as by plans.</p>
+<div class="optima-widget ow-reflect" data-wid="m5-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Imagine you are a governor in February 1933. Banks in your state are failing and no help is coming from Washington. What would you do first? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That is what the governor of Michigan did. It stops the panic, but it also locks people out of their own money. Notice how that tradeoff shapes the choices that follow.">Close the banks for a while</button><button data-response="Calm can matter a great deal. But a bank cannot hand back money it does not have. Watch what Roosevelt added to calm words.">Ask people to stay calm and keep their money in</button><button data-response="Waiting avoids a mistake, but it costs time. Think about what the country lost in the weeks before March 4.">Wait for the new president</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>In his inaugural address, Roosevelt told Americans that the only thing they had to fear was fear itself. Two days later, he declared a <span class="gloss" tabindex="0">bank holiday<span class="gloss-tip"><span class="gloss-pron">bangk HAH-lih-day</span>A short, government-ordered closing of all banks. Roosevelt declared one in March 1933 to stop the panic.</span></span>, which closed every bank in the country for several days. On March 9, Congress met in a special session and passed the <span class="gloss" tabindex="0">Emergency Banking Act<span class="gloss-tip"><span class="gloss-pron">ih-MER-jun-see BANG-king akt</span>The law Congress passed in a single afternoon on March 9, 1933. It let the government inspect banks and reopen only the sound ones.</span></span> in a single afternoon. The bill was so new that many members voted without having read it. It allowed the government to inspect banks and reopen only the sound ones. On March 12, Roosevelt spoke to the country by radio and explained in simple words how the plan worked. When the banks reopened, people put money back in. The run was over. It was one of the quickest turnarounds in American politics.</p>
 <p>Congress stayed in session until mid-June. In those <span class="gloss" tabindex="0">Hundred Days<span class="gloss-tip"><span class="gloss-pron">HUN-drid dayz</span>The first months of Roosevelt's presidency in 1933, when Congress passed fifteen major laws to fight the Depression.</span></span>, it passed fifteen major laws. Roosevelt called his program the <span class="gloss" tabindex="0">New Deal<span class="gloss-tip"><span class="gloss-pron">noo deel</span>The name Roosevelt gave to his program of relief, recovery, and reform to fight the Great Depression.</span></span>. The laws can be grouped under three purposes, which people at the time called relief, recovery, and reform.</p>
 <p>Relief meant helping people who were suffering right away. The <span class="gloss" tabindex="0">Civilian Conservation Corps<span class="gloss-tip"><span class="gloss-pron">sih-VIL-yun kon-ser-VAY-shun kor</span>A New Deal program that hired young unemployed men to plant trees, build trails, and fight soil erosion. About three million served.</span></span> hired young unemployed men to plant trees, build trails, and fight erosion. They earned thirty dollars a month, and most of it was sent home to their families. About three million young men served in the Corps before it ended. The Federal Emergency Relief Administration sent federal money to states and cities to feed the hungry. <span class="gloss" tabindex="0">Relief<span class="gloss-tip"><span class="gloss-pron">rih-LEEF</span>Money or goods given directly to people in need.</span></span> now had a national source for the first time.</p>
 <p>Recovery meant getting the economy moving again. The <span class="gloss" tabindex="0">Agricultural Adjustment Act<span class="gloss-tip"><span class="gloss-pron">ag-rih-KUL-chur-ul uh-JUST-ment akt</span>A 1933 New Deal law that paid farmers to grow less, so that the prices of crops would rise.</span></span> paid farmers to grow less, so that crop prices would rise. It was a harsh remedy, and in 1933 it led to the destruction of crops and millions of young pigs while people went hungry. The <span class="gloss" tabindex="0">National Industrial Recovery Act<span class="gloss-tip"><span class="gloss-pron">NASH-un-ul in-DUS-tree-ul rih-KUV-er-ee akt</span>A 1933 New Deal law that let businesses in each industry write codes setting prices, wages, and hours. It also protected workers' right to join unions.</span></span> let businesses in each industry write codes of fair competition that set prices, wages, and hours. It also protected workers' right to join unions. The <span class="gloss" tabindex="0">Tennessee Valley Authority<span class="gloss-tip"><span class="gloss-pron">TEN-uh-see VAL-ee aw-THOR-ih-tee</span>A New Deal agency that built dams on the Tennessee River to control floods and make cheap electricity.</span></span> built dams on the Tennessee River to control floods and make cheap electricity, in one of the poorest regions in the country.</p>
+<div class="optima-widget ow-select" data-wid="m5-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; SORTING THE LAWS</div><div class="widget-question">Sort each law by what it was meant to do.</div><div class="widget-row" data-correct="0" data-fb="Right. It put young men to work at once, and most of their pay went home to their families." data-hint="Ask whether this law helped people right away or tried to restart business."><div class="widget-row-prompt">1. The <span class="gloss" tabindex="0">Civilian Conservation Corps<span class="gloss-tip"><span class="gloss-pron">sih-VIL-yun kon-ser-VAY-shun kor</span>A New Deal program that hired young unemployed men to plant trees, build trails, and fight soil erosion. About three million served.</span></span> hired young unemployed men to plant trees and build trails.</div><div class="widget-options"><button data-choice="0">Help people who were suffering right away</button><button data-choice="1">Fix the system so disaster would not repeat</button><button data-choice="2">Get the economy moving again</button></div></div><div class="widget-row" data-correct="2" data-fb="Right. The goal was higher prices to restart farming, even though the remedy was harsh." data-hint="Think about what higher crop prices were supposed to do for the economy."><div class="widget-row-prompt">2. The <span class="gloss" tabindex="0">Agricultural Adjustment Act<span class="gloss-tip"><span class="gloss-pron">ag-rih-KUL-chur-ul uh-JUST-ment akt</span>A 1933 New Deal law that paid farmers to grow less, so that the prices of crops would rise.</span></span> paid farmers to grow less so that crop prices would rise.</div><div class="widget-options"><button data-choice="0">Fix the system so disaster would not repeat</button><button data-choice="1">Help people who were suffering right away</button><button data-choice="2">Get the economy moving again</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. The lesson places the dams with the laws meant to get the economy moving." data-hint="The lesson groups the dams with the farm and business laws."><div class="widget-row-prompt">3. The <span class="gloss" tabindex="0">Tennessee Valley Authority<span class="gloss-tip"><span class="gloss-pron">TEN-uh-see VAL-ee aw-THOR-ih-tee</span>A New Deal agency that built dams on the Tennessee River to control floods and make cheap electricity.</span></span> built dams to control floods and make cheap electricity in a poor region.</div><div class="widget-options"><button data-choice="0">Fix the system so disaster would not repeat</button><button data-choice="1">Get the economy moving again</button><button data-choice="2">Help people who were suffering right away</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Reform meant fixing the system so that disaster would not repeat. The Securities Act required companies selling stock to tell the truth about their business. The Glass-Steagall Act separated ordinary banks from risky investment firms. It also set up <span class="gloss" tabindex="0">deposit insurance<span class="gloss-tip"><span class="gloss-pron">dih-POZ-it in-SHOOR-uns</span>A government guarantee that repays a customer's savings if a bank fails. It was created in 1933.</span></span>, which guarantees that the government will repay a customer's savings if a bank fails. Your own family's bank account is protected by this idea today.</p>
 <p>What was Roosevelt's method? He gathered a group of advisers, many of them college professors, whom reporters called the <span class="gloss" tabindex="0">Brain Trust<span class="gloss-tip"><span class="gloss-pron">brayn trust</span>The group of advisers, many of them college professors, whom Roosevelt gathered to help him plan the New Deal.</span></span>. He tried many ideas at once. In a speech during the 1932 campaign, he explained his approach. "It is common sense to take a method and try it," he said. "If it fails, admit it frankly and try another. But above all, try something." That honesty won him trust, but it also meant the New Deal had no single theory. Some laws cut federal spending, such as the Economy Act, while others raised it. Some raised prices, which helped farmers but hurt consumers. A fair historian will not call the Hundred Days a perfect plan. It was a series of hurried experiments by people in an emergency.</p>
 <p>Was the speed a strength or a danger? A republic must be able to deliberate and act. A country that cannot respond in a crisis has failed at one of its first duties. The Emergency Banking Act showed the benefits of quick action. The crisis ended, and the confidence of ordinary people returned. But a bill passed in an afternoon by members who had not read it is a risky way to make law. It places great trust in one person. Americans gave Roosevelt that trust, and for the moment they were glad they did. Whether the nation could keep the benefits of vigorous executive leadership without losing the habits of careful lawmaking would be a major question of the 1930s.</p>
+<div class="ow-group" data-wid="m5-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Congress do on March 9, 1933?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It passed the banking bill in a single afternoon. Many members voted without having read it.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Why did a bill passed that way worry careful observers?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It placed great trust in one person, and a bill passed so fast skips the habit of careful lawmaking.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>The Hundred Days ended with the banks open and hope rising, but the Depression was far from over. Unemployment remained about one worker in four. The second lesson of this week shows what happened next: who criticized the New Deal, who supported it, and what role the states played in a plan that began in Washington.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

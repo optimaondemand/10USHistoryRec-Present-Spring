@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,12 +368,15 @@
 <p>The first blow came on May 27, 1935. In a case called Schechter Poultry Corporation v. United States, the Court struck down the National Industrial Recovery Act, the law at the center of the first New Deal. The ruling was unanimous. Even the justices who usually liked the New Deal voted against it. The Schechter brothers ran a slaughterhouse in Brooklyn that sold chickens only inside New York. The government had charged them with breaking the industry code, which set wages, hours, and prices. The Court gave two main reasons. First, the law gave too much power to the president and to private industry groups, with too little guidance from Congress. Second, the Constitution lets Congress regulate trade between the states under the <span class="gloss" tabindex="0">Commerce Clause<span class="gloss-tip"><span class="gloss-pron">KAH-murs klawz</span>The part of the Constitution that gives Congress the power to regulate trade between the states.</span></span>, and the Court said that a Brooklyn butcher selling to Brooklyn customers was not in that kind of trade.</p>
 <p>Roosevelt was angry. He told reporters that the country had been given a "horse-and-buggy" definition of interstate commerce. In his view, a national economy needed national rules. But the Court was not finished. In January 1936, in United States v. Butler, it struck down the Agricultural Adjustment Act by a vote of six to three. In the same year, it struck down a law to regulate the coal industry. By the end of 1936, the Court had killed or crippled several of the most important laws of the New Deal.</p>
 <p>To understand the Court, you need to know who sat on it. Four of the justices, Willis Van Devanter, James McReynolds, George Sutherland, and Pierce Butler, were very skeptical of government regulation. A newspaper cartoonist gave them a nickname that stuck, the <span class="gloss" tabindex="0">Four Horsemen<span class="gloss-tip"><span class="gloss-pron">for HOR-smen</span>The nickname for four justices, Van Devanter, McReynolds, Sutherland, and Butler, who usually voted against New Deal laws.</span></span>. Three justices, Louis Brandeis, Harlan Stone, and Benjamin Cardozo, were often willing to uphold the New Deal. That left two in the middle. One was <span class="gloss" tabindex="0">Charles Evans Hughes<span class="gloss-tip"><span class="gloss-pron">charlz EV-unz hyooz</span>The Chief Justice of the United States from 1930 to 1941. He often cast the deciding vote in New Deal cases.</span></span>, the Chief Justice, a careful man who had once run for president. The other was Owen Roberts. Most big cases came down to how those two voted. The fate of the New Deal rested on a few people.</p>
+<div class="optima-widget" data-wid="m6-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">Nine justices decided the fate of Roosevelt's laws, and most big cases came down to just two of them.</div><details class="ow-reveal"><summary>What might have changed if <span class="gloss" tabindex="0">Hughes<span class="gloss-tip"><span class="gloss-pron">charlz EV-unz hyooz</span>The Chief Justice of the United States from 1930 to 1941. He often cast the deciding vote in New Deal cases.</span></span> and Roberts had voted the other way? Decide first and jot down two possible results before you open this.</summary><div class="ow-reveal-body">With four justices against the new laws and three often for them, two votes in the middle decided each case. Different votes in 1935 and 1936 might have saved more of the early laws. But votes shift for many reasons, and nobody can read a justice's mind. Count what was possible, not what was certain.</div></details><button class="widget-reset">Reset</button></div>
 <p>After he won re-election in a landslide in 1936, Roosevelt decided to act. On February 5, 1937, he sent Congress a plan to reform the courts. He said the federal courts had too much work and that older judges were slow. His bill would let the president add a new justice for every sitting justice who had reached the age of seventy and had not retired, up to a total of fifteen. At that moment, six justices were over seventy. It was easy to see what the plan would do. Roosevelt could add six new justices who agreed with him. Critics called it <span class="gloss" tabindex="0">court-packing<span class="gloss-tip"><span class="gloss-pron">KORT-pak-ing</span>The name critics gave to Roosevelt's 1937 plan to add justices to the Supreme Court so that it would favor his laws.</span></span>, and the name stuck.</p>
 <p>On March 9, Roosevelt explained his plan to the country by radio. He compared the government to a team of three horses, Congress, the president, and the Court, pulling the same plow. One horse, he said, was not pulling with the others. The speech was a clever one. But many Americans, including many who liked the New Deal, were uneasy. The Constitution had set up a <span class="gloss" tabindex="0">separation of powers<span class="gloss-tip"><span class="gloss-pron">sep-uh-RAY-shun uv POW-urz</span>The idea that lawmaking, enforcing, and judging belong to different branches of government, so that no one branch can rule alone.</span></span>, which means that the lawmaking, enforcing, and judging powers belong to different branches so that no one branch can dominate the others. The Constitution does not fix the size of the Supreme Court, so Congress could pass this bill. Still, using that power to change the outcome of cases looked to many people like an attack on the independence of the judges. Some of Roosevelt's own party in the Senate turned against him. Even his Vice President, John Nance Garner, was said to be unhappy.</p>
 <p>Then the Court itself changed course. On March 29, 1937, in West Coast Hotel v. Parrish, the Court upheld a Washington State law that set a <span class="gloss" tabindex="0">minimum wage<span class="gloss-tip"><span class="gloss-pron">MIN-ih-mum wayj</span>The lowest hourly pay that an employer may legally offer a worker.</span></span> for women. Only a year earlier, the Court had struck down a similar law from New York. The vote was five to four, and Owen Roberts had switched sides. A famous joke said that "a switch in time saved nine." The truth is more complicated. Roberts had cast his vote in the case months before Roosevelt announced his plan, so historians doubt that the plan alone changed his mind. We cannot be sure what he was thinking. But the timing helped the president's critics and his allies tell a story.</p>
+<div class="optima-widget ow-scale" data-wid="m6-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID IT MATTER?</div><div class="widget-question">In 1937 one justice switched sides on a <span class="gloss" tabindex="0">minimum wage<span class="gloss-tip"><span class="gloss-pron">MIN-ih-mum wayj</span>The lowest hourly pay that an employer may legally offer a worker.</span></span> case. How much did Roosevelt's court plan cause the switch?</div><div class="widget-row" data-correct="2" data-fb="Yes. The lesson says he had cast his vote before the plan was announced, so historians doubt the plan alone changed his mind, and we cannot be sure." data-hint="Remember when the justice cast his vote compared with when the plan was announced."><div class="widget-options"><button data-choice="0" data-fb="Not quite. His vote came before the plan was announced.">It caused the switch by itself</button><button data-choice="1" data-fb="Not quite. Historians doubt the plan alone changed his mind.">It was the main cause</button><button data-choice="2" data-fb="Yes. The timing helped the president&#x27;s critics and allies tell a story, but we cannot be sure what he was thinking.">It may have played a part, but not alone</button><button data-choice="3" data-fb="Not quite. The plan may have played some part.">It had nothing to do with it</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Two weeks later, the Court upheld the <span class="gloss" tabindex="0">Wagner Act<span class="gloss-tip"><span class="gloss-pron">WAG-ner akt</span>A 1935 law that protected the right of workers to form unions and bargain with their employers. It is also called the National Labor Relations Act.</span></span> in a case about a steel company. In May, it upheld the <span class="gloss" tabindex="0">Social Security Act<span class="gloss-tip"><span class="gloss-pron">SOH-shul sih-KYUR-ih-tee akt</span>A 1935 law that created old-age insurance and unemployment insurance and gave aid to poor children and blind people.</span></span>. The same month, Justice Van Devanter, one of the Four Horsemen, announced that he would retire. The president would finally have a chance to name a justice. With the Court now friendly to his laws, the reason for the plan seemed to fade. In July, the Senate leader of the fight, Joseph Robinson, died suddenly, and the plan fell apart. The bill was sent back to a committee and was never heard from again.</p>
 <p>So who won? Roosevelt lost the fight over the bill, and he lost some of his political strength. Southern Democrats and Republicans began to work together against him in Congress. Yet he won the larger struggle. Over the next several years, one justice after another retired or died, and Roosevelt named eight new justices. By 1941, the Court that had struck down the first New Deal had been replaced by one that would let Congress do almost anything it chose under the Commerce Clause. That change shaped American government for many decades.</p>
 <p>There is a lesson here about what a republic needs. It needs a government able to act when the country is in danger, and it needs courts that can say no. If either one wins completely, citizens lose something. Roosevelt had tried to win the argument by changing the referee. Americans, who had given him a huge victory only a few months earlier, would not let him do it. In the end, the old balance held, but the Court itself moved. As you read the sources for this week, ask yourself which of these was the true story of 1937.</p>
+<div class="optima-widget ow-seq" data-wid="m6-2-3" data-ra-skip data-n="5" data-fb="That is the order. The Court changed course before the plan ever came to a vote." data-hint="Start with the first big ruling, then follow the plan from announcement to end."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">The Court unanimously strikes down the main law of Roosevelt&#x27;s first program</button><button data-pos="2">The Court strikes down the farm law by a vote of six to three</button><button data-pos="3">Roosevelt sends Congress his plan to add justices</button><button data-pos="4">The Court upholds a state law setting a lowest wage, five to four</button><button data-pos="5">The Senate leader of the fight dies and the plan falls apart</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>Next week, the story turns away from the economy. While Americans argued about courts and wages, dictators in Europe and Asia were making plans of their own.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -391,6 +427,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

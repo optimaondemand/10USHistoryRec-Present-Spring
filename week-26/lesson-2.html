@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -335,12 +368,15 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>Japan's attack on Pearl Harbor was only one part of a larger plan. In the same weeks, Japanese forces struck the Philippines, Malaya, Hong Kong, and the Dutch East Indies. They won victory after victory. By the spring of 1942, Japan ruled a huge empire that stretched from the borders of India to islands near Australia. Americans had agreed on a policy of <span class="gloss" tabindex="0">Europe First<span class="gloss-tip"><span class="gloss-pron">YUR-up furst</span>The Allied plan to defeat Germany before Japan.</span></span>, so the forces in the Pacific had to make do with less. They would need skill, courage, and some luck to survive.</p>
 <p>The first great defeat came in the Philippines. General Douglas MacArthur commanded the American and Filipino troops there. In March 1942, he was ordered to leave for Australia, and he told the Filipinos, "I shall return." On the Bataan Peninsula, about 75,000 American and Filipino soldiers, sick and starving, surrendered in April. The Japanese forced them to march about sixty-five miles to a prison camp, in what is known as the <span class="gloss" tabindex="0">Bataan Death March<span class="gloss-tip"><span class="gloss-pron">buh-TAN deth march</span>The forced march, in April 1942, of about 75,000 American and Filipino prisoners in the Philippines. Thousands died.</span></span>. Thousands died from beatings, hunger, and disease, or were killed when they could not go on. Americans learned of it in 1944, and it hardened the nation's will to fight.</p>
 <p>The war turned in June 1942 at the <span class="gloss" tabindex="0">Battle of Midway<span class="gloss-tip"><span class="gloss-pron">BAT-ul uv MID-way</span>The June 1942 naval battle in which American carrier planes sank four Japanese carriers and turned the tide in the Pacific.</span></span>. The Pacific Fleet was led by Admiral <span class="gloss" tabindex="0">Chester Nimitz<span class="gloss-tip"><span class="gloss-pron">CHES-ter NIM-its</span>The admiral who commanded the American Pacific Fleet.</span></span>, a Texan with a calm temper. The main weapon in that fleet was the <span class="gloss" tabindex="0">aircraft carrier<span class="gloss-tip"><span class="gloss-pron">AIR-kraft KAIR-ee-er</span>A warship with a long flat deck from which airplanes take off and land.</span></span>, a ship with a long flat deck from which planes can take off and land. Pearl Harbor had destroyed American battleships but had missed the carriers, and now they were the heart of the American fleet. Nimitz had another advantage. A team of navy codebreakers in Hawaii had broken part of the Japanese naval code. They learned that Japan planned an attack on a target called "AF." To prove that AF was Midway, a small island in the middle of the Pacific, they had the island send out a false message that its water supply was low. Soon after, the Japanese reported that "AF" was short of water.</p>
+<div class="optima-widget" data-wid="m8-2-1" data-ra-skip><div class="widget-kicker">&#9889; DECIDE FIRST</div><div class="widget-question">American codebreakers learned that Japan planned to attack a target called AF, and they believed it was Midway.</div><details class="ow-reveal"><summary>What might have happened if <span class="gloss" tabindex="0">Admiral Nimitz<span class="gloss-tip"><span class="gloss-pron">CHES-ter NIM-its</span>The admiral who commanded the American Pacific Fleet.</span></span> had guessed wrong and sent his carriers somewhere else? Decide first and jot down two results before you open this.</summary><div class="ow-reveal-body">The <span class="gloss" tabindex="0">aircraft carriers<span class="gloss-tip"><span class="gloss-pron">AIR-kraft KAIR-ee-er</span>A warship with a long flat deck from which airplanes take off and land.</span></span> were the heart of the American fleet, and Nimitz had only three to wait with. With them elsewhere, Midway might have fallen with little fight, and the Japanese fleet might have kept its strength. The lesson says that a small delay one way or the other might have changed it all. But might is the word. This is reasoning from what we know, not a certain result.</div></details><button class="widget-reset">Reset</button></div>
 <p>Nimitz sent his three carriers to wait. On the morning of June 4, the Japanese fleet, led by Admiral Yamamoto's four large carriers, began to attack Midway. The American planes found the Japanese carriers at a moment when their decks were crowded with planes being refueled and rearmed. Within minutes, American dive bombers destroyed three of the four. The fourth carrier was sunk later that day. The Americans lost one carrier. Japan lost four, along with many of its most skilled pilots, and could not replace them. Midway was a victory of intelligence, of courage, and of luck. A small delay one way or the other might have changed it all. Historians who like to study contingency often start here.</p>
 <p>After Midway, the Americans went on the offense. In August 1942, Marines landed on <span class="gloss" tabindex="0">Guadalcanal<span class="gloss-tip"><span class="gloss-pron">gwah-dul-kuh-NAL</span>The island in the Solomons where American Marines landed in August 1942 and won in February 1943, Japan's first big defeat on land.</span></span>, an island in the Solomon chain where the Japanese were building an airfield. For six months, soldiers, sailors, and airmen fought on land, at sea, and in the air. The fighting was brutal, and the jungle added disease and misery. The Americans held the airfield and won in February 1943. It was Japan's first big defeat on land.</p>
 <p>From there, the Americans developed a plan known as <span class="gloss" tabindex="0">island hopping<span class="gloss-tip"><span class="gloss-pron">EYE-lund HOP-ing</span>The American strategy of taking some Pacific islands and skipping others, which left Japanese troops on the skipped islands cut off.</span></span>. There were too many Japanese-held islands to capture them all. Instead, the Americans seized some, built airfields on them, and skipped others, leaving the Japanese troops there cut off and useless. Meanwhile, American submarines sank much of Japan's merchant fleet, cutting off the oil and supplies that its war depended on. The factories at home, which you will read about next week, poured out ships, planes, and tanks. American forces moved west across the Pacific, one step at a time. In November 1943, at Tarawa, more than a thousand Marines died in a few days taking a tiny island. The lessons from that battle helped the Navy and Marines plan better.</p>
+<div class="optima-widget ow-scale" data-wid="m8-2-2" data-ra-skip><div class="widget-kicker">&#9889; HOW MUCH DID CHANCE MATTER?</div><div class="widget-question">At Midway, the Americans had skill, good intelligence, and some luck. How much did luck matter?</div><div class="widget-row" data-correct="1,2" data-fb="Yes. The lesson calls Midway a victory of intelligence, of courage, and of luck." data-hint="The lesson names three things that won the battle. Is luck one of them?"><div class="widget-options"><button data-choice="0" data-fb="Not quite. The lesson names luck among the causes.">Not at all</button><button data-choice="1" data-fb="Accepted, since the codebreakers and the pilots did most of the work. The lesson still counts luck as one of three causes.">A small part</button><button data-choice="2" data-fb="Yes. Intelligence, courage, and luck together won the battle.">A real part, alongside skill and intelligence</button><button data-choice="3" data-fb="Not quite. The codebreakers and the pilots mattered too.">The whole story</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Many Americans served in this war who did not usually appear in the story. Navajo men served in the Marine Corps as code talkers. Using their own language as the base of a code that the Japanese could not break, they sent important messages quickly and accurately. Florida also played its part. The Naval Air Station at Pensacola trained thousands of the pilots who flew from the carriers, and bases across the state trained soldiers and sailors for both oceans.</p>
 <p>By the summer of 1944, American forces were close enough to Japan to attack it directly. After they took the island of Saipan in June, giant B-29 bombers could fly from there to Tokyo. In October, MacArthur kept his promise. He waded ashore in the Philippines on the island of Leyte. A few days later, the largest naval battle in history, the <span class="gloss" tabindex="0">Battle of Leyte Gulf<span class="gloss-tip"><span class="gloss-pron">BAT-ul uv LAY-tee gulf</span>The October 1944 naval battle near the Philippines, the largest in history, which destroyed most of Japan's navy.</span></span>, destroyed most of what was left of Japan's navy. It also saw the first organized attacks by pilots who flew their planes into American ships on purpose.</p>
 <p>The last stop before Japan itself was <span class="gloss" tabindex="0">Iwo Jima<span class="gloss-tip"><span class="gloss-pron">EE-woh JEE-muh</span>A small volcanic island, about 750 miles from Tokyo, that the Marines captured in February and March of 1945.</span></span>, a small volcanic island only about 750 miles from Tokyo. American leaders wanted its airfields so that fighter planes could protect the bombers and damaged planes could land safely. The Marines landed on February 19, 1945. The Japanese defenders had dug deep into the rock. They had built hundreds of hidden tunnels and bunkers, and they planned to make the Americans pay for every yard. They did. In five weeks of fighting, about 6,800 Americans died, and almost all of the roughly 21,000 Japanese defenders were killed. On the fifth day, Marines raised a flag on Mount Suribachi. A photographer, Joe Rosenthal, took a picture of a second, larger flag-raising that day. It became one of the most famous images in American history. Three of the six men in it were killed in the fighting that followed.</p>
+<div class="optima-widget ow-seq" data-wid="m8-2-3" data-ra-skip data-n="5" data-fb="That is the order. Each step brought American forces closer to Japan, and the fighting grew more costly." data-hint="Start with the battle that turned the war, then follow the advance toward Japan."><div class="widget-kicker">&#9889; PUT IT IN ORDER</div><div class="widget-question">Put these events in order, from earliest to latest. Tap them one at a time.</div><div class="widget-options ow-seq-pool"><button data-pos="1">American dive bombers sink three Japanese carriers within minutes</button><button data-pos="2">Marines land on an island where Japan is building an airfield</button><button data-pos="3">More than a thousand Marines die taking a tiny island in a few days</button><button data-pos="4">MacArthur wades ashore in the Philippines</button><button data-pos="5">Marines land on a volcanic island about 750 miles from Tokyo</button></div><ol class="ow-seq-line"></ol><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>By the spring of 1945, the American position was strong, but the Japanese showed no sign of giving up. The Allies had demanded <span class="gloss" tabindex="0">unconditional surrender<span class="gloss-tip"><span class="gloss-pron">un-kun-DISH-un-ul suh-REN-der</span>A surrender in which the losing side gives up completely, with no bargaining over terms.</span></span>, and Japan's leaders were not ready to accept it. The fighting was getting closer to the Japanese home islands, and with each step, the fighting grew more deadly. Next week, you will first see the home front that made this fighting possible. Then you will see how the war ended, and why the leaders of the United States chose the path that they did.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -391,6 +427,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>

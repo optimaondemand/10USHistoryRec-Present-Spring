@@ -54,6 +54,39 @@
   .visual-box img { width: 100%; max-width: 420px; display: block; border-radius: 6px; margin-bottom: 12px; }
   .visual-box .visual-body { font-size: 15px; color: #1a2340; line-height: 1.6; }
   .visual-box .visual-credit { font-size: 11px; color: #8290ab; margin-top: 10px; }
+
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; font-size: 16px; line-height: 1.5; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.optima-widget button:focus-visible, .ow-flip:focus-visible, .ow-reveal summary:focus-visible { outline: 3px solid #2196D0; outline-offset: 2px; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8A6112; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; min-width: 110px; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.ow-seq-line { margin: 10px 0 0 0; padding-left: 22px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+.ow-reveal .ow-reveal-body { margin-top: 10px; font-size: 15px; color: #1a2340; line-height: 1.6; }
+.ow-group { margin: 18px 0; }
+.ow-group .optima-widget { margin: 10px 0; }
+@media (prefers-reduced-motion: reduce) { .widget-options button { transition: none; } }
 </style>
 </head>
 <body>
@@ -337,14 +370,17 @@
   <div style="font-size: 17px; color: #1a2340; line-height: 1.7;"><p>In 1919, Americans had hoped that the Great War would be the war to end all wars. By the middle of the 1930s, many of them felt fooled. The Depression made things worse. When so many people were out of work at home, a quarrel across the ocean seemed like someone else's trouble. While Americans looked inward, a new kind of government was spreading in Europe and Asia. It would test whether a free republic could see danger coming from far away.</p>
 <p>The new governments had a name, <span class="gloss" tabindex="0">totalitarianism<span class="gloss-tip"><span class="gloss-pron">toh-tal-ih-TAIR-ee-un-iz-um</span>A system in which one party and one leader control every part of life, using propaganda and secret police.</span></span>. In a totalitarian state, one party and one leader try to control not just the government but every part of life, including the schools, the newspapers, the churches, and even the family. A secret police enforces obedience. Propaganda, which is one-sided messages meant to shape what people believe, fills the air. Two kinds of totalitarian state grew up between the wars. In the Soviet Union, the Communist Party under Joseph Stalin seized the farms and the factories, and millions of people died in famines and prisons. The other kind was called <span class="gloss" tabindex="0">fascism<span class="gloss-tip"><span class="gloss-pron">FASH-iz-um</span>A system of government in which a dictator rules, the nation and the state count for more than the individual, opposition is forbidden, and war is praised.</span></span>, a system that praises the nation and the state above the individual, demands total loyalty to a single leader, and glorifies war.</p>
 <p>Fascism began in Italy. <span class="gloss" tabindex="0">Benito Mussolini<span class="gloss-tip"><span class="gloss-pron">buh-NEE-toh moo-suh-LEE-nee</span>The fascist dictator of Italy from 1922 until 1943.</span></span>, a newspaper editor and war veteran, took power in 1922 after his followers marched on Rome. Within a few years he ruled as a dictator, and the Italians called him Il Duce, "the leader." In October 1935, he sent his army to conquer Ethiopia, one of the few free countries in Africa. The League of Nations protested but did little. Its weakness was plain to see, and the United States was not even a member.</p>
+<div class="optima-widget ow-reflect" data-wid="m7-1-1" data-ra-skip><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">A war is raging across an ocean, and your own country is struggling at home. What would make you care about it? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button data-response="That feeling moved many Americans later. In the 1930s, though, most of them had no tie to the people in danger, and their own troubles came first.">If people I knew were in danger</button><button data-response="That is the question leaders had to answer. It is hard to judge a threat that is far away and not yet clear.">If it might reach my country someday</button><button data-response="Many Americans felt exactly that. Notice how memory and hard times shaped their choices.">I would focus on problems at home first</button></div><div class="widget-feedback" role="status"></div><button class="widget-reset">Reset</button></div>
 <p>In Germany, the road was different but the result was the same. After losing the war, Germany suffered inflation, then unemployment during the Depression. Many Germans were angry and afraid. The <span class="gloss" tabindex="0">Nazi Party<span class="gloss-tip"><span class="gloss-pron">NAHT-see PAR-tee</span>The German political party led by Hitler. It taught extreme nationalism, hatred of Jews, and total obedience to the leader.</span></span> promised to give them work, restore their pride, and punish their enemies. Its leader, <span class="gloss" tabindex="0">Adolf Hitler<span class="gloss-tip"><span class="gloss-pron">AY-dolf HIT-ler</span>The leader of the Nazi Party, who became dictator of Germany in the 1930s and started the war in Europe in 1939.</span></span>, had spent time in prison in the 1920s and wrote a book in which he described his hatred of the Jews and his plans for conquest. In January 1933, he became chancellor. Within a year he had made himself dictator. In 1935, new laws took away the rights of German Jews. In 1936, Hitler broke the Treaty of Versailles by sending troops into the Rhineland, an area next to France that was supposed to stay free of soldiers. France and Britain did nothing. In March 1938, he absorbed Austria.</p>
 <p>In the Pacific, Japan was ruled by a government in which army officers had great power. In 1931, the army seized Manchuria, a region of China, and in 1937, Japan launched a full war against China. When Japanese planes sank an American gunboat, the USS Panay, on the Yangtze River in December 1937, Japan apologized and paid for the damage, and the American public wanted to forget it. Few people yet imagined that the same country would someday attack Hawaii.</p>
 <p>Why did Americans not act? One reason was memory. Over 100,000 Americans had died in the Great War, and the peace had brought disappointment. Between 1934 and 1936, a Senate group called the <span class="gloss" tabindex="0">Nye Committee<span class="gloss-tip"><span class="gloss-pron">nye kuh-MIT-ee</span>A Senate group, active from 1934 to 1936, that argued that bankers and arms makers had pushed the United States into the Great War.</span></span> held hearings in which it argued that bankers and arms makers had pushed America into the war to make money. Historians now think the case was weak, but many Americans believed it. The result was <span class="gloss" tabindex="0">isolationism<span class="gloss-tip"><span class="gloss-pron">eye-suh-LAY-shun-iz-um</span>The belief that a country should stay out of the quarrels and wars of other nations.</span></span>, the belief that the United States should stay out of the quarrels of other nations. Isolationists came from both parties and all walks of life. Some were pacifists. Some distrusted Britain. Some feared that war would give the president too much power. The Constitution, they pointed out, gives only Congress the power to declare war.</p>
 <p>In 1935, 1936, and 1937, Congress passed the <span class="gloss" tabindex="0">Neutrality Acts<span class="gloss-tip"><span class="gloss-pron">noo-TRAL-ih-tee akts</span>Laws passed in the 1930s that banned arms sales to countries at war and kept Americans out of war zones.</span></span>. These laws banned the sale of weapons to countries at war and kept American ships and citizens out of war zones. Their aim was to avoid the mistakes that had led to war in 1917. But the laws made no difference between a bully and a victim. A country that was attacked could not buy weapons from the United States any more easily than the attacker could. In 1938, a proposal for a constitutional amendment that required a national vote before any declaration of war came close to reaching a vote in the House. Roosevelt worked hard to stop it, and the House kept it off the floor by a margin of 209 votes to 188.</p>
+<div class="optima-widget ow-select" data-wid="m7-1-2" data-ra-skip><div class="widget-kicker">&#9889; TRY IT &middot; WHY STAY OUT?</div><div class="widget-question">Match each statement to the reason behind it.</div><div class="widget-row" data-correct="0" data-fb="Right. Many Americans remembered a real war and had real doubts about a new one." data-hint="Which reason is about what Americans had lived through?"><div class="widget-row-prompt">1. More than 100,000 Americans died in the last war, and the peace was a disappointment.</div><div class="widget-options"><button data-choice="0">Memory of the Great War</button><button data-choice="1">A belief that bankers and arms makers started it</button><button data-choice="2">Fear of the president&#x27;s power</button><button data-choice="3">Dislike of Britain</button></div></div><div class="widget-row" data-correct="3" data-fb="Right. Historians now think the case was weak, but many Americans believed it." data-hint="Think about the hearings held between 1934 and 1936."><div class="widget-row-prompt">2. Bankers and arms makers pushed us into the last war to make money.</div><div class="widget-options"><button data-choice="0">Memory of the Great War</button><button data-choice="1">Fear of the president&#x27;s power</button><button data-choice="2">Dislike of Britain</button><button data-choice="3">The claim made in Senate hearings</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. Some isolationists pointed to the Constitution, which gives the war power to Congress." data-hint="Which reason is about who holds the power to take the country to war?"><div class="widget-row-prompt">3. Only Congress can declare war, and war gives the president too much power.</div><div class="widget-options"><button data-choice="0">The claim made in Senate hearings</button><button data-choice="1">Fear of the president&#x27;s power</button><button data-choice="2">Memory of the Great War</button></div></div><button class="widget-reset">Reset</button></div>
 <p>Roosevelt saw the danger more clearly than most, but he was also weaker than he had been. The fight over <span class="gloss" tabindex="0">court-packing<span class="gloss-tip"><span class="gloss-pron">KORT-pak-ing</span>The name critics gave to Roosevelt's 1937 plan to add justices to the Supreme Court so that it would favor his laws.</span></span> had cost him allies in Congress. In October 1937, he gave a speech in Chicago in which he said that the world's lawless nations should be "quarantined," as a community cuts off the carrier of a disease. The public reaction was cold. Roosevelt took the hint and backed away. The country's army at this time had fewer than 200,000 soldiers, and no one in Washington expected them to be used.</p>
 <p>Meanwhile, the British and French tried to avoid war by giving in to Hitler's demands. This policy is called <span class="gloss" tabindex="0">appeasement<span class="gloss-tip"><span class="gloss-pron">uh-PEEZ-ment</span>The policy of giving in to an aggressor's demands in the hope of keeping the peace.</span></span>. In September 1938, their leaders met Hitler in Munich. In the <span class="gloss" tabindex="0">Munich Agreement<span class="gloss-tip"><span class="gloss-pron">MYOO-nik uh-GREE-ment</span>The 1938 deal in which Britain and France let Germany take part of Czechoslovakia, hoping to avoid war.</span></span>, they agreed that Germany could take the Sudetenland, a border region of Czechoslovakia, in return for his promise to ask for nothing more. The Czechs were not even invited. Britain's prime minister, Neville Chamberlain, returned home and said that he had brought "peace for our time." Six months later, German troops took the rest of Czechoslovakia.</p>
 <p>The cruelty of the Nazi government was also becoming harder to ignore. On the night of November 9, 1938, mobs across Germany, led by Nazi officials, smashed the shops of Jewish families and burned synagogues. The event is known as <span class="gloss" tabindex="0">Kristallnacht<span class="gloss-tip"><span class="gloss-pron">KRIS-tahl-nahkt</span>The "night of broken glass," November 9 and 10, 1938, when Nazi mobs attacked Jewish homes, shops, and synagogues across Germany.</span></span>, the "night of broken glass." Nearly one hundred Jews were killed, and about thirty thousand Jewish men were sent to camps. Roosevelt called the German ambassador home in protest. But most Americans, including many who were horrified, were not ready to let in large numbers of refugees. In 1939, a ship carrying more than nine hundred Jewish refugees, the St. Louis, was turned away from Cuba and then was not allowed to land in the United States. It sailed back to Europe. Many of its passengers were later murdered.</p>
 <p>On September 1, 1939, German armies invaded Poland. Britain and France declared war two days later. Days earlier, Hitler had made a secret deal with Stalin, so that the two dictators could divide Poland between them. Europe was at war again.</p>
+<div class="ow-group" data-wid="m7-1-3" data-ra-skip><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Italy&#x27;s army do in October 1935?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">It invaded Ethiopia, one of the few free countries in Africa. An international body of nations protested but did little.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Japan launch in 1937?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A full war against China. Army officers had great power in its government.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What treaty did Hitler break in 1936, and how?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">The treaty that ended the Great War. He sent troops into the Rhineland, which was supposed to stay free of soldiers.</div></div><button class="widget-reset">Reset</button></div><div class="optima-widget" data-ra-skip><div class="widget-kicker">&#9889; TAP TO REVEAL</div><div class="ow-flip" tabindex="0" role="button"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">What did Hitler and Stalin agree to just before the invasion of Poland?<div style="font-size:11px;color:#6b7a99;margin-top:6px;">(tap to flip)</div></div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;">A secret deal to divide Poland between them.</div></div><button class="widget-reset">Reset</button></div></div>
 <p>Could a free people have seen this coming? Historians still argue about it. The classical republican tradition holds that a state must be able to defend itself and to see threats clearly. A free republic has a special difficulty. Its leaders must persuade a public that does not want to listen. In the 1930s, many Americans were wrong about Hitler, but they were not foolish. They remembered a real war and had real doubts about a new one. The question for the next two years was whether events, or leaders, would change their minds.</p></div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 22px; margin: 0 34px 20px;">
@@ -395,6 +431,81 @@ document.addEventListener('click', function (e) {
     document.querySelectorAll('.gloss.open').forEach(function (g) { g.classList.remove('open'); });
   }
 });
+</script>
+<script>
+(function () {
+  function shuffle(pool) {
+    var bs = [].slice.call(pool.children), n = bs.length, ok = false, i, j, t;
+    if (n < 3) return;
+    while (!ok) {
+      for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = bs[i]; bs[i] = bs[j]; bs[j] = t; }
+      for (i = 0; i < n; i++) { if (+bs[i].dataset.pos !== i + 1) { ok = true; break; } }
+    }
+    bs.forEach(function (b) { pool.appendChild(b); });
+  }
+  document.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+  document.addEventListener('click', function (e) {
+    var gl = e.target.closest('.ow-reveal summary .gloss');
+    if (gl) e.preventDefault();
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); b.disabled = false; });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      w.querySelectorAll('.ow-seq-line').forEach(function (l) { l.innerHTML = ''; });
+      w.querySelectorAll('.ow-seq-pool').forEach(shuffle);
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = row.dataset.correct.split(',').indexOf(sBtn.dataset.choice) !== -1;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var sq = e.target.closest('.ow-seq .ow-seq-pool button');
+    if (sq && !sq.disabled) {
+      var sw = sq.closest('.ow-seq'), line = sw.querySelector('.ow-seq-line'), sf = sw.querySelector('.widget-feedback');
+      var next = line.children.length + 1;
+      if (+sq.dataset.pos === next) {
+        var li = document.createElement('li'); li.textContent = sq.textContent; line.appendChild(li);
+        sq.disabled = true; sq.classList.add('correct');
+        if (next === +sw.dataset.n) { sf.textContent = sw.dataset.fb || 'Right.'; sf.classList.add('show'); }
+        else { sf.classList.remove('show'); sf.textContent = ''; }
+      } else {
+        sq.classList.add('incorrect');
+        sf.textContent = sw.dataset.hint || 'Not quite. Try again.'; sf.classList.add('show');
+        setTimeout(function () { sq.classList.remove('incorrect'); }, 700);
+      }
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var f = e.target.closest && e.target.closest('.ow-flip');
+    if (f) { e.preventDefault(); f.classList.toggle('flipped'); }
+  });
+})();
 </script>
 </body>
 </html>
