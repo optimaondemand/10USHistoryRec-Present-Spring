@@ -53,6 +53,113 @@ footer .t span{color:var(--cyan)}footer .m{color:rgba(255,255,255,.7);font-size:
 <section class="hero"><div class="wrap"><div class="kicker">WEEK WRAP-UP · 3 min</div><h1>Week Wrap-Up</h1><div class="topic">This Week&#39;s Topic: The League Rejected and the Red Scare</div></div></section>
 <div class="rule"></div>
 <main class="wrap">
+<div id="optima-read-aloud" data-ra-skip class="ora" role="group" aria-label="Read this page aloud">
+<style>
+.ora{background:var(--card,#fff);border:1px solid var(--line,#ddd);border-left:5px solid var(--terra,#444);border-radius:10px;padding:12px 16px;margin:0 0 14px}
+.ora .ora-kicker{font:700 11px/1 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-d,#222);margin-bottom:10px}
+.ora .ora-controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ora .ora-controls button{border-radius:8px;padding:8px 16px;font:600 14px system-ui,sans-serif;cursor:pointer;min-height:40px}
+.ora #ora-play{background:var(--navy,#17202a);color:#fff;border:1.5px solid var(--navy,#17202a)}
+.ora #ora-play:disabled{opacity:.55;cursor:default}
+.ora #ora-stop{background:#fff;color:var(--navy,#17202a);border:1.5px solid var(--line,#ddd)}
+.ora #ora-stop:disabled{opacity:.55;cursor:default}
+.ora .ora-speed{font:12px system-ui,sans-serif;color:var(--ink2,#555);display:flex;align-items:center;gap:6px}
+.ora #ora-rate{font:13px system-ui,sans-serif;color:var(--ink,#111);border:1.5px solid var(--line,#ddd);border-radius:6px;padding:5px 8px;background:#fff}
+.ora #ora-status{font:12px system-ui,sans-serif;color:var(--ink2,#555)}
+</style>
+<div class="ora-kicker">&#128266; Read aloud: listen to this page</div>
+<div class="ora-controls">
+<button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+<button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+<label class="ora-speed">Speed
+<select id="ora-rate" aria-label="Reading speed"><option value="0.8">Slower</option><option value="1" selected>Normal</option><option value="1.25">Faster</option></select>
+</label>
+<span id="ora-status" role="status" aria-live="polite"></span>
+</div>
+<script>
+(function () {
+  "use strict";
+  var playBtn = document.getElementById("ora-play"), stopBtn = document.getElementById("ora-stop"),
+      rateSel = document.getElementById("ora-rate"), statusEl = document.getElementById("ora-status");
+  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+    playBtn.disabled = true; rateSel.disabled = true;
+    statusEl.textContent = "Read-aloud is not supported in this browser.";
+    return;
+  }
+  var LABEL_PLAY = "▶️ Listen", LABEL_PAUSE = "⏸️ Pause", LABEL_RESUME = "▶️ Resume";
+  var queue = [], idx = 0, playing = false, paused = false, stopping = false, currentUtterance = null;
+  var voices = [];
+  function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+  loadVoices();
+  if ("onvoiceschanged" in window.speechSynthesis) window.speechSynthesis.onvoiceschanged = loadVoices;
+  function pickVoice() {
+    if (!voices.length) loadVoices();
+    var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+    return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+        || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+        || en.filter(function (v) { return v.default; })[0] || en[0] || null;
+  }
+  function textOf(el) {
+    var c = el.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll("button, .pp, script, style"), function (n) { n.remove(); });
+    return c.textContent.replace(/\s+/g, " ").trim();
+  }
+  // The page's own text, in order: title, then each heading and paragraph (book pages use #flow; map and wrap-up pages use main).
+  function collectQueue() {
+    var q = [], t = document.querySelector(".hero h1");
+    function add(s) {
+      var sentences = s.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [s];
+      sentences.forEach(function (x) { x = x.trim(); if (x) q.push(x); });
+    }
+    if (t && textOf(t)) add(textOf(t) + ".");
+    var flow = document.getElementById("flow");
+    var sel = flow ? "#flow h3, #flow p.prose, #flow .doccite" : "main h2, main h3, main p, main li";
+    Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+      if (el.closest("[data-ra-skip]")) return;
+      var s = textOf(el);
+      if (!s) return;
+      if (/^H[23]$/.test(el.tagName) && !/[.!?]$/.test(s)) s += ".";
+      add(s);
+    });
+    return q;
+  }
+  function speakNext() {
+    if (idx >= queue.length) { finish("Finished reading this page."); return; }
+    var u = new SpeechSynthesisUtterance(queue[idx]);
+    u.rate = parseFloat(rateSel.value) || 1;
+    var v = pickVoice(); if (v) u.voice = v;
+    u.onend = function () { if (stopping) return; idx++; speakNext(); };
+    u.onerror = function (e) { if (stopping || e.error === "canceled" || e.error === "interrupted") return; idx++; speakNext(); };
+    currentUtterance = u;
+    window.speechSynthesis.speak(u);
+    statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+  }
+  function finish(message) {
+    playing = false; paused = false;
+    playBtn.textContent = LABEL_PLAY; stopBtn.disabled = true;
+    statusEl.textContent = message || ""; currentUtterance = null;
+  }
+  playBtn.addEventListener("click", function () {
+    if (playing && !paused) { window.speechSynthesis.pause(); paused = true; playBtn.textContent = LABEL_RESUME; statusEl.textContent = "Paused"; return; }
+    if (playing && paused) { window.speechSynthesis.resume(); paused = false; playBtn.textContent = LABEL_PAUSE; statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length; return; }
+    queue = collectQueue();
+    if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+    idx = 0; stopping = false; playing = true; paused = false;
+    window.speechSynthesis.cancel();
+    playBtn.textContent = LABEL_PAUSE; stopBtn.disabled = false;
+    speakNext();
+  });
+  stopBtn.addEventListener("click", function () { stopping = true; window.speechSynthesis.cancel(); finish(""); });
+  rateSel.addEventListener("change", function () {
+    if (!playing || paused) return;
+    stopping = true; window.speechSynthesis.cancel();
+    setTimeout(function () { stopping = false; speakNext(); }, 60);
+  });
+  window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- END READ-ALOUD PLAYER -->
 <div class="card"><p>You have reached the end of this week. Check each item below before you move on.</p></div>
 <div class="card rust"><div class="pill">CONFIRM YOUR SUBMISSIONS</div><ul class="checks"><li><label><input type="checkbox" data-k="0"><span>I read the lesson "The League Rejected, 1919 to 1922" and the lesson "Red Scare, Strikes, and the Closing Door".</span></label></li><li><label><input type="checkbox" data-k="1"><span>I read the source Henry Cabot Lodge, Speech Against the League of Nations and the source A. Mitchell Palmer, "The Case Against the 'Reds'".</span></label></li><li><label><input type="checkbox" data-k="2"><span>I completed this week's Primary Source Report.</span></label></li><li><label><input type="checkbox" data-k="3"><span>I took part in the discussion "Who Killed the League: Wilson or the Senate?"</span></label></li><li><label><input type="checkbox" data-k="4"><span>I opened Canvas and confirmed that each of my submissions shows as turned in.</span></label></li></ul></div>
 <div class="seq"><a class="prev" href="primary-source-2.html"><div class="k">&larr; Previous</div><div class="l">A. Mitchell Palmer, "The Case Against the 'Reds'"</div></a></div><div class="back"><a href="module-map.html">&larr; Back to this week's Module Map</a></div>
